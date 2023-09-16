@@ -29,4 +29,44 @@ public class Carro {
     @Column(nullable = true)
     @NotBlank(message = "O campo quilometragem não pode ser vazio")
     private Long quilometragem;
+
+    public long getId() {
+        return this.id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getMarca() {
+        return this.marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return this.modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getAnoDeFabricacao() {
+        return this.anoDeFabricacao;
+    }
+
+    public void setAnoDeFabricacao(String anoDeFabricacao) {
+        this.anoDeFabricacao = anoDeFabricacao;
+    }
+
+    public Long getQuilometragem() {
+        return this.quilometragem;
+    }
+
+    public void setQuilometragem(Long quilometragem) {
+        this.quilometragem = quilometragem;
+    }
 }
