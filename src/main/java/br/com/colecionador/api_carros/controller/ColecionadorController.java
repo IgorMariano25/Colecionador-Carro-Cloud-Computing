@@ -32,4 +32,14 @@ public class ColecionadorController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PostMapping
+    public ResponseEntity<Colecionador> create(@RequestBody Colecionador item) {
+        try {
+            Colecionadores.add(item);
+            return new ResponseEntity<>(item, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+        }
+    }
 }
