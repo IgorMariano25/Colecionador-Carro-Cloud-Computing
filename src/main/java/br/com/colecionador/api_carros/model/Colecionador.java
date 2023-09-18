@@ -24,15 +24,15 @@ public class Colecionador {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo nome não pode ser vazio")
     private String nome;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo nome não pode ser vazio")
     private String sobrenome;
 
-    @Column(nullable = true)
+    @Column(nullable = true, length = 100)
     private String nickname;
 
     @Column(nullable = true)
