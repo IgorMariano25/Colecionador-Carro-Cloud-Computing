@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Colecionador;
+import br.com.colecionador.api_carros.model.Colecionador;
 
 @RestController
 @RequestMapping("/colecionador")
@@ -60,5 +61,27 @@ public class ColecionadorController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Colecionador> update(@PathVariable("id") Integer id, @RequestBody Colecionador colecionadorNovosDados) {
+
+        Colecionador colecionadorAserAtualizado = null;
+
+        for (Colecionador item : Colecionadores) {
+            if (item.getId() == id) {
+                colecionadorAserAtualizado = item;
+                break;
+            }
+        }
+
+        if (colecionadorAserAtualizado == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        colecionadorAserAtualizado.setEmail(colecionadorNovosDados.getEmail());
+        colecionadorAserAtualizado.setNickname(colecionadorNovosDados.getNickname());
+
+        return new ResponseEntity<>(colecionadorAserAtualizado, HttpStatus.OK);
     }
 }
