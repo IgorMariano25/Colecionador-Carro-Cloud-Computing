@@ -23,12 +23,23 @@ import br.com.colecionador.api_carros.model.Carro;
 public class CarroController {
 
     private static ArrayList<Carro> Carros = new ArrayList<>();
+
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
         try {
             return new ResponseEntity<>(Carros, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<Carro> create(@RequestBody Carro item) {
+        try {
+            Carros.add(item);
+            return new ResponseEntity<>(item, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
         }
     }
 }
