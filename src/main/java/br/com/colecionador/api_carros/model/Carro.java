@@ -39,6 +39,7 @@ public class Carro {
     @Column(nullable = false)
     @NotBlank(message = "O campo quilometragem não pode ser vazio")
     private Integer quilometragem;
+
     public long getId() {
         return this.id;
     }
@@ -61,6 +62,14 @@ public class Carro {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public String getCor() {
+        return this.cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
     public String getAnoDeFabricacao() {
