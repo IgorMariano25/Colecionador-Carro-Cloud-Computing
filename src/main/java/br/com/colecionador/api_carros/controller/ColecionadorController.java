@@ -22,4 +22,22 @@ import br.com.colecionador.api_carros.model.Colecionador;;
 @RequestMapping("/colecionador")
 public class ColecionadorController {
 
+    @GetMapping
+    public ResponseEntity<List<Colecionador>> getAll() {
+        try {
+            List<Colecionador> items = new ArrayList<Colecionador>();
+            Colecionador colecionador = new Colecionador();
+            colecionador.setNome("Igor");
+            colecionador.setSobrenome("Mariano");
+            colecionador.setNickname("DK");
+            colecionador.setCpf("123.456.789.00");
+            colecionador.setEmail("teste@teste.com");
+
+            items.add(colecionador);
+
+            return new ResponseEntity<>(items, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
