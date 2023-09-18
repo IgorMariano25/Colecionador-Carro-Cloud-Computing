@@ -89,4 +89,13 @@ public class Colecionador {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
 }
