@@ -33,6 +33,9 @@ public class Colecionador {
     private String sobrenome;
 
     @Column(nullable = true)
+    private String nickname;
+
+    @Column(nullable = true)
     @NotBlank(message = "O campo cpf não pode ser vazio")
     @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}", message = "cpf não está em um formato válido")
     private String cpf;
