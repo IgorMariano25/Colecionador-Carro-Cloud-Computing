@@ -9,6 +9,7 @@
   <a href="https://postman.com" target="_blank"><img alt="postman" width="65" height="65" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" /></a>
   <a href="https://azure.microsoft.com/en-us/" target="_blank"><img alt="AAzure -Microsoft" width="80" height="80" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" /></a>
   <a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank"><img alt="Windows-11-logo-Icon" width="80" height="80" src="https://img.icons8.com/color/48/windows-11.png"/></a>
+  <a href="https://git-scm.com/" target="_blank"><img alt="Windows-11-logo-Icon" width="70" height="70" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"/></a>
 </div>
 
 ## Tags de versões do Software 🏷️
