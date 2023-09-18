@@ -58,7 +58,8 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,@RequestBody Colecionador colecionadorNovosDados) {
+    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,
+            @RequestBody Colecionador colecionadorNovosDados) {
 
         Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
@@ -79,20 +80,14 @@ public class ColecionadorController {
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
         try {
 
-            Colecionador colecionadorASerExluido = null;
+            Optional<Colecionador> colecionadorASerExcluido = this._colecionadorRepository.findById(id);
 
-            for (Colecionador item : Colecionadores) {
-                if (item.getId() == id) {
-                    colecionadorASerExluido = item;
-                    break;
-                }
-            }
-
-            if (colecionadorASerExluido == null) {
+            if (colecionadorASerExcluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            Colecionadores.remove(colecionadorASerExluido);
+            this._colecionadorRepository.delete(colecionadorASerExcluido.get());
+
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
