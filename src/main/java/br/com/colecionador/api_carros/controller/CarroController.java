@@ -84,4 +84,28 @@ public class CarroController {
 
         return new ResponseEntity<>(carroAserAtualizado, HttpStatus.OK);
     }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+        try {
+
+            Carro carroASerExluido = null;
+
+            for (Carro item : Carros) {
+                if (item.getId() == id) {
+                    carroASerExluido = item;
+                    break;
+                }
+            }
+
+            if (carroASerExluido == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            Carros.remove(carroASerExluido);
+            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+        }
+    }
 }
