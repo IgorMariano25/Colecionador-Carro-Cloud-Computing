@@ -22,20 +22,11 @@ import br.com.colecionador.api_carros.model.Carro;
 @RequestMapping("/carro")
 public class CarroController {
 
+    private static ArrayList<Carro> Carros = new ArrayList<>();
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            List<Carro> items = new ArrayList<Carro>();
-            Carro carro = new Carro();
-            carro.setMarca("Ferrai");
-            carro.setModelo("458");
-            carro.setAnoDeFabricacao("2015");
-            carro.setVelocidadeMaxima(325);
-            carro.setQuilometragem(1000);
-
-            items.add(carro);
-
-            return new ResponseEntity<>(items, HttpStatus.OK);
+            return new ResponseEntity<>(Carros, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
