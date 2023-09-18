@@ -98,4 +98,11 @@ public class Colecionador {
         this.enderecos = enderecos;
     }
 
+    public List<Carro> getCarros() {
+        return this.carros;
+    }
+
+    public void setCarros(List<Carro> carros) {
+        this.carros = carros;
+    }
 }
