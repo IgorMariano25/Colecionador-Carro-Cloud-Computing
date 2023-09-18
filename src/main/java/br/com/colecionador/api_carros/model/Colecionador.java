@@ -34,7 +34,7 @@ public class Colecionador {
 
     @Column(nullable = true)
     @NotBlank(message = "O campo cpf não pode ser vazio")
-    @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}", message = "cpf não está em um formato válido" )
+    @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}", message = "cpf não está em um formato válido")
     private String cpf;
 
     @Column(nullable = true)
@@ -46,12 +46,16 @@ public class Colecionador {
     @JoinColumn(name = "colecionador_id")
     private List<Endereco> enderecos;
 
-    public List<Endereco> getEnderecos() {
-        return enderecos;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JoinColumn(name = "colecionador_id")
+    private List<Carro> carros;
+
+    public String getSobrenome() {
+        return this.sobrenome;
     }
 
-    public void setEnderecos(List<Endereco> enderecos) {
-        this.enderecos = enderecos;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getCpf() {
