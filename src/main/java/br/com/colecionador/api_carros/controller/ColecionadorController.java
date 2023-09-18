@@ -58,26 +58,21 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,
-            @RequestBody Colecionador colecionadorNovosDados) {
+    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,@RequestBody Colecionador colecionadorNovosDados) {
 
-        Colecionador colecionadorAserAtualizado = null;
+        Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
-        for (Colecionador item : Colecionadores) {
-            if (item.getId() == id) {
-                colecionadorAserAtualizado = item;
-                break;
-            }
-        }
-
-        if (colecionadorAserAtualizado == null) {
+        if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        colecionadorAserAtualizado.setEmail(colecionadorNovosDados.getEmail());
-        colecionadorAserAtualizado.setNickname(colecionadorNovosDados.getNickname());
+        Colecionador colecionadorASerAtualizado = result.get();
+        colecionadorASerAtualizado.setEmail(colecionadorNovosDados.getEmail());
+        colecionadorASerAtualizado.setNickname(colecionadorNovosDados.getNickname());
 
-        return new ResponseEntity<>(colecionadorAserAtualizado, HttpStatus.OK);
+        this._colecionadorRepository.save(colecionadorASerAtualizado);
+
+        return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
