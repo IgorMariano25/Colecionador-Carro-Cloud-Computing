@@ -63,11 +63,19 @@ public class Carro {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
-    public Long getQuilometragem() {
+    public Integer getVelocidadeMaxima() {
+        return this.velocidadeMaxima;
+    }
+
+    public void setVelocidadeMaxima(Integer velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    public Integer getQuilometragem() {
         return this.quilometragem;
     }
 
-    public void setQuilometragem(Long quilometragem) {
+    public void setQuilometragem(Integer quilometragem) {
         this.quilometragem = quilometragem;
     }
 }
