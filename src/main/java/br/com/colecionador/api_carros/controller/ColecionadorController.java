@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.model.Colecionador;
+import br.com.colecionador.api_carros.model.Colecionador;
 
 @RestController
 @RequestMapping("/colecionador")
@@ -64,7 +65,8 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") Integer id, @RequestBody Colecionador colecionadorNovosDados) {
+    public ResponseEntity<Colecionador> update(@PathVariable("id") Integer id,
+            @RequestBody Colecionador colecionadorNovosDados) {
 
         Colecionador colecionadorAserAtualizado = null;
 
@@ -83,5 +85,29 @@ public class ColecionadorController {
         colecionadorAserAtualizado.setNickname(colecionadorNovosDados.getNickname());
 
         return new ResponseEntity<>(colecionadorAserAtualizado, HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+        try {
+
+            Colecionador colecionadorASerExluido = null;
+
+            for (Colecionador item : Colecionadores) {
+                if (item.getId() == id) {
+                    colecionadorASerExluido = item;
+                    break;
+                }
+            }
+
+            if (colecionadorASerExluido == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            Colecionadores.remove(colecionadorASerExluido);
+            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+        }
     }
 }
