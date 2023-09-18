@@ -16,26 +16,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.colecionador.api_carros.model.Colecionador;;
+import br.com.colecionador.api_carros.model.Colecionador;
 
 @RestController
 @RequestMapping("/colecionador")
 public class ColecionadorController {
 
+    private static ArrayList<Colecionador> Colecionadores = new ArrayList<>();
+
     @GetMapping
     public ResponseEntity<List<Colecionador>> getAll() {
         try {
-            List<Colecionador> items = new ArrayList<Colecionador>();
-            Colecionador colecionador = new Colecionador();
-            colecionador.setNome("Igor");
-            colecionador.setSobrenome("Mariano");
-            colecionador.setNickname("DK");
-            colecionador.setCpf("123.456.789.00");
-            colecionador.setEmail("teste@teste.com");
-
-            items.add(colecionador);
-
-            return new ResponseEntity<>(items, HttpStatus.OK);
+            return new ResponseEntity<>(Colecionadores, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
