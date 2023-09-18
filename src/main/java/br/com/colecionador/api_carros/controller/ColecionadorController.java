@@ -58,7 +58,7 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") Integer id,
+    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,
             @RequestBody Colecionador colecionadorNovosDados) {
 
         Colecionador colecionadorAserAtualizado = null;
@@ -81,7 +81,7 @@ public class ColecionadorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
         try {
 
             Colecionador colecionadorASerExluido = null;
