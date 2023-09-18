@@ -46,19 +46,12 @@ public class ColecionadorController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Colecionador> getById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Colecionador> getById(@PathVariable("id") long id) {
 
-        Colecionador result = null;
+        Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
-        for (Colecionador item : Colecionadores) {
-            if (item.getId() == id) {
-                result = item;
-                break;
-            }
-        }
-
-        if (result != null) {
-            return new ResponseEntity<>(result, HttpStatus.OK);
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
