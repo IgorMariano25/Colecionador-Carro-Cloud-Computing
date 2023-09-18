@@ -30,7 +30,7 @@ public class Carro {
 
     @Column(nullable = true, length = 100)
     @NotBlank(message = "O campo ano de fabricação não pode ser vazio")
-    private String anoDeFabricacao;
+    private Integer anoDeFabricacao;
 
     @Column(nullable = false)
     @NotBlank(message = "O campo velocidade máxima não pode ser vazio")
@@ -72,11 +72,11 @@ public class Carro {
         this.cor = cor;
     }
 
-    public String getAnoDeFabricacao() {
+    public Integer getAnoDeFabricacao() {
         return this.anoDeFabricacao;
     }
 
-    public void setAnoDeFabricacao(String anoDeFabricacao) {
+    public void setAnoDeFabricacao(Integer anoDeFabricacao) {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
