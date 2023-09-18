@@ -48,7 +48,7 @@ public class CarroController {
 
         Carro result = null;
 
-        for (Carro item : Carros){
+        for (Carro item : Carros) {
             if (item.getId() == id) {
                 result = item;
                 break;
@@ -60,5 +60,28 @@ public class CarroController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Carro> update(@PathVariable("id") Integer id, @RequestBody Carro carroNovosDados) {
+
+        Carro carroAserAtualizado = null;
+
+        for (Carro item : Carros) {
+            if (item.getId() == id) {
+                carroAserAtualizado = item;
+                break;
+            }
+        }
+
+        if (carroAserAtualizado == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        carroAserAtualizado.setMarca(carroNovosDados.getMarca());
+        carroAserAtualizado.setModelo(carroNovosDados.getModelo());
+        carroAserAtualizado.setCor(carroNovosDados.getCor());
+
+        return new ResponseEntity<>(carroAserAtualizado, HttpStatus.OK);
     }
 }
