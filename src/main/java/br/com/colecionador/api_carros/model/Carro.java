@@ -15,7 +15,7 @@ public class Carro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    
+
     @Column(nullable = false)
     @NotBlank(message = "O campo marca não pode ser vazio")
     private String marca;
@@ -23,6 +23,10 @@ public class Carro {
     @Column(nullable = false)
     @NotBlank(message = "O campo modelo não pode ser vazio")
     private String modelo;
+
+    @Column(nullable = false)
+    @NotBlank(message = "O campo cor não pode ser vazio")
+    private String cor;
 
     @Column(nullable = true)
     @NotBlank(message = "O campo ano de fabricação não pode ser vazio")
