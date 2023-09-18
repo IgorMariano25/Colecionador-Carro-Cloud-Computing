@@ -38,8 +38,8 @@ public class ColecionadorController {
     @PostMapping
     public ResponseEntity<Colecionador> create(@RequestBody Colecionador item) {
         try {
-            Colecionadores.add(item);
-            return new ResponseEntity<>(item, HttpStatus.CREATED);
+            Colecionador result = this._colecionadorRepository.save(item);
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
         }
