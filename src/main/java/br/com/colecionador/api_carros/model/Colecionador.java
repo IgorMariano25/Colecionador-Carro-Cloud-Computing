@@ -21,7 +21,7 @@ import jakarta.validation.constraints.Pattern;
 public class Colecionador {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(nullable = false, length = 100)
