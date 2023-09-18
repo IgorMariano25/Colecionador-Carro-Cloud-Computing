@@ -8,3 +8,7 @@
   <a href="https://spring.io" target="_blank"><img alt="Spring-boot-logo-icon" height="60" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"/></a>
   <a href="https://postman.com" target="_blank"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="65" height="65"/></a>
 </div></br>
+
+## Tags de versões do Software 🏷️
+- **[V1.0.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.0.0)**
+- **[V1.1.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.1.0)**
