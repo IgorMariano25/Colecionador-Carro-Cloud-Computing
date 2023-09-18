@@ -42,4 +42,23 @@ public class CarroController {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
         }
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Carro> getById(@PathVariable("id") Integer id) {
+
+        Carro result = null;
+
+        for (Carro item : Carros){
+            if (item.getId() == id) {
+                result = item;
+                break;
+            }
+        }
+
+        if (result != null) {
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
