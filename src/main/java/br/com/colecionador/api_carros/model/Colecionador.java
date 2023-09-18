@@ -53,20 +53,12 @@ public class Colecionador {
     @JoinColumn(name = "colecionador_id")
     private List<Carro> carros;
 
-    public String getSobrenome() {
-        return this.sobrenome;
+    public long getId() {
+        return id;
     }
 
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -77,12 +69,28 @@ public class Colecionador {
         this.nome = nome;
     }
 
-    public long getId() {
-        return id;
+    public String getSobrenome() {
+        return this.sobrenome;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getNickname() {
+        return this.nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public void addEndereco(Endereco endereco) {
