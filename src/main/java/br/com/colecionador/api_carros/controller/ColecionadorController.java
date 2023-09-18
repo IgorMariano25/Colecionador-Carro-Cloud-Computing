@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/colecionador")
