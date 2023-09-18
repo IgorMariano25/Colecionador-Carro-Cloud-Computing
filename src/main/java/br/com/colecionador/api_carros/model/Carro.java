@@ -13,9 +13,9 @@ import jakarta.validation.constraints.NotBlank;
 public class Carro {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    
+
     @Column(nullable = false)
     @NotBlank(message = "O campo marca não pode ser vazio")
     private String marca;
@@ -23,6 +23,10 @@ public class Carro {
     @Column(nullable = false)
     @NotBlank(message = "O campo modelo não pode ser vazio")
     private String modelo;
+
+    @Column(nullable = false)
+    @NotBlank(message = "O campo cor não pode ser vazio")
+    private String cor;
 
     @Column(nullable = true)
     @NotBlank(message = "O campo ano de fabricação não pode ser vazio")
@@ -35,6 +39,7 @@ public class Carro {
     @Column(nullable = false)
     @NotBlank(message = "O campo quilometragem não pode ser vazio")
     private Integer quilometragem;
+
     public long getId() {
         return this.id;
     }
@@ -57,6 +62,14 @@ public class Carro {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public String getCor() {
+        return this.cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
     public String getAnoDeFabricacao() {

@@ -22,22 +22,90 @@ import br.com.colecionador.api_carros.model.Carro;
 @RequestMapping("/carro")
 public class CarroController {
 
+    private static ArrayList<Carro> Carros = new ArrayList<>();
+
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            List<Carro> items = new ArrayList<Carro>();
-            Carro carro = new Carro();
-            carro.setMarca("Ferrai");
-            carro.setModelo("458");
-            carro.setAnoDeFabricacao("2015");
-            carro.setVelocidadeMaxima(325);
-            carro.setQuilometragem(1000);
-
-            items.add(carro);
-
-            return new ResponseEntity<>(items, HttpStatus.OK);
+            return new ResponseEntity<>(Carros, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<Carro> create(@RequestBody Carro item) {
+        try {
+            Carros.add(item);
+            return new ResponseEntity<>(item, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+        }
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Carro> getById(@PathVariable("id") Integer id) {
+
+        Carro result = null;
+
+        for (Carro item : Carros) {
+            if (item.getId() == id) {
+                result = item;
+                break;
+            }
+        }
+
+        if (result != null) {
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Carro> update(@PathVariable("id") Integer id, @RequestBody Carro carroNovosDados) {
+
+        Carro carroAserAtualizado = null;
+
+        for (Carro item : Carros) {
+            if (item.getId() == id) {
+                carroAserAtualizado = item;
+                break;
+            }
+        }
+
+        if (carroAserAtualizado == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        carroAserAtualizado.setMarca(carroNovosDados.getMarca());
+        carroAserAtualizado.setModelo(carroNovosDados.getModelo());
+        carroAserAtualizado.setCor(carroNovosDados.getCor());
+
+        return new ResponseEntity<>(carroAserAtualizado, HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+        try {
+
+            Carro carroASerExluido = null;
+
+            for (Carro item : Carros) {
+                if (item.getId() == id) {
+                    carroASerExluido = item;
+                    break;
+                }
+            }
+
+            if (carroASerExluido == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            Carros.remove(carroASerExluido);
+            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
         }
     }
 }

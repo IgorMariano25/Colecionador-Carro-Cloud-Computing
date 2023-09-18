@@ -13,7 +13,7 @@ import jakarta.validation.constraints.NotBlank;
 public class Endereco {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     
     @Column(length = 200, nullable = false)
