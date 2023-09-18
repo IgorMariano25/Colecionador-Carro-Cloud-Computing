@@ -24,10 +24,13 @@ public class Carro {
     @NotBlank(message = "O campo ano de fabricação não pode ser vazio")
     private String anoDeFabricacao;
 
-    @Column(nullable = true)
-    @NotBlank(message = "O campo quilometragem não pode ser vazio")
-    private Long quilometragem;
+    @Column(nullable = false)
+    @NotBlank(message = "O campo velocidade máxima não pode ser vazio")
+    private Integer velocidadeMaxima;
 
+    @Column(nullable = false)
+    @NotBlank(message = "O campo quilometragem não pode ser vazio")
+    private Integer quilometragem;
     public long getId() {
         return this.id;
     }
