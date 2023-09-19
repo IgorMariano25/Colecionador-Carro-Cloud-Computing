@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/carro")
@@ -36,12 +37,12 @@ public class CarroController {
     }
 
     @PostMapping
-    public ResponseEntity<Carro> create(@RequestBody Carro item) {
+    public ResponseEntity<Carro> create(@Valid @RequestBody Carro item) {
         try {
-            Carros.add(item);
-            return new ResponseEntity<>(item, HttpStatus.CREATED);
+            Carro result = this._carroRepsoitory.save(item);
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 
