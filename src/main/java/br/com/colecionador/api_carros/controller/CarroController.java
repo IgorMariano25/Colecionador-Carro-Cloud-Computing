@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 import jakarta.validation.Valid;
 
@@ -60,24 +61,20 @@ public class CarroController {
 
     @PutMapping("{id}")
     public ResponseEntity<Carro> update(@PathVariable("id") long id, @RequestBody Carro carroNovosDados) {
-        Carro carroAserAtualizado = null;
 
-        for (Carro item : Carros) {
-            if (item.getId() == id) {
-                carroAserAtualizado = item;
-                break;
-            }
-        }
+        Optional<Carro> result = this._carroRepsoitory.findById(id);
 
-        if (carroAserAtualizado == null) {
+        if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        carroAserAtualizado.setMarca(carroNovosDados.getMarca());
-        carroAserAtualizado.setModelo(carroNovosDados.getModelo());
-        carroAserAtualizado.setCor(carroNovosDados.getCor());
+        Carro carroASerAtualizado = result.get();
+        carroASerAtualizado.setCor(carroNovosDados.getCor());
+        carroASerAtualizado.setQuilometragem(carroNovosDados.getQuilometragem());
 
-        return new ResponseEntity<>(carroAserAtualizado, HttpStatus.OK);
+        this._carroRepsoitory.save(carroASerAtualizado);
+
+        return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
