@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Endereco;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
 import jakarta.validation.Valid;
 
@@ -25,6 +26,9 @@ public class EnderecoController {
 
     @Autowired
     private EnderecoRepository _enderecoRepository;
+
+    @Autowired
+    private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
     public ResponseEntity<List<Endereco>> getAll() {
