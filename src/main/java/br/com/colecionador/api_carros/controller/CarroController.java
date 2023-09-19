@@ -49,17 +49,10 @@ public class CarroController {
     @GetMapping("{id}")
     public ResponseEntity<Carro> getById(@PathVariable("id") long id) {
 
-        Carro result = null;
+        Optional<Carro> result = this._carroRepsoitory.findById(id);
 
-        for (Carro item : Carros) {
-            if (item.getId() == id) {
-                result = item;
-                break;
-            }
-        }
-
-        if (result != null) {
-            return new ResponseEntity<>(result, HttpStatus.OK);
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -67,7 +60,6 @@ public class CarroController {
 
     @PutMapping("{id}")
     public ResponseEntity<Carro> update(@PathVariable("id") long id, @RequestBody Carro carroNovosDados) {
-
         Carro carroAserAtualizado = null;
 
         for (Carro item : Carros) {
