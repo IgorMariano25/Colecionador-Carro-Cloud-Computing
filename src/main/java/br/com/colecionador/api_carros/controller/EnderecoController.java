@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Endereco;
 import br.com.colecionador.api_carros.model.Endereco;
+import br.com.colecionador.api_carros.model.Endereco;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
 import jakarta.validation.Valid;
 
@@ -44,6 +45,18 @@ public class EnderecoController {
             return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Endereco> getById(@PathVariable("id") long id) {
+
+        Optional<Endereco> result = this._enderecoRepository.findById(id);
+
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }
