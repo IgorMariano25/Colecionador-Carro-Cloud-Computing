@@ -20,7 +20,7 @@ import br.com.colecionador.api_carros.repository.EnderecoRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/enderecos")
+@RequestMapping("/endereco")
 public class EnderecoController {
 
     @Autowired
