@@ -78,4 +78,22 @@ public class EnderecoController {
 
         return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
+        try {
+
+            Optional<Endereco> enderecoASerExcluido = this._enderecoRepository.findById(id);
+
+            if (enderecoASerExcluido.isPresent() == false) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            this._enderecoRepository.delete(enderecoASerExcluido.get());
+
+            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+        }
+    }
 }
