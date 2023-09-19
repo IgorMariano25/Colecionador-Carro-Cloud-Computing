@@ -81,20 +81,13 @@ public class CarroController {
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
         try {
 
-            Carro carroASerExluido = null;
+           Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
 
-            for (Carro item : Carros) {
-                if (item.getId() == id) {
-                    carroASerExluido = item;
-                    break;
-                }
-            }
-
-            if (carroASerExluido == null) {
+            if (carroASerExluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            Carros.remove(carroASerExluido);
+            this._carroRepsoitory.delete(carroASerExluido.get());
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
