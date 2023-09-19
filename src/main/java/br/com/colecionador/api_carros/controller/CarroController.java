@@ -47,7 +47,7 @@ public class CarroController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Carro> getById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Carro> getById(@PathVariable("id") long id) {
 
         Carro result = null;
 
@@ -66,7 +66,7 @@ public class CarroController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Carro> update(@PathVariable("id") Integer id, @RequestBody Carro carroNovosDados) {
+    public ResponseEntity<Carro> update(@PathVariable("id") long id, @RequestBody Carro carroNovosDados) {
 
         Carro carroAserAtualizado = null;
 
@@ -89,7 +89,7 @@ public class CarroController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
         try {
 
             Carro carroASerExluido = null;
