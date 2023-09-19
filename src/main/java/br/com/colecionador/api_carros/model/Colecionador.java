@@ -120,4 +120,8 @@ public class Colecionador {
     public void setCarros(List<Carro> carros) {
         this.carros = carros;
     }
+
+    public void adicionarEndereco(Endereco endereco){
+        this.enderecos.add(endereco);
+    }
 }
