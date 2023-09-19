@@ -57,4 +57,26 @@ public class EnderecoController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Endereco> update(@PathVariable("id") long id,
+            @RequestBody Endereco enderecoNovosDados) {
+
+        Optional<Endereco> result = this._enderecoRepository.findById(id);
+
+        if (result.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        Endereco enderecoASerAtualizado = result.get();
+        enderecoASerAtualizado.setLogradouro(enderecoNovosDados.getLogradouro());
+        enderecoASerAtualizado.setComplemento(enderecoASerAtualizado.getComplemento());
+        enderecoASerAtualizado.setCidade(enderecoASerAtualizado.getCidade());
+        enderecoASerAtualizado.setEstado(enderecoASerAtualizado.getEstado());
+        enderecoASerAtualizado.setCep(enderecoASerAtualizado.getCep());
+
+        this._enderecoRepository.save(enderecoASerAtualizado);
+
+        return new ResponseEntity<>(result.get(), HttpStatus.OK);
+    }
 }
