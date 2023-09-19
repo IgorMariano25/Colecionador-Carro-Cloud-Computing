@@ -1,6 +1,5 @@
 package br.com.colecionador.api_carros.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,6 +1,5 @@
 package br.com.colecionador.api_carros.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
-import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 import jakarta.validation.Valid;
 
