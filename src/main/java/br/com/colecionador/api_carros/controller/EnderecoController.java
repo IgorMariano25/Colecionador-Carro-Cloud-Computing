@@ -20,6 +20,19 @@ import br.com.colecionador.api_carros.model.Endereco;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
 import jakarta.validation.Valid;
 
+@RestController
+@RequestMapping("/enderecos")
 public class EnderecoController {
-    
+
+    @Autowired
+    private EnderecoRepository _enderecoRepository;
+
+    @GetMapping
+    public ResponseEntity<List<Endereco>> getAll() {
+        try {
+            return new ResponseEntity<>(this._enderecoRepository.findAll(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
