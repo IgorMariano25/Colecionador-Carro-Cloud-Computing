@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Endereco;
+import br.com.colecionador.api_carros.model.Endereco;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
 import jakarta.validation.Valid;
 
@@ -33,6 +34,16 @@ public class EnderecoController {
             return new ResponseEntity<>(this._enderecoRepository.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<Endereco> create(@Valid @RequestBody Endereco item) {
+        try {
+            Endereco result = this._enderecoRepository.save(item);
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 }
