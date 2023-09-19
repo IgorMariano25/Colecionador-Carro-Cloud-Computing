@@ -17,17 +17,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 
 @RestController
 @RequestMapping("/carro")
 public class CarroController {
 
-    private static ArrayList<Carro> Carros = new ArrayList<>();
+    @Autowired
+    private CarroRepsoitory _carroRepsoitory;
 
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            return new ResponseEntity<>(Carros, HttpStatus.OK);
+            return new ResponseEntity<>(this._carroRepsoitory.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
