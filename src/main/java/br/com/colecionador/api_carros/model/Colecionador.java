@@ -124,4 +124,8 @@ public class Colecionador {
     public void adicionarEndereco(Endereco endereco){
         this.enderecos.add(endereco);
     }
+
+    public void adicionarCarros(Carro carro){
+        this.carros.add(carro);
+    }
 }
