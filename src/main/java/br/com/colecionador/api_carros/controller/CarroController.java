@@ -40,8 +40,9 @@ public class CarroController {
         }
     }
 
-    @PostMapping({"idColecionador"})
-    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador, @Valid @RequestBody Carro carro) {
+    @PostMapping("{idColecionador}")
+    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
+            @Valid @RequestBody Carro carro) {
         try {
 
             Optional<Colecionador> colecionador = this._colecionadorRepository.findById(idColecionador);
@@ -52,6 +53,7 @@ public class CarroController {
 
             colecionador.get().adicionarCarros(carro);
             this._colecionadorRepository.save(colecionador.get());
+
             return new ResponseEntity<>(carro, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
@@ -92,7 +94,7 @@ public class CarroController {
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
-           Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
+            Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
 
             if (carroASerExluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
