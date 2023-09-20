@@ -72,12 +72,11 @@ public class EnderecoController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Endereco> update(@PathVariable("id") long id,
-            @RequestBody Endereco enderecoNovosDados) {
+    public ResponseEntity<Endereco> update(@PathVariable("id") long id, @RequestBody Endereco enderecoNovosDados) {
 
-        Optional<Endereco> result = this._enderecoRepository.findById(id);
+        Optional<Endereco> result = _enderecoRepository.findById(id);
 
-        if (result.isEmpty()) {
+        if (result.isPresent() == false) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
@@ -90,7 +89,7 @@ public class EnderecoController {
 
         this._enderecoRepository.save(enderecoASerAtualizado);
 
-        return new ResponseEntity<>(result.get(), HttpStatus.OK);
+        return new ResponseEntity<>(enderecoASerAtualizado, HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
