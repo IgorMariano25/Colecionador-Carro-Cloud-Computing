@@ -6,7 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "carros")
@@ -29,15 +32,19 @@ public class Carro {
     private String cor;
 
     @Column(nullable = true, length = 100)
-    @NotBlank(message = "O campo ano de fabricação não pode ser vazio")
+    @NotNull(message = "O campo ano de fabricação não pode ser Null")
+    @Min(value = 1885, message = "O ano de fabricação deve ser maior ou igual a 1885")
+    @Max(value = 2023, message = "O ano de fabricação deve ser menor ou igual a 2023")
     private Integer anoDeFabricacao;
 
     @Column(nullable = false)
-    @NotBlank(message = "O campo velocidade máxima não pode ser vazio")
+    @NotNull(message = "O campo velocidade máxima não pode ser Null")
+    @Max(value = 500, message = "O campo velocidade máxima não pode ser maior que 550")
     private Integer velocidadeMaxima;
-
+    
     @Column(nullable = false)
-    @NotBlank(message = "O campo quilometragem não pode ser vazio")
+    @NotNull(message = "O campo quilometragem não pode ser Null")
+    @Min(value = 0, message = "A quilometragem deve ser maior ou igual a 0")
     private Integer quilometragem;
 
     public Long getId() {
