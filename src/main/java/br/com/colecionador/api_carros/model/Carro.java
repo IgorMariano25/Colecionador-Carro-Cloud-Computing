@@ -14,7 +14,7 @@ public class Carro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo marca não pode ser vazio")
@@ -40,11 +40,11 @@ public class Carro {
     @NotBlank(message = "O campo quilometragem não pode ser vazio")
     private Integer quilometragem;
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
