@@ -14,11 +14,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.Valid;
 
 import br.com.colecionador.api_carros.model.Endereco;
-import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
-import jakarta.validation.Valid;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 
 @RestController
 @RequestMapping("/endereco")
