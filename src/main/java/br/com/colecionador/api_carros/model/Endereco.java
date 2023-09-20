@@ -35,7 +35,7 @@ public class Endereco {
 
     @Column(length = 100, nullable = false)
     @NotBlank(message = "O campo cep não pode ser vazio")
-    @Pattern(regexp = "\\d{5}\\-\\d{2}", message = "cpf não está em um formato válido")
+    @Pattern(regexp = "\\d{5}\\-\\d{3}", message = "cpf não está em um formato válido")
     private String cep;
 
     public long getId() {
