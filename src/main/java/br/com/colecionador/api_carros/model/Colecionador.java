@@ -22,7 +22,7 @@ public class Colecionador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo nome não pode ser vazio")
@@ -53,11 +53,11 @@ public class Colecionador {
     @JoinColumn(name = "colecionador_id")
     private List<Carro> carros;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
