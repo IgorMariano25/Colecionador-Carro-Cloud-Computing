@@ -39,11 +39,21 @@ public class EnderecoController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<Endereco> create(@Valid @RequestBody Endereco item) {
+    @PostMapping("{idColecionador}")
+    public ResponseEntity<Endereco> create(@PathVariable("idColecionador") long idColecionador,
+            @Valid @RequestBody Endereco endereco) {
         try {
-            Endereco result = this._enderecoRepository.save(item);
-            return new ResponseEntity<>(result, HttpStatus.CREATED);
+
+            Optional<Colecionador> colecionador = this._colecionadorRepository.findById(idColecionador);
+
+            if (colecionador.isPresent() == false) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            colecionador.get().addEndereco(endereco);
+            this._colecionadorRepository.save(colecionador.get());
+
+            return new ResponseEntity<>(endereco, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
