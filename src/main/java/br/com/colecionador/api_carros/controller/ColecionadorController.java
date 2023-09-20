@@ -46,7 +46,7 @@ public class ColecionadorController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Colecionador> getById(@PathVariable("id") long id) {
+    public ResponseEntity<Colecionador> getById(@PathVariable("id") Long id) {
 
         Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
@@ -58,7 +58,7 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") long id,
+    public ResponseEntity<Colecionador> update(@PathVariable("id") Long id,
             @RequestBody Colecionador colecionadorNovosDados) {
 
         Optional<Colecionador> result = this._colecionadorRepository.findById(id);
@@ -77,7 +77,7 @@ public class ColecionadorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
             Optional<Colecionador> colecionadorASerExcluido = this._colecionadorRepository.findById(id);
