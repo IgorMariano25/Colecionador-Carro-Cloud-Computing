@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 import jakarta.validation.Valid;
@@ -39,11 +40,19 @@ public class CarroController {
         }
     }
 
-    @PostMapping()
-    public ResponseEntity<Carro> create(@Valid @RequestBody Carro item) {
+    @PostMapping({"idColecionador"})
+    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador, @Valid @RequestBody Carro carro) {
         try {
-            Carro result = this._carroRepsoitory.save(item);
-            return new ResponseEntity<>(result, HttpStatus.CREATED);
+
+            Optional<Colecionador> colecionador = this._colecionadorRepository.findById(idColecionador);
+
+            if (colecionador.isPresent() == false) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            colecionador.get().adicionarCarros(carro);
+            this._colecionadorRepository.save(colecionador.get());
+            return new ResponseEntity<>(carro, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
