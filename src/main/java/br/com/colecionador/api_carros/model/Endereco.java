@@ -15,7 +15,7 @@ public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(length = 200, nullable = false)
     @NotBlank(message = "O campo logradouro não pode ser vazio")
@@ -38,11 +38,11 @@ public class Endereco {
     @Pattern(regexp = "\\d{5}\\-\\d{3}", message = "cpf não está em um formato válido")
     private String cep;
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
