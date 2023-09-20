@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 import jakarta.validation.Valid;
 
 @RestController
@@ -25,6 +26,9 @@ public class CarroController {
 
     @Autowired
     private CarroRepsoitory _carroRepsoitory;
+
+    @Autowired
+    private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
