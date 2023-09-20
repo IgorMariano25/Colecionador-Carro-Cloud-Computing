@@ -41,7 +41,7 @@ public class EnderecoController {
     }
 
     @PostMapping("{idColecionador}")
-    public ResponseEntity<Endereco> create(@PathVariable("idColecionador") long idColecionador,
+    public ResponseEntity<Endereco> create(@PathVariable("idColecionador") Long idColecionador,
             @Valid @RequestBody Endereco endereco) {
         try {
 
@@ -61,7 +61,7 @@ public class EnderecoController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Endereco> getById(@PathVariable("id") long id) {
+    public ResponseEntity<Endereco> getById(@PathVariable("id") Long id) {
 
         Optional<Endereco> result = this._enderecoRepository.findById(id);
 
@@ -73,7 +73,7 @@ public class EnderecoController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Endereco> update(@PathVariable("id") long id, @RequestBody Endereco enderecoNovosDados) {
+    public ResponseEntity<Endereco> update(@PathVariable("id") Long id, @RequestBody Endereco enderecoNovosDados) {
 
         Optional<Endereco> result = _enderecoRepository.findById(id);
 
@@ -94,7 +94,7 @@ public class EnderecoController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
             Optional<Endereco> enderecoASerExcluido = this._enderecoRepository.findById(id);
