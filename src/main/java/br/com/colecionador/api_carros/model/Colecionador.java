@@ -21,18 +21,18 @@ import jakarta.validation.constraints.Pattern;
 public class Colecionador {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo nome não pode ser vazio")
     private String nome;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     @NotBlank(message = "O campo nome não pode ser vazio")
     private String sobrenome;
 
-    @Column(nullable = true)
+    @Column(nullable = true, length = 100)
     private String nickname;
 
     @Column(nullable = true)
@@ -53,11 +53,11 @@ public class Colecionador {
     @JoinColumn(name = "colecionador_id")
     private List<Carro> carros;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -119,5 +119,13 @@ public class Colecionador {
 
     public void setCarros(List<Carro> carros) {
         this.carros = carros;
+    }
+
+    public void adicionarEndereco(Endereco endereco){
+        this.enderecos.add(endereco);
+    }
+
+    public void adicionarCarros(Carro carro){
+        this.carros.add(carro);
     }
 }

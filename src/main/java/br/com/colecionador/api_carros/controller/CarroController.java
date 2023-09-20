@@ -1,6 +1,5 @@
 package br.com.colecionador.api_carros.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,92 +16,91 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.model.Colecionador;
+import br.com.colecionador.api_carros.repository.CarroRepsoitory;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/carro")
 public class CarroController {
 
-    private static ArrayList<Carro> Carros = new ArrayList<>();
+    @Autowired
+    private CarroRepsoitory _carroRepsoitory;
+
+    @Autowired
+    private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            return new ResponseEntity<>(Carros, HttpStatus.OK);
+            return new ResponseEntity<>(this._carroRepsoitory.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PostMapping
-    public ResponseEntity<Carro> create(@RequestBody Carro item) {
+    @PostMapping("{idColecionador}")
+    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
+            @Valid @RequestBody Carro carro) {
         try {
-            Carros.add(item);
-            return new ResponseEntity<>(item, HttpStatus.CREATED);
+
+            Optional<Colecionador> colecionador = this._colecionadorRepository.findById(idColecionador);
+
+            if (colecionador.isPresent() == false) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            colecionador.get().adicionarCarros(carro);
+            this._colecionadorRepository.save(colecionador.get());
+
+            return new ResponseEntity<>(carro, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Carro> getById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Carro> getById(@PathVariable("id") Long id) {
 
-        Carro result = null;
+        Optional<Carro> result = this._carroRepsoitory.findById(id);
 
-        for (Carro item : Carros) {
-            if (item.getId() == id) {
-                result = item;
-                break;
-            }
-        }
-
-        if (result != null) {
-            return new ResponseEntity<>(result, HttpStatus.OK);
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Carro> update(@PathVariable("id") Integer id, @RequestBody Carro carroNovosDados) {
+    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) {
 
-        Carro carroAserAtualizado = null;
+        Optional<Carro> result = this._carroRepsoitory.findById(id);
 
-        for (Carro item : Carros) {
-            if (item.getId() == id) {
-                carroAserAtualizado = item;
-                break;
-            }
-        }
-
-        if (carroAserAtualizado == null) {
+        if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        carroAserAtualizado.setMarca(carroNovosDados.getMarca());
-        carroAserAtualizado.setModelo(carroNovosDados.getModelo());
-        carroAserAtualizado.setCor(carroNovosDados.getCor());
+        Carro carroASerAtualizado = result.get();
+        carroASerAtualizado.setCor(carroNovosDados.getCor());
+        carroASerAtualizado.setQuilometragem(carroNovosDados.getQuilometragem());
 
-        return new ResponseEntity<>(carroAserAtualizado, HttpStatus.OK);
+        this._carroRepsoitory.save(carroASerAtualizado);
+
+        return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
-            Carro carroASerExluido = null;
+            Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
 
-            for (Carro item : Carros) {
-                if (item.getId() == id) {
-                    carroASerExluido = item;
-                    break;
-                }
-            }
-
-            if (carroASerExluido == null) {
+            if (carroASerExluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            Carros.remove(carroASerExluido);
+            this._carroRepsoitory.delete(carroASerExluido.get());
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);

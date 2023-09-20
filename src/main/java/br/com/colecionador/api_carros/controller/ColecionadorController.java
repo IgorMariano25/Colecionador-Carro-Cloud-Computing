@@ -1,6 +1,5 @@
 package br.com.colecionador.api_carros.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,94 +16,78 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Colecionador;
-import br.com.colecionador.api_carros.model.Colecionador;
-import br.com.colecionador.api_carros.model.Colecionador;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/colecionador")
 public class ColecionadorController {
 
-    private static ArrayList<Colecionador> Colecionadores = new ArrayList<>();
+    @Autowired
+    private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
     public ResponseEntity<List<Colecionador>> getAll() {
         try {
-            return new ResponseEntity<>(Colecionadores, HttpStatus.OK);
+            return new ResponseEntity<>(this._colecionadorRepository.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @PostMapping
-    public ResponseEntity<Colecionador> create(@RequestBody Colecionador item) {
+    public ResponseEntity<Colecionador> create(@Valid @RequestBody Colecionador item) {
         try {
-            Colecionadores.add(item);
-            return new ResponseEntity<>(item, HttpStatus.CREATED);
+            Colecionador result = this._colecionadorRepository.save(item);
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Colecionador> getById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Colecionador> getById(@PathVariable("id") Long id) {
 
-        Colecionador result = null;
+        Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
-        for (Colecionador item : Colecionadores) {
-            if (item.getId() == id) {
-                result = item;
-                break;
-            }
-        }
-
-        if (result != null) {
-            return new ResponseEntity<>(result, HttpStatus.OK);
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Colecionador> update(@PathVariable("id") Integer id,
+    public ResponseEntity<Colecionador> update(@PathVariable("id") Long id,
             @RequestBody Colecionador colecionadorNovosDados) {
 
-        Colecionador colecionadorAserAtualizado = null;
+        Optional<Colecionador> result = this._colecionadorRepository.findById(id);
 
-        for (Colecionador item : Colecionadores) {
-            if (item.getId() == id) {
-                colecionadorAserAtualizado = item;
-                break;
-            }
-        }
-
-        if (colecionadorAserAtualizado == null) {
+        if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        colecionadorAserAtualizado.setEmail(colecionadorNovosDados.getEmail());
-        colecionadorAserAtualizado.setNickname(colecionadorNovosDados.getNickname());
+        Colecionador colecionadorASerAtualizado = result.get();
+        colecionadorASerAtualizado.setEmail(colecionadorNovosDados.getEmail());
+        colecionadorASerAtualizado.setNickname(colecionadorNovosDados.getNickname());
 
-        return new ResponseEntity<>(colecionadorAserAtualizado, HttpStatus.OK);
+        this._colecionadorRepository.save(colecionadorASerAtualizado);
+
+        return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
-            Colecionador colecionadorASerExluido = null;
+            Optional<Colecionador> colecionadorASerExcluido = this._colecionadorRepository.findById(id);
 
-            for (Colecionador item : Colecionadores) {
-                if (item.getId() == id) {
-                    colecionadorASerExluido = item;
-                    break;
-                }
-            }
-
-            if (colecionadorASerExluido == null) {
+            if (colecionadorASerExcluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            Colecionadores.remove(colecionadorASerExluido);
+            this._colecionadorRepository.delete(colecionadorASerExcluido.get());
+
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
