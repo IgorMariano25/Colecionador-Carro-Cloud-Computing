@@ -21,6 +21,7 @@
 <a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank"><img alt="Windows-11-logo-Icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Windows_11-0078d4?style=for-the-badge&logo=windows-11&logoColor=white" />
 <a href="https://github.com/" target="_blank"><img alt="github-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
 <a href="https://git-scm.com/" target="_blank"><img alt="git-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
+<a href="https://swagger.io/" target="_blank"><img alt="swagger-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" />
 </div>
 
 
