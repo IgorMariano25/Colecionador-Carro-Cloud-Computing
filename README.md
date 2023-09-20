@@ -25,5 +25,6 @@
 
 
 ## Tags de versões do Software 🏷️
-- **[V1.0.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.0.0)**
-- **[V1.1.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.1.0)**
+- 🟢 **[V1.2.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.2.0)** ***NEW***
+- 🟡 **[V1.1.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.1.0)**
+- 🟡 **[V1.0.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.0.0)**
