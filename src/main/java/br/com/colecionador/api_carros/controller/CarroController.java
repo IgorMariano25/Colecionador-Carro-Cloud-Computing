@@ -35,7 +35,7 @@ public class CarroController {
         }
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Carro> create(@Valid @RequestBody Carro item) {
         try {
             Carro result = this._carroRepsoitory.save(item);
@@ -46,7 +46,7 @@ public class CarroController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Carro> getById(@PathVariable("id") long id) {
+    public ResponseEntity<Carro> getById(@PathVariable("id") Long id) {
 
         Optional<Carro> result = this._carroRepsoitory.findById(id);
 
@@ -58,7 +58,7 @@ public class CarroController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Carro> update(@PathVariable("id") long id, @RequestBody Carro carroNovosDados) {
+    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) {
 
         Optional<Carro> result = this._carroRepsoitory.findById(id);
 
@@ -76,7 +76,7 @@ public class CarroController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
            Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
