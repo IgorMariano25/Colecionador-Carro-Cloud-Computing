@@ -19,9 +19,12 @@ import br.com.colecionador.api_carros.model.Carro;
 import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
+@Tag(name = "Carro", description = "Resquições para a tabela Carro")
 @RequestMapping("/carro")
 public class CarroController {
 
@@ -32,6 +35,7 @@ public class CarroController {
     private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
+    @Operation(summary = "Buscando todos os carros", method = "GET")
     public ResponseEntity<List<Carro>> getAll() {
         try {
             return new ResponseEntity<>(this._carroRepsoitory.findAll(), HttpStatus.OK);
@@ -41,6 +45,7 @@ public class CarroController {
     }
 
     @PostMapping("{idColecionador}")
+    @Operation(summary = "Adicionando um carro ao colecionador pelo ID", method = "POST")
     public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
             @Valid @RequestBody Carro carro) {
         try {
@@ -61,6 +66,8 @@ public class CarroController {
     }
 
     @GetMapping("{id}")
+    @Operation(summary = "Buscando todos os carros de um colecionador pelo ID", method = "GET")
+
     public ResponseEntity<Carro> getById(@PathVariable("id") Long id) {
 
         Optional<Carro> result = this._carroRepsoitory.findById(id);
@@ -73,6 +80,8 @@ public class CarroController {
     }
 
     @PutMapping("{id}")
+    @Operation(summary = "Alterando informações do carro pelo ID", method = "GET")
+
     public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) {
 
         Optional<Carro> result = this._carroRepsoitory.findById(id);
@@ -91,6 +100,8 @@ public class CarroController {
     }
 
     @DeleteMapping("{id}")
+        @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
+
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
