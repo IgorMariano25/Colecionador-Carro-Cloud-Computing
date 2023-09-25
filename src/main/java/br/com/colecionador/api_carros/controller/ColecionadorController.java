@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.service.ColecionadorService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
@@ -29,6 +30,7 @@ public class ColecionadorController {
     private ColecionadorService _colecionadorService;
 
     @GetMapping
+    @Operation(summary = "Buscando todos os colecionadores", method = "GET")
     public ResponseEntity<List<Colecionador>> getAll() {
         try {
             return new ResponseEntity<>(this._colecionadorService.findAll(), HttpStatus.OK);
@@ -38,6 +40,7 @@ public class ColecionadorController {
     }
 
     @PostMapping
+    @Operation(summary = "Adicionando um colecionador", method = "POST")
     public ResponseEntity<Colecionador> create(@Valid @RequestBody Colecionador item) {
         try {
             Colecionador result = this._colecionadorService.save(item);
@@ -48,6 +51,7 @@ public class ColecionadorController {
     }
 
     @GetMapping("{id}")
+    @Operation(summary = "Buscando um colecionador pelo ID", method = "GET")
     public ResponseEntity<Colecionador> getById(@PathVariable("id") Long id) {
 
         Optional<Colecionador> result = this._colecionadorService.findById(id);
@@ -60,6 +64,7 @@ public class ColecionadorController {
     }
 
     @PutMapping("{id}")
+    @Operation(summary = "Alterando informações do colecionador pelo ID", method = "PUT")
     public ResponseEntity<Colecionador> update(@PathVariable("id") Long id,
             @RequestBody Colecionador colecionadorNovosDados) {
         try {
@@ -71,6 +76,8 @@ public class ColecionadorController {
     }
 
     @DeleteMapping("{id}")
+    @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
+
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
