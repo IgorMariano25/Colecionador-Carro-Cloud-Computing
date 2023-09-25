@@ -19,9 +19,12 @@ import jakarta.validation.Valid;
 import br.com.colecionador.api_carros.model.Endereco;
 import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.EnderecoRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 
 @RestController
+@Tag(name = "Endereço", description = "Resquições para a tabela Endereco")
 @RequestMapping("/endereco")
 public class EnderecoController {
 
@@ -32,6 +35,7 @@ public class EnderecoController {
     private ColecionadorRepository _colecionadorRepository;
 
     @GetMapping
+    @Operation(summary = "Buscando todos os endereços", method = "GET")
     public ResponseEntity<List<Endereco>> getAll() {
         try {
             return new ResponseEntity<>(this._enderecoRepository.findAll(), HttpStatus.OK);
@@ -41,6 +45,8 @@ public class EnderecoController {
     }
 
     @PostMapping("{idColecionador}")
+    @Operation(summary = "Adicionando um endereço ao colecionador pelo ID", method = "POST")
+
     public ResponseEntity<Endereco> create(@PathVariable("idColecionador") Long idColecionador,
             @Valid @RequestBody Endereco endereco) {
         try {
@@ -61,6 +67,8 @@ public class EnderecoController {
     }
 
     @GetMapping("{id}")
+    @Operation(summary = "Buscando todos os endereços de um colecionador pelo ID", method = "GET")
+
     public ResponseEntity<Endereco> getById(@PathVariable("id") Long id) {
 
         Optional<Endereco> result = this._enderecoRepository.findById(id);
@@ -73,6 +81,8 @@ public class EnderecoController {
     }
 
     @PutMapping("{id}")
+    @Operation(summary = "Alterando informações do endereço pelo ID", method = "PUT")
+
     public ResponseEntity<Endereco> update(@PathVariable("id") Long id, @RequestBody Endereco enderecoNovosDados) {
 
         Optional<Endereco> result = _enderecoRepository.findById(id);
@@ -94,6 +104,7 @@ public class EnderecoController {
     }
 
     @DeleteMapping("{id}")
+    @Operation(summary = "Deletando um endereço pelo ID", method = "DELETE")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
