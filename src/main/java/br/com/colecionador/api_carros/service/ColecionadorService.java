@@ -57,4 +57,7 @@ public class ColecionadorService {
     public void saveEndereco(Colecionador colecionador) {
         this._colecionadorRepository.save(colecionador);
     }
+    public void saveCarro(Colecionador colecionador) {
+        this._colecionadorRepository.save(colecionador);
+    }
 }
