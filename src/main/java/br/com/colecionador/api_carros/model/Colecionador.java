@@ -93,10 +93,6 @@ public class Colecionador {
         this.cpf = cpf;
     }
 
-    public void addEndereco(Endereco endereco) {
-        this.enderecos.add(endereco);
-    }
-
     public String getEmail() {
         return email;
     }

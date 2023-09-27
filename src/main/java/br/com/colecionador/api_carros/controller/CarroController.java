@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.service.CarroService;
 import br.com.colecionador.api_carros.model.Colecionador;
-import br.com.colecionador.api_carros.repository.CarroRepsoitory;
-import br.com.colecionador.api_carros.repository.ColecionadorRepository;
+import br.com.colecionador.api_carros.service.ColecionadorService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -29,18 +29,18 @@ import jakarta.validation.Valid;
 public class CarroController {
 
     @Autowired
-    private CarroRepsoitory _carroRepsoitory;
+    private CarroService _carroService;
 
     @Autowired
-    private ColecionadorRepository _colecionadorRepository;
+    private ColecionadorService _colecionadorService;
 
     @GetMapping
     @Operation(summary = "Buscando todos os carros", method = "GET")
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            return new ResponseEntity<>(this._carroRepsoitory.findAll(), HttpStatus.OK);
+            return new ResponseEntity<>(this._carroService.findAll(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -50,18 +50,18 @@ public class CarroController {
             @Valid @RequestBody Carro carro) {
         try {
 
-            Optional<Colecionador> colecionador = this._colecionadorRepository.findById(idColecionador);
+            Optional<Colecionador> colecionador = this._colecionadorService.findById(idColecionador);
 
             if (colecionador.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
             colecionador.get().adicionarCarros(carro);
-            this._colecionadorRepository.save(colecionador.get());
+            this._colecionadorService.saveCarro(colecionador.get());
 
             return new ResponseEntity<>(carro, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
+            return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 
@@ -70,7 +70,7 @@ public class CarroController {
 
     public ResponseEntity<Carro> getById(@PathVariable("id") Long id) {
 
-        Optional<Carro> result = this._carroRepsoitory.findById(id);
+        Optional<Carro> result = this._carroService.findById(id);
 
         if (result.isPresent()) {
             return new ResponseEntity<>(result.get(), HttpStatus.OK);
@@ -82,9 +82,9 @@ public class CarroController {
     @PutMapping("{id}")
     @Operation(summary = "Alterando informações do carro pelo ID", method = "GET")
 
-    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) {
+    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) throws Exception {
 
-        Optional<Carro> result = this._carroRepsoitory.findById(id);
+        Optional<Carro> result = this._carroService.findById(id);
 
         if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -94,7 +94,7 @@ public class CarroController {
         carroASerAtualizado.setCor(carroNovosDados.getCor());
         carroASerAtualizado.setQuilometragem(carroNovosDados.getQuilometragem());
 
-        this._carroRepsoitory.save(carroASerAtualizado);
+        this._carroService.save(carroASerAtualizado);
 
         return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
@@ -105,16 +105,16 @@ public class CarroController {
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
-            Optional<Carro> carroASerExluido = this._carroRepsoitory.findById(id);
+            Optional<Carro> carroASerExluido = this._carroService.findById(id);
 
             if (carroASerExluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            this._carroRepsoitory.delete(carroASerExluido.get());
-            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+            this._carroService.delete(carroASerExluido.get().getId());
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 }
