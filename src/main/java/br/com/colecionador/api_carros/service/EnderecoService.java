@@ -24,7 +24,7 @@ public class EnderecoService {
 
     public Endereco save(Endereco endereco) throws Exception {
         if (this._enderecoRepository.findById(endereco.getId()).isPresent() == false) {
-            throw new Exception("Esse ID já existe na base de dados");
+            throw new Exception("Esse ID já existe na base de dados na tabela Endereco");
         }
         this._enderecoRepository.save(endereco);
         return endereco;
@@ -34,7 +34,7 @@ public class EnderecoService {
         Optional<Endereco> existingItemOptional = _enderecoRepository.findById(id);
 
         if (existingItemOptional.isPresent() == false) {
-            throw new Exception("Não encontreio o endereço a ser atualizado na base de dados");
+            throw new Exception("Não encontreio o endereço a ser atualizado na base de dados na tabela Endereco");
         }
 
         Endereco enderecoASerAtualizado = existingItemOptional.get();
@@ -43,7 +43,7 @@ public class EnderecoService {
         enderecoASerAtualizado.setComplemento(enderecoNovosDados.getComplemento());
         enderecoASerAtualizado.setCidade(enderecoNovosDados.getCidade());
         enderecoASerAtualizado.setEstado(enderecoNovosDados.getEstado());
-        enderecoASerAtualizado.setCep(enderecoASerAtualizado.getCep());
+        enderecoASerAtualizado.setCep(enderecoNovosDados.getCep());
 
         this._enderecoRepository.save(enderecoASerAtualizado);
 
