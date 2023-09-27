@@ -34,7 +34,7 @@ public class ColecionadorService {
     public Colecionador update(Long id, Colecionador colecionadorNovosDados) throws Exception {
         Optional<Colecionador> result = this._colecionadorRepository.findById(id);
         if (result.isPresent() == false) {
-            throw new Exception("Não encontreio o colecionado a ser atualizado na base de dados");
+            throw new Exception("Não encontreio o colecionador a ser atualizado na base de dados");
         }
 
         Colecionador colecionadorASerAtualizado = result.get();
