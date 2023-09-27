@@ -6,5 +6,5 @@ import br.com.colecionador.api_carros.model.Colecionador;
 
 @Repository
 public interface ColecionadorRepository extends JpaRepository<Colecionador, Long>{
-    
+    Colecionador findByCpf(String cpf);
 }
