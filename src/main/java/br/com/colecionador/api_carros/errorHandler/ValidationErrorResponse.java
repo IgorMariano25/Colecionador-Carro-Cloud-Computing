@@ -1,10 +1,11 @@
 package br.com.colecionador.api_carros.errorHandler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ValidationErrorResponse {
     private String errorMessage = "Aconteceu um problema ao processar sua solicitação";
-    private List<Validation> errors = new List<Validation>();
+    private List<Validation> errors = new ArrayList<Validation>();
 
     public String getErrorMessage() {
         return this.errorMessage;
