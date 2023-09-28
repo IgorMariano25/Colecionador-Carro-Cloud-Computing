@@ -85,7 +85,7 @@ localhost:8080/colecionador
 ### PUT 🔄
 #### URL da requisição PUT colecionador
 ```URL
-localhost:8080//colecionador/{id}
+localhost:8080/colecionador/{id}
 ```
 **Alterando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
@@ -127,6 +127,11 @@ localhost:8080//colecionador/{id}
   "enderecos": null,
   "carros": null
 }
+```
+### GET 🔄
+#### URL da requisição GET colecionador
+```URL
+localhost:8080/colecionador/
 ```
 </details>
 </details>
