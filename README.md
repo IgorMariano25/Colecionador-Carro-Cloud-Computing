@@ -37,7 +37,7 @@
     - ✅ **[POST](#post-carro)**
     - ♻️ **[PUT](#put-carro)**
     - 🫳 **[GET](#get-carro)**
-    - 📌 **[GET pelo ID](#get-pelo-id-carro)**
+    - 📌 **[GET pelo ID](#get-pelo-id-do-carro)**
     - ❌ **[DELETE](#delete-carro)**
     </details>
 
@@ -237,6 +237,62 @@ localhost:8080/endereco/{id}
 **Na URL dessa requisição é preciso informar o id do colecionador que você deseja Excluir da base de dados** 
 ```URL
 localhost:8080/endereco/{id}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Post Carro
+**Adicionando todas as informações do carro**
+
+**Para adicionar um novo carro a base de dados, é preciso utilizar o body abaixo no formato JSON durante o envio da sua requisição e respeitar o tipo de dado que cada coluna da tabela suporta. Além de adicionar o ID do colecionador na requisição**
+```JSON
+{
+  "marca": "string",
+  "modelo": "string",
+  "cor": "string",
+  "anoDeFabricacao": 2023,
+  "velocidadeMaxima": 500,
+  "quilometragem": 0
+}
+```
+```URL
+localhost:8080/carro/{idColecionador}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Put Carro
+**Alterando apenas as informações do carro de um colecionador**
+```URL
+localhost:8080/carro/{id}
+```
+```JSON
+{
+  "logradouro": "string",
+  "complemento": "string",
+  "cidade": "string",
+  "estado": "string",
+  "cep": "60517-991"
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Get Carro 
+**Não é necessário adicionar nenhum body para essa requisição, apenas utilize a URL abaixo e você irá obter a informação de todos os carros presentes na base de dados.** 
+```URL
+localhost:8080/carro
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Get pelo id do Carro
+**Na URL dessa requisição é preciso informar o ID do carro que você deseja obter as informações. Da mesma forma que no GET anterior, não é preciso adicionar um body para essa requisição** 
+```URL
+localhost:8080/carro/{id}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Delete Carro 
+**Na URL dessa requisição é preciso informar o ID do carro que você deseja Excluir da base de dados** 
+```URL
+localhost:8080/carro/{id}
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
