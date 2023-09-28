@@ -39,7 +39,6 @@
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
-  "id": 0,
   "nome": "string",
   "sobrenome": "string",
   "nickname": "string",
@@ -47,7 +46,6 @@
   "email": "string",
   "enderecos": [
     {
-      "id": 0,
       "logradouro": "string",
       "complemento": "string",
       "cidade": "string",
@@ -57,7 +55,6 @@
   ],
   "carros": [
     {
-      "id": 0,
       "marca": "string",
       "modelo": "string",
       "cor": "string",
@@ -84,7 +81,6 @@
 **Alterando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
-  "id": 0,
   "nome": "string",
   "sobrenome": "string",
   "nickname": "string",
@@ -92,7 +88,6 @@
   "email": "string",
   "enderecos": [
     {
-      "id": 0,
       "logradouro": "string",
       "complemento": "string",
       "cidade": "string",
@@ -102,7 +97,6 @@
   ],
   "carros": [
     {
-      "id": 0,
       "marca": "string",
       "modelo": "string",
       "cor": "string",
