@@ -1,18 +1,17 @@
 #  Colecionador de Carros - Cloud Computing 
-# Sobre o projeto
+## Sobre o projeto
 **🎓 Disciplina e instituição:** Repositório criado para o desenvolvimento back-end da disciplina de Cloud Computing do 4º período do semestre 2023.2 da instituição de ensino ***[IBMEC](https://www.ibmec.br/)***
 
 **🎯Objetivo:** Esse projeto tem como objetivo o desenvolvimento de uma API Rest utilizando a linguagem de programação JAVA, em conjunto com SPRING BOOT e ferramentas de nuvem como a AZURE, onde o deploy será feito.
 
-
-# Tabela de Conteúdo
-- 🚗 [Título do projeto](colecionador-de-carros-cloud-computing) ☁️
-- ✍️ [Sobre o projeto](#sobre-o-projeto)
-- 📑 [Tabela de conteúdo](#tabela-de-conteúdo)
-- 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
-- 🏷️ [Tags de versões do software](#tags-de-versões-do-software)
-- 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
-    <details><summary>😎 Colecionador</summary>
+## Tabela de Conteúdo - Table of Content - TOC
+1. 🚗 [Título do projeto](colecionador-de-carros-cloud-computing) ☁️
+2. ✍️ [Sobre o projeto](#sobre-o-projeto)
+3. 📑 [Tabela de Conteúdo - Table of Content - TOC](#tabela-de-conteúdo---table-of-content---toc)
+4. 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
+5. 🏷️ [Tags de versões do software](#tags-de-versões-do-software)
+6. 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
+     **<details><summary>😎 Colecionador</summary>**
     
     - ✅ [POST](#post)
     - ♻️ [PUT](#put)
@@ -21,7 +20,8 @@
     - ❌ [DELETE](#delete)
     </details>
     <details>
-    <summary>🏠 Endereço</summary>
+        
+    **<summary>🏠 Endereço</summary>**
     
     - ✅ [POST](#post)
     - ♻️ [PUT](#put)
@@ -31,7 +31,39 @@
     </details>
   
     <details>
-    <summary>🚗 Carro</summary>
+        
+    **<summary>🚗 Carro</summary>**
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+7. 🧡 [Escopo das requisições no Postman](#escopo-das-requisições-no-postman)
+    **<details><summary>😎 Colecionador</summary>**
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+  
+    <details>
+        
+    **<summary>🏠 Endereço</summary>**
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+  
+    <details>
+        
+    **<summary>🚗 Carro</summary>**
     
     - ✅ [POST](#post)
     - ♻️ [PUT](#put)
@@ -40,7 +72,7 @@
     - ❌ [DELETE](#delete)
     </details>
 
-- 🔗 [Todas as URLs das requisições](#url-das-requisições)
+8. 🔗 [Todas as URLs das requisições](#url-das-requisições)
 
 ## Tecnologias utilizadas nesse projeto 
 <!-- <div>
@@ -77,7 +109,8 @@
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
 ## Escopo das Requisições no Swagger
-##**<details><summary>Colecionador</summary>**
+## Escopo das Requisições no Postman
+## Colecionador
 ### POST 
 🔗 [URL de requisição do Colecionador](#url-das-requisições)
 ```URL
