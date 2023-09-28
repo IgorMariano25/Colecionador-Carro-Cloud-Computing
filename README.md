@@ -35,7 +35,7 @@
 
 ## Escopo das Requisições no Swagger 🔗💚
 **<details><summary>Colecionador</summary>**
-### POST
+### POST ➕
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
@@ -80,12 +80,50 @@
   "carros": null
 }
 ```
+### PUT 🔄
+**Alterando todas as informações do colecionador, inclusive endereço e carro**
+```JSON
+{
+  "id": 0,
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": [
+    {
+      "id": 0,
+      "logradouro": "string",
+      "complemento": "string",
+      "cidade": "string",
+      "estado": "string",
+      "cep": "50865-381"
+    }
+  ],
+  "carros": [
+    {
+      "id": 0,
+      "marca": "string",
+      "modelo": "string",
+      "cor": "string",
+      "anoDeFabricacao": 2023,
+      "velocidadeMaxima": 500,
+      "quilometragem": 0
+    }
+  ]
+}
+```
+**Alterando apenas as informações do colecionar e deixando como null endereço e carro**
+```JSON
+{
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": null,
+  "carros": null
+}
+```
 </details>
-
-**<details><summary> Seção 2: Configuração do Ambiente ✅</summary>**
-    <details><summary>1. Instalação Node</summary>
-      💚 **[Node](https://nodejs.org/en)**
-    </details>
-    <details><summary>2. Instalação Visual Studio Code</summary>
-      💙 **[VSCode](https://code.visualstudio.com/Download)**
-    </details>
+</details>
