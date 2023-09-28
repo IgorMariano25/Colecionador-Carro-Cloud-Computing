@@ -223,12 +223,12 @@ localhost:8080/colecionador/
 
 ### URL das Requisições
 
-| Tipo da Requisição   | URL |                                                                                                                                                                                                                                  
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | 
-| POST                 |                   | 
-| PUT                  |                   | 
-| GET                  |                   | 
-| GET pelo ID          |                   | 
-| Delete               |                   | 
+| Tabela                               |     Tipo da Requisição      | URL |                                                                                                   
+|:------------------------------------ | :-------------------------: | :----------------------------------- | 
+|    😎 Colecionador                  |     ✅ POST                 | `localhost:8080/colecionador`        |                                                                                                                                  
+|    😎 Colecionador                  |     ♻️ PUT                  | `localhost:8080/colecionador/{id}`   | 
+|    😎 Colecionador                  |     🫳 GET                  | `localhost:8080/colecionador`        | 
+|    😎 Colecionador                  |   📌 GET pelo ID            | `localhost:8080/colecionador/{id}`   | 
+|    😎 Colecionador                  |    ❌ Delete                | `localhost:8080/colecionador/{id}`   |   
 
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
