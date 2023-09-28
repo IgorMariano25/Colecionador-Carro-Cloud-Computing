@@ -10,81 +10,40 @@
 3. 📑 [Tabela de Conteúdo - Table of Content - TOC](#tabela-de-conteúdo---table-of-content---toc)
 4. 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
 5. 🏷️ [Tags de versões do software](#tags-de-versões-do-software)
-6. 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
-     **<details><summary>😎 Colecionador</summary>**
+6. 💚🧡 [Escopo das requisições no Swagger e Postman](#escopo-das-requisições-no-swagger-e-postman)
+     **<details><summary>😎 Colecionador (clique aqui 🖱️👆)</summary>**
     
-    - ✅ **[POST](#post-colecionador-swagger)**
-    - ♻️ **[PUT](#put-colecionador-swagger)**
-    - 🫳 **[GET](#get-colecionador-swagger)**
-    - 📌 **[GET pelo ID](#get-pelo-id-do-colecionador-swagger)**
-    - ❌ **[DELETE](#delete-colecionador-swagger)**
+    - ✅ **[POST](#post-colecionador)**
+    - ♻️ **[PUT](#put-colecionador)**
+    - 🫳 **[GET](#get-colecionador)**
+    - 📌 **[GET pelo ID](#get-pelo-id-do-colecionador)**
+    - ❌ **[DELETE](#delete-colecionador)**
     </details>
     <details>
         
-    **<summary>🏠 Endereço</summary>**
+    **<summary>🏠 Endereço (clique aqui 🖱️👆)</summary>**
     
-    - ✅ **[POST](#post-endereço-swagger)**
-    - ♻️ **[PUT](#put-endereço-swagger)**
-    - 🫳 **[GET](#get-endereço-swagger)**
-    - 📌 **[GET pelo ID](#get-pelo-id-endereço-swagger)**
-    - ❌ **[DELETE](#delete-endereço-swagger)**
+    - ✅ **[POST](#post-endereço)**
+    - ♻️ **[PUT](#put-endereço)**
+    - 🫳 **[GET](#get-endereço)**
+    - 📌 **[GET pelo ID](#get-pelo-id-do-endereço)**
+    - ❌ **[DELETE](#delete-endereço)**
     </details>
   
     <details>
         
-    **<summary>🚗 Carro</summary>**
+    **<summary>🚗 Carro (clique aqui 🖱️👆)</summary>**
     
-    - ✅ **[POST](#post-carro-swagger)**
-    - ♻️ **[PUT](#put-carro-swagger)**
-    - 🫳 **[GET](#get-carro-swagger)**
-    - 📌 **[GET pelo ID](#get-pelo-id-carro-swagger)**
-    - ❌ **[DELETE](#delete-carro-swagger)**
-    </details>
-7. 🧡 [Escopo das requisições no Postman](#escopo-das-requisições-no-postman)
-    **<details><summary>😎 Colecionador</summary>**
-    
-    - ✅ **[POST](#post-colecionador-postman)**
-    - ♻️ **[PUT](#put-colecionador-postman)**
-    - 🫳 **[GET](#get-colecionador-postman)**
-    - 📌 **[GET pelo ID](#get-pelo-id-colecionador-postman)**
-    - ❌ **[DELETE](#delete-colecionador-postman)**
-    </details>
-  
-    <details>
-        
-    **<summary>🏠 Endereço</summary>**
-    
-    - ✅ **[POST](#post-endereço-postman)**
-    - ♻️ **[PUT](#put-endereço-postman)**
-    - 🫳 **[GET](#get-endereço-postman)**
-    - 📌 **[GET pelo ID](#get-pelo-id-endereço-postman)**
-    - ❌ **[DELETE](#delete-endereço-postman)**
-    </details>
-  
-    <details>
-        
-    **<summary>🚗 Carro</summary>**
-    
-    - ✅ **[POST](#post-carro-postman)**
-    - ♻️ **[PUT](#put-post-carro-postman)**
-    - 🫳 **[GET](#get-post-carro-postman)**
-    - 📌 **[GET pelo ID](#get-pelo-id-post-carro-postman)**
-    - ❌ **[DELETE](#delete-post-carro-postman)**
+    - ✅ **[POST](#post-carro)**
+    - ♻️ **[PUT](#put-carro)**
+    - 🫳 **[GET](#get-carro)**
+    - 📌 **[GET pelo ID](#get-pelo-id-carro)**
+    - ❌ **[DELETE](#delete-carro)**
     </details>
 
-8. 🔗 [Todas as URLs das requisições](#url-das-requisições)
+7. 🔗 [](#urls-das-requisições-de-cada-tabela)
 
 ## Tecnologias utilizadas nesse projeto 
-<!-- <div>
-  <a href="https://code.visualstudio.com" target="_blank"><img alt="VS-Code-logo-Icon" height="60" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/></a>
-  <a href="https://www.java.com/pt-BR/" target="_blank"><img alt="Java-logo-icon" height="80" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/></a>
-  <a href="https://spring.io" target="_blank"><img alt="Spring-boot-logo-icon" height="60" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"/></a>
-  <a href="https://postman.com" target="_blank"><img alt="postman" width="65" height="65" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" /></a>
-  <a href="https://azure.microsoft.com/en-us/" target="_blank"><img alt="Azure -Microsoft" width="80" height="80" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" /></a>
-  <a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank"><img alt="Windows-11-logo-Icon" width="80" height="80" src="https://img.icons8.com/color/48/windows-11.png"/></a>
-  <a href="https://git-scm.com/" target="_blank"><img alt="git-icon" width="70" height="70" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"/></a>
-</div> -->
-
 <div>
 <a href="https://code.visualstudio.com" target="_blank"><img alt="VS-Code-logo-Icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
 <a href="https://www.java.com/pt-BR/" target="_blank"><img alt="Java-logo-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
@@ -108,8 +67,8 @@
   
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-## Escopo das Requisições no Swagger
-### Post Colecionador swagger
+## Escopo das requisições no Swagger e Postman
+### Post Colecionador
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
 
 **Para adicionar um novo colecionar a base de dados, é preciso utilizar o body abaixo no formato JSON durante o envio da sua requisição e respeitar o tipo de dado que cada coluna da tabela suporta.**
@@ -157,7 +116,7 @@
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-### Put Colecionador Swagger
+### Put Colecionador 
 **Alterando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
@@ -203,134 +162,85 @@
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-### Get Colecionador Swagger
+### Get Colecionador 
 **Não é necessário adicionar nenhum body para essa requisição, apenas utilize a URL abaixo e você irá obter a informação de todos os colecionadores presente na base de dados.** 
 ```URL
 localhost:8080/colecionador
 ```
-### Get pelo id do Colecionador Swagger
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Get pelo id do Colecionador 
 **Na URL dessa requisição é preciso informar o id do colecionador que você deseja obter as informações. Da mesma forma que no GET anterior, não é preciso adicionar um body para essa requisição** 
 ```URL
 localhost:8080/colecionador/{id}
 ```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-### Delete Colecionador Swagger
+### Delete Colecionador 
 **Na URL dessa requisição é preciso informar o id do colecionador que você deseja Excluir da base de dados** 
 ```URL
 localhost:8080/colecionador/{id}
 ```
-
-**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
-</details>
-</details>
-
-## Escopo das Requisições no Postman
-## Colecionador 
-**Adicionando todas as informações do colecionador, inclusive endereço e carro**
-```JSON
-{
-  "nome": "string",
-  "sobrenome": "string",
-  "nickname": "string",
-  "cpf": "471.388.476-39",
-  "email": "string",
-  "enderecos": [
-    {
-      "logradouro": "string",
-      "complemento": "string",
-      "cidade": "string",
-      "estado": "string",
-      "cep": "50865-381"
-    }
-  ],
-  "carros": [
-    {
-      "marca": "string",
-      "modelo": "string",
-      "cor": "string",
-      "anoDeFabricacao": 2023,
-      "velocidadeMaxima": 500,
-      "quilometragem": 0
-    }
-  ]
-}
-```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-**Adicionado apenas as informações do colecionar e deixando como null endereço e carro**
-```JSON
-{
-  "nome": "string",
-  "sobrenome": "string",
-  "nickname": "string",
-  "cpf": "471.388.476-39",
-  "email": "string",
-  "enderecos": null,
-  "carros": null
-}
-```
-**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+### Post Endereço 
+**Adicionando todas as informações do endereço de um colecionador**
 
-### PUT 
-#### URL da requisição PUT colecionador
+**Para adicionar um novo endereço a base de dados, é preciso utilizar o body abaixo no formato JSON durante o envio da sua requisição. É precsio adicionar também o ID do colecionador que irá obter esse endereço na URL da sua requisição, além de respeitar o tipo de dado que cada coluna da tabela suporta.**
+
 ```URL
-localhost:8080/colecionador/{id}
+localhost:8080/endereco/{idColecionador}
 ```
-**Alterando todas as informações do colecionador, inclusive endereço e carro**
+
 ```JSON
 {
-  "nome": "string",
-  "sobrenome": "string",
-  "nickname": "string",
-  "cpf": "471.388.476-39",
-  "email": "string",
-  "enderecos": [
-    {
-      "logradouro": "string",
-      "complemento": "string",
-      "cidade": "string",
-      "estado": "string",
-      "cep": "50865-381"
-    }
-  ],
-  "carros": [
-    {
-      "marca": "string",
-      "modelo": "string",
-      "cor": "string",
-      "anoDeFabricacao": 2023,
-      "velocidadeMaxima": 500,
-      "quilometragem": 0
-    }
-  ]
+  "logradouro": "string",
+  "complemento": "string",
+  "cidade": "string",
+  "estado": "string",
+  "cep": "60517-991"
 }
 ```
-**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-**Alterando apenas as informações do colecionar e deixando como null endereço e carro**
-```JSON
-{
-  "nome": "string",
-  "sobrenome": "string",
-  "nickname": "string",
-  "cpf": "471.388.476-39",
-  "email": "string",
-  "enderecos": null,
-  "carros": null
-}
-```
-**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
-
-### GET 
-#### URL da requisição GET colecionador
+### Put Endereço
+**Alterando apenas as informações do endereço de um colecionador**
 ```URL
-localhost:8080/colecionador/
+localhost:8080/endereco/{idColecionador}
+```
+
+```JSON
+{
+  "logradouro": "string",
+  "complemento": "string",
+  "cidade": "string",
+  "estado": "string",
+  "cep": "60517-991"
+}
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
-</details>
-</details>
 
-### URL das Requisições
+### Get Endereço 
+**Não é necessário adicionar nenhum body para essa requisição, apenas utilize a URL abaixo e você irá obter a informação de todos os endereços presente na base de dados.** 
+```URL
+localhost:8080/endereco
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Get pelo id do Endereço
+**Na URL dessa requisição é preciso informar o id do endereço que você deseja obter as informações. Da mesma forma que no GET anterior, não é preciso adicionar um body para essa requisição** 
+```URL
+localhost:8080/endereco/{id}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Delete Endereço 
+**Na URL dessa requisição é preciso informar o id do colecionador que você deseja Excluir da base de dados** 
+```URL
+localhost:8080/endereco/{id}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### URLs das Requisições de cada tabela
 
 | Tabela                               |     Tipo da Requisição      | URL |                                                                                                   
 |:------------------------------------ | :-------------------------: | :----------------------------------- | 
@@ -350,6 +260,6 @@ localhost:8080/colecionador/
 |    🚗 Carro                         |     ♻️ PUT                  | `localhost:8080/carro/{id}`                        | 
 |    🚗 Carro                         |     🫳 GET                  | `localhost:8080/carro`                             | 
 |    🚗 Carro                         |   📌 GET pelo ID            | `localhost:8080/carro/{id}`                        | 
-|    🚗 Carro                         |    ❌ Delete                | `localhost:8080/carro/{id}`                 |    
+|    🚗 Carro                         |    ❌ Delete                | `localhost:8080/carro/{id}`                        |    
 
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
