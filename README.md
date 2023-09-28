@@ -13,7 +13,7 @@
 6. 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
      **<details><summary>😎 Colecionador</summary>**
     
-    - ✅ [POST](#post)
+    - ✅ [POST](#colecionador---post)
     - ♻️ [PUT](#put)
     - 🫳 [GET](#get)
     - 📌 [GET pelo ID](#get-pelo-id)
@@ -109,14 +109,112 @@
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
 ## Escopo das Requisições no Swagger
-## Escopo das Requisições no Postman
-## Colecionador
-### POST 
-🔗 [URL de requisição do Colecionador](#url-das-requisições)
-```URL
-localhost:8080/colecionador
+### Colecionador 
+**Adicionando todas as informações do colecionador, inclusive endereço e carro**
+```JSON
+{
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": [
+    {
+      "logradouro": "string",
+      "complemento": "string",
+      "cidade": "string",
+      "estado": "string",
+      "cep": "50865-381"
+    }
+  ],
+  "carros": [
+    {
+      "marca": "string",
+      "modelo": "string",
+      "cor": "string",
+      "anoDeFabricacao": 2023,
+      "velocidadeMaxima": 500,
+      "quilometragem": 0
+    }
+  ]
+}
 ```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
+**Adicionado apenas as informações do colecionar e deixando como null endereço e carro**
+```JSON
+{
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": null,
+  "carros": null
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### PUT 
+#### URL da requisição PUT colecionador
+```URL
+localhost:8080/colecionador/{id}
+```
+**Alterando todas as informações do colecionador, inclusive endereço e carro**
+```JSON
+{
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": [
+    {
+      "logradouro": "string",
+      "complemento": "string",
+      "cidade": "string",
+      "estado": "string",
+      "cep": "50865-381"
+    }
+  ],
+  "carros": [
+    {
+      "marca": "string",
+      "modelo": "string",
+      "cor": "string",
+      "anoDeFabricacao": 2023,
+      "velocidadeMaxima": 500,
+      "quilometragem": 0
+    }
+  ]
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+**Alterando apenas as informações do colecionar e deixando como null endereço e carro**
+```JSON
+{
+  "nome": "string",
+  "sobrenome": "string",
+  "nickname": "string",
+  "cpf": "471.388.476-39",
+  "email": "string",
+  "enderecos": null,
+  "carros": null
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### GET 
+#### URL da requisição GET colecionador
+```URL
+localhost:8080/colecionador/
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+</details>
+</details>
+## Escopo das Requisições no Postman
+## Colecionador 
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
@@ -225,10 +323,22 @@ localhost:8080/colecionador/
 
 | Tabela                               |     Tipo da Requisição      | URL |                                                                                                   
 |:------------------------------------ | :-------------------------: | :----------------------------------- | 
-|    😎 Colecionador                  |     ✅ POST                 | `localhost:8080/colecionador`        |                                                                                                                                  
-|    😎 Colecionador                  |     ♻️ PUT                  | `localhost:8080/colecionador/{id}`   | 
-|    😎 Colecionador                  |     🫳 GET                  | `localhost:8080/colecionador`        | 
-|    😎 Colecionador                  |   📌 GET pelo ID            | `localhost:8080/colecionador/{id}`   | 
-|    😎 Colecionador                  |    ❌ Delete                | `localhost:8080/colecionador/{id}`   |   
+|    😎 Colecionador                  |     ✅ POST                 | `localhost:8080/colecionador`                      |                                                                                                                                  
+|    😎 Colecionador                  |     ♻️ PUT                  | `localhost:8080/colecionador/{id}`                 | 
+|    😎 Colecionador                  |     🫳 GET                  | `localhost:8080/colecionador`                      | 
+|    😎 Colecionador                  |   📌 GET pelo ID            | `localhost:8080/colecionador/{id}`                 | 
+|    😎 Colecionador                  |    ❌ Delete                | `localhost:8080/colecionador/{id}`                 |                                                                                                                                  
+|                                     |                              |                                                    |                                                                                                                                  
+|    🏠 Endereço                      |     ✅ POST                 | `localhost:8080/endereco/{idColecionador}`         |                                                                                                                                  
+|    🏠 Endereço                      |     ♻️ PUT                  | `localhost:8080/endereco/{id}`                     | 
+|    🏠 Endereço                      |     🫳 GET                  | `localhost:8080/endereco`                          | 
+|    🏠 Endereço                      |   📌 GET pelo ID            | `localhost:8080/endereco/{id}`                     | 
+|    🏠 Endereço                      |    ❌ Delete                | `localhost:8080/endereco/{id}`                     |   
+|                                      |                             |                                                    |                                                                                                                                  
+|    🚗 Carro                         |     ✅ POST                 | `localhost:8080/carro/{idColecionador}`            |                                                                                                                                  
+|    🚗 Carro                         |     ♻️ PUT                  | `localhost:8080/carro/{id}`                        | 
+|    🚗 Carro                         |     🫳 GET                  | `localhost:8080/carro`                             | 
+|    🚗 Carro                         |   📌 GET pelo ID            | `localhost:8080/carro/{id}`                        | 
+|    🚗 Carro                         |    ❌ Delete                | `localhost:8080/carro/{id}`                 |    
 
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
