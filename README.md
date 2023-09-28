@@ -36,7 +36,7 @@
 ## Escopo das Requisições no Swagger 🔗💚
 **<details><summary>Colecionador</summary>**
 ### POST ➕
-#### URL da requisição POST
+#### URL da requisição POST colecionador
 ```URL
 localhost:8080/colecionador
 ```
@@ -83,6 +83,10 @@ localhost:8080/colecionador
 }
 ```
 ### PUT 🔄
+#### URL da requisição PUT colecionador
+```URL
+localhost:8080//colecionador/{id}
+```
 **Alterando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
