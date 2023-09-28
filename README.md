@@ -36,6 +36,11 @@
 ## Escopo das Requisições no Swagger 🔗💚
 **<details><summary>Colecionador</summary>**
 ### POST ➕
+#### URL da requisição POST
+```URL
+localhost:8080/colecionador
+```
+
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
@@ -121,3 +126,4 @@
 ```
 </details>
 </details>
+
