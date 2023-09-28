@@ -7,69 +7,69 @@
 ## Tabela de Conteúdo - Table of Content - TOC
 1. 🚗 [Título do projeto](#colecionador-de-carros---cloud-computing) ☁️
 2. ✍️ [Sobre o projeto](#sobre-o-projeto)
-3. 📑 [Tabela de Conteúdo - Table of Content - TOC](#tabela-de-conteúdo---table-of-content---toc---table-of-content---toc)
+3. 📑 [Tabela de Conteúdo - Table of Content - TOC](#tabela-de-conteúdo---table-of-content---toc)
 4. 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
 5. 🏷️ [Tags de versões do software](#tags-de-versões-do-software)
 6. 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
      **<details><summary>😎 Colecionador</summary>**
     
-    - ✅ [POST](#colecionador---post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-colecionador-swagger)**
+    - ♻️ **[PUT](#put-colecionador-swagger)**
+    - 🫳 **[GET](#get-colecionador-swagger)**
+    - 📌 **[GET pelo ID](#get-pelo-id-do-colecionador-swagger)**
+    - ❌ **[DELETE](#delete-colecionador-swagger)**
     </details>
     <details>
         
     **<summary>🏠 Endereço</summary>**
     
-    - ✅ [POST](#post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-endereço-swagger)**
+    - ♻️ **[PUT](#put-endereço-swagger)**
+    - 🫳 **[GET](#get-endereço-swagger)**
+    - 📌 **[GET pelo ID](#get-pelo-id-endereço-swagger)**
+    - ❌ **[DELETE](#delete-endereço-swagger)**
     </details>
   
     <details>
         
     **<summary>🚗 Carro</summary>**
     
-    - ✅ [POST](#post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-carro-swagger)**
+    - ♻️ **[PUT](#put-carro-swagger)**
+    - 🫳 **[GET](#get-carro-swagger)**
+    - 📌 **[GET pelo ID](#get-pelo-id-carro-swagger)**
+    - ❌ **[DELETE](#delete-carro-swagger)**
     </details>
 7. 🧡 [Escopo das requisições no Postman](#escopo-das-requisições-no-postman)
     **<details><summary>😎 Colecionador</summary>**
     
-    - ✅ [POST](#post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-colecionador-postman)**
+    - ♻️ **[PUT](#put-colecionador-postman)**
+    - 🫳 **[GET](#get-colecionador-postman)**
+    - 📌 **[GET pelo ID](#get-pelo-id-colecionador-postman)**
+    - ❌ **[DELETE](#delete-colecionador-postman)**
     </details>
   
     <details>
         
     **<summary>🏠 Endereço</summary>**
     
-    - ✅ [POST](#post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-endereço-postman)**
+    - ♻️ **[PUT](#put-endereço-postman)**
+    - 🫳 **[GET](#get-endereço-postman)**
+    - 📌 **[GET pelo ID](#get-pelo-id-endereço-postman)**
+    - ❌ **[DELETE](#delete-endereço-postman)**
     </details>
   
     <details>
         
     **<summary>🚗 Carro</summary>**
     
-    - ✅ [POST](#post)
-    - ♻️ [PUT](#put)
-    - 🫳 [GET](#get)
-    - 📌 [GET pelo ID](#get-pelo-id)
-    - ❌ [DELETE](#delete)
+    - ✅ **[POST](#post-carro-postman)**
+    - ♻️ **[PUT](#put-post-carro-postman)**
+    - 🫳 **[GET](#get-post-carro-postman)**
+    - 📌 **[GET pelo ID](#get-pelo-id-post-carro-postman)**
+    - ❌ **[DELETE](#delete-post-carro-postman)**
     </details>
 
 8. 🔗 [Todas as URLs das requisições](#url-das-requisições)
@@ -109,8 +109,10 @@
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
 ## Escopo das Requisições no Swagger
-### Colecionador 
+### Post Colecionador swagger
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
+
+**Para adicionar um novo colecionar a base de dados, é preciso utilizar o body abaixo no formato JSON durante o envio da sua requisição e respeitar o tipo de dado que cada coluna da tabela suporta.**
 ```JSON
 {
   "nome": "string",
@@ -155,11 +157,7 @@
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-### PUT 
-#### URL da requisição PUT colecionador
-```URL
-localhost:8080/colecionador/{id}
-```
+### Put Colecionador Swagger
 **Alterando todas as informações do colecionador, inclusive endereço e carro**
 ```JSON
 {
@@ -205,14 +203,27 @@ localhost:8080/colecionador/{id}
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
-### GET 
-#### URL da requisição GET colecionador
+### Get Colecionador Swagger
+**Não é necessário adicionar nenhum body para essa requisição, apenas utilize a URL abaixo e você irá obter a informação de todos os colecionadores presente na base de dados.** 
 ```URL
-localhost:8080/colecionador/
+localhost:8080/colecionador
 ```
+### Get pelo id do Colecionador Swagger
+**Na URL dessa requisição é preciso informar o id do colecionador que você deseja obter as informações. Da mesma forma que no GET anterior, não é preciso adicionar um body para essa requisição** 
+```URL
+localhost:8080/colecionador/{id}
+```
+
+### Delete Colecionador Swagger
+**Na URL dessa requisição é preciso informar o id do colecionador que você deseja Excluir da base de dados** 
+```URL
+localhost:8080/colecionador/{id}
+```
+
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 </details>
 </details>
+
 ## Escopo das Requisições no Postman
 ## Colecionador 
 **Adicionando todas as informações do colecionador, inclusive endereço e carro**
