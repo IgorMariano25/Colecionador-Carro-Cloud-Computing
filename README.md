@@ -1,8 +1,9 @@
 #  Colecionador de Carros - Cloud Computing 
 # Sobre o projeto
-Esse projeto tem como objetivo o desenvolvimento de uma API Rest utilizando a linguagem de programação JAVA, em conjunto com SPRING BOOT e ferramentas de nuvem como a AZURE, onde o deploy será feito.
+**🎓 Disciplina e instituição:** Repositório criado para o desenvolvimento back-end da disciplina de Cloud Computing do 4º período do semestre 2023.2 da instituição de ensino ***[IBMEC](https://www.ibmec.br/)***
 
-Repositório criado para o desenvolvimento back-end da disciplina de Cloud Computing do 4º período do semestre 2023.2 da instituição de ensino ***[IBMEC](https://www.ibmec.br/)***
+**🎯Objetivo:** Esse projeto tem como objetivo o desenvolvimento de uma API Rest utilizando a linguagem de programação JAVA, em conjunto com SPRING BOOT e ferramentas de nuvem como a AZURE, onde o deploy será feito.
+
 
 # Tabela de Conteúdo
 - 🚗 [Título do Projeto](colecionador-de-carros-cloud-computing) ☁️
