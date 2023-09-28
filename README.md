@@ -6,13 +6,41 @@
 
 
 # Tabela de Conteúdo
-- 🚗 [Título do Projeto](colecionador-de-carros-cloud-computing) ☁️
+- 🚗 [Título do projeto](colecionador-de-carros-cloud-computing) ☁️
 - ✍️ [Sobre o projeto](#sobre-o-projeto)
-- 📑 [Tabela de Conteúdo](#tabela-de-conteúdo)
+- 📑 [Tabela de conteúdo](#tabela-de-conteúdo)
 - 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
-- 🏷️ [Tags de versões do Software](#tags-de-versões-do-software)
-- 💚 [Escopo das Requisições no Swagger](#escopo-das-requisições-no-swagger)
-- 🔗 [URL das Requisições](#url-das-requisições)
+- 🏷️ [Tags de versões do software](#tags-de-versões-do-software)
+- 💚 [Escopo das requisições no Swagger](#escopo-das-requisições-no-swagger)
+    <details><summary>😎 Colecionador</summary>
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+    <details>
+    <summary>🏠 Endereço</summary>
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+  
+    <details>
+    <summary>🚗 Carro</summary>
+    
+    - ✅ [POST](#post)
+    - ♻️ [PUT](#put)
+    - 🫳 [GET](#get)
+    - 📌 [GET pelo ID](#get-pelo-id)
+    - ❌ [DELETE](#delete)
+    </details>
+
+- 🔗 [Todas as URLs das requisições](#url-das-requisições)
 
 ## Tecnologias utilizadas nesse projeto 
 <!-- <div>
@@ -46,12 +74,12 @@
 - 🟡 **[V1.1.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.1.0)**
 - 🟡 **[V1.0.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.0.0)**
   
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
 ## Escopo das Requisições no Swagger
-**<details><summary>Colecionador</summary>**
-### POST ➕
-#### URL da requisição POST colecionador
+##**<details><summary>Colecionador</summary>**
+### POST 
+🔗 [URL de requisição do Colecionador](#url-das-requisições)
 ```URL
 localhost:8080/colecionador
 ```
@@ -85,7 +113,7 @@ localhost:8080/colecionador
   ]
 }
 ```
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
 **Adicionado apenas as informações do colecionar e deixando como null endereço e carro**
 ```JSON
@@ -99,9 +127,9 @@ localhost:8080/colecionador
   "carros": null
 }
 ```
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
-### PUT 🔄
+### PUT 
 #### URL da requisição PUT colecionador
 ```URL
 localhost:8080/colecionador/{id}
@@ -135,7 +163,7 @@ localhost:8080/colecionador/{id}
   ]
 }
 ```
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
 **Alterando apenas as informações do colecionar e deixando como null endereço e carro**
 ```JSON
@@ -149,14 +177,14 @@ localhost:8080/colecionador/{id}
   "carros": null
 }
 ```
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 
-### GET 🔄
+### GET 
 #### URL da requisição GET colecionador
 ```URL
 localhost:8080/colecionador/
 ```
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
 </details>
 </details>
 
@@ -170,4 +198,4 @@ localhost:8080/colecionador/
 | GET pelo ID          |                   | 
 | Delete               |                   | 
 
-**[(voltar ao início do README.md)](#tabela-de-conteúdo)**
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo)**
