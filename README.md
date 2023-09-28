@@ -1,7 +1,16 @@
 # 🚗 Colecionador de Carros - Cloud Computing ☁️
 ## **Repositório criado para o desenvolvimento back-end da disciplina de Cloud Computing do 4º período do semestre 2023.2 da instituição de ensino *[IBMEC](https://www.ibmec.br/)***
 
-<h2>Tecnologias utilizadas nesse projeto 🖥️</h2> 
+# Table of contents
+- ✍️ [](#table-of-contents)
+- 📑 [Table of contents](#table-of-contents)
+- 🖥️ [Tecnologias utilizadas nesse projeto](#tecnologias-utilizadas-nesse-projeto)
+- 🏷️ [Tags de versões do Software](#tags-de-versões-do-software)
+-  💚 [Escopo das Requisições no Swagger](#escopo-das-requisições-no-swagger)
+- [🔗 URL das Requisições](#url-das-requisições)
+- [Badges](#badges)
+
+## Tecnologias utilizadas nesse projeto 
 <!-- <div>
   <a href="https://code.visualstudio.com" target="_blank"><img alt="VS-Code-logo-Icon" height="60" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/></a>
   <a href="https://www.java.com/pt-BR/" target="_blank"><img alt="Java-logo-icon" height="80" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/></a>
@@ -25,7 +34,7 @@
 <a href="https://www.markdownguide.org/" target="_blank"><img alt="markdown-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" />
 </div>
 
-## Tags de versões do Software 🏷️
+## Tags de versões do Software
 ➡️ **[Como funciona a numeração das tags ?](https://www.alura.com.br/artigos/versionamento-semantico-breve-introducao?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=645853715422&hsa_src=g&hsa_tgt=dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI5bbSwZK0gQMVDjrUAR0n9AA3EAAYAiAAEgKBzfD_BwE)**
 
 - 🟢 **[V1.3.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.3.0)** ***NEW***
@@ -33,7 +42,7 @@
 - 🟡 **[V1.1.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.1.0)**
 - 🟡 **[V1.0.0](https://github.com/IgorMariano25/Colecionador-Carro-Cloud-Computing/releases/tag/V1.0.0)**
 
-## Escopo das Requisições no Swagger 🔗💚
+## Escopo das Requisições no Swagger
 **<details><summary>Colecionador</summary>**
 ### POST ➕
 #### URL da requisição POST colecionador
@@ -136,3 +145,12 @@ localhost:8080/colecionador/
 </details>
 </details>
 
+### URL das Requisições
+
+| Tipo da Requisição   | URL |                                                                                                                                                                                                                                  
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | 
+| POST                 |                   | 
+| PUT                  |                   | 
+| GET                  |                   | 
+| GET pelo ID          |                   | 
+| Delete               |                   | 
