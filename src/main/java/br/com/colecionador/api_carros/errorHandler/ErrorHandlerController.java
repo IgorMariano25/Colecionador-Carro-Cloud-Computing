@@ -64,14 +64,14 @@ public class ErrorHandlerController {
     //     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     // }
 
-    // @ExceptionHandler(HttpMessageNotReadableException.class)
-    // @ResponseStatus(HttpStatus.NOT_FOUND)
-    // @ResponseBody
-    // public ResponseEntity<ValidationErrorResponse> handleHttpMessageNotReadableException(
-    //         HttpMessageNotReadableException e) {
-    //     ValidationErrorResponse response = new ValidationErrorResponse();
-    //     response.addErrorValidation("400 Bad Request", "Requisição inválida, verifique os dados enviados.");
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseBody
+    public ResponseEntity<ValidationErrorResponse> handleHttpMessageNotReadableException(
+            HttpMessageNotReadableException e) {
+        ValidationErrorResponse response = new ValidationErrorResponse();
+        response.addErrorValidation("400 Bad Request", "Requisição inválida, verifique os dados enviados.");
 
-    //     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-    // }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
 }
