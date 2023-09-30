@@ -41,7 +41,8 @@
     - ❌ **[DELETE](#delete-carro)**
     </details>
 
-7. 🔗 [](#urls-das-requisições-de-cada-tabela)
+7. 🔗 [URLs das Requisições de cada tabela](#urls-das-requisições-de-cada-tabela)
+8. ⛔ [Mensagem de erro nas requisições](#mensagem-de-erro-nas-requisições)  
 
 ## Tecnologias utilizadas nesse projeto 
 <div>
@@ -318,4 +319,114 @@ localhost:8080/carro/{id}
 |    🚗 Carro                         |   📌 GET pelo ID            | `localhost:8080/carro/{id}`                        | 
 |    🚗 Carro                         |    ❌ Delete                | `localhost:8080/carro/{id}`                        |    
 
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+### Mensagem de erro nas requisições
+
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "405 Method Not Allowed",
+            "message": "Método HTTP não suportado, verifique a rota da sua URL."
+        }
+    ]
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "cpf",
+            "message": "cpf não está em um formato válido"
+        },
+        {
+            "field": "cpf",
+            "message": "O campo cpf não pode ser vazio"
+        },
+        {
+            "field": "sobrenome",
+            "message": "O campo nome não pode ser vazio"
+        },
+        {
+            "field": "nome",
+            "message": "O campo nome não pode ser vazio"
+        },
+        {
+            "field": "email",
+            "message": "O campo email não pode ser vazio"
+        }
+    ]
+}
+```
+
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "estado",
+            "message": "O campo estado não pode ser vazio"
+        },
+        {
+            "field": "cidade",
+            "message": "O campo cidade não pode ser vazio"
+        },
+        {
+            "field": "complemento",
+            "message": "O campo complemento não pode ser vazio"
+        },
+        {
+            "field": "cep",
+            "message": "cpf não está em um formato válido"
+        },
+        {
+            "field": "cep",
+            "message": "O campo cep não pode ser vazio"
+        },
+        {
+            "field": "logradouro",
+            "message": "O campo logradouro não pode ser vazio"
+        }
+    ]
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "velocidadeMaxima",
+            "message": "O campo velocidade máxima não pode ser maior que 550"
+        },
+        {
+            "field": "cor",
+            "message": "O campo cor não pode ser vazio"
+        },
+        {
+            "field": "quilometragem",
+            "message": "A quilometragem deve ser maior ou igual a 0"
+        },
+        {
+            "field": "modelo",
+            "message": "O campo modelo não pode ser vazio"
+        },
+        {
+            "field": "marca",
+            "message": "O campo marca não pode ser vazio"
+        },
+        {
+            "field": "anoDeFabricacao",
+            "message": "O ano de fabricação deve ser maior ou igual a 1885"
+        }
+    ]
+}
+```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
