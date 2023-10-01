@@ -52,17 +52,17 @@ public class ErrorHandlerController {
         return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(response);
     }
 
-    // @ExceptionHandler(NoHandlerFoundException.class)
-    // @ResponseStatus(HttpStatus.NOT_FOUND)
-    // @ResponseBody
-    // public ResponseEntity<ValidationErrorResponse> handleNotFoundException(
-    //         NoHandlerFoundException e) {
-    //     ValidationErrorResponse response = new ValidationErrorResponse();
-    //     response.addErrorValidation("404 Not Found",
-    //             "A página ou recurso solicitado não foi encontrado, verifique a rota da sua URL.");
+    @ExceptionHandler(NoHandlerFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseBody
+    public ResponseEntity<ValidationErrorResponse> handleNotFoundException(
+            NoHandlerFoundException e) {
+        ValidationErrorResponse response = new ValidationErrorResponse();
+        response.addErrorValidation("404 Not Found",
+                "A página ou recurso solicitado não foi encontrado, verifique a rota da sua URL.");
 
-    //     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-    // }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+    }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
