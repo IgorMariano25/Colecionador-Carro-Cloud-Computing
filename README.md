@@ -337,6 +337,32 @@ localhost:8080/carro/{id}
 ```
 **[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
 
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "404 Not Found",
+            "message": "A página ou recurso solicitado não foi encontrado, verifique a rota da sua URL."
+        }
+    ]
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
+```JSON
+{
+    "errorMessage": "Aconteceu um problema ao processar sua solicitação",
+    "errors": [
+        {
+            "field": "400 Bad Request",
+            "message": "Requisição inválida, verifique os dados enviados."
+        }
+    ]
+}
+```
+**[(🆙 voltar ao início do README.md)](#tabela-de-conteúdo---table-of-content---toc)**
+
 
 ```JSON
 {
