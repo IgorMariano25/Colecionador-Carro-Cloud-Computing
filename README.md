@@ -56,6 +56,7 @@
 <a href="https://git-scm.com/" target="_blank"><img alt="git-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
 <a href="https://swagger.io/" target="_blank"><img alt="swagger-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" />
 <a href="https://www.markdownguide.org/" target="_blank"><img alt="markdown-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" />
+<a href="https://maven.apache.org/" target="_blank"><img alt="markdown-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
 </div>
 
 ## Tags de versões do Software
