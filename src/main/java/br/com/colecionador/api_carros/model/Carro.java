@@ -36,15 +36,17 @@ public class Carro {
     @Min(value = 1885, message = "O ano de fabricação deve ser maior ou igual a 1885")
     @Max(value = 2023, message = "O ano de fabricação deve ser menor ou igual a 2023")
     private Integer anoDeFabricacao;
-
+    
     @Column(nullable = false)
     @NotNull(message = "O campo velocidade máxima não pode ser Null")
     @Max(value = 500, message = "O campo velocidade máxima não pode ser maior que 550")
+    @Min(value = 0, message = "O campo velocidade máxima não pode ser menor que 0")
     private Integer velocidadeMaxima;
     
     @Column(nullable = false)
     @NotNull(message = "O campo quilometragem não pode ser Null")
     @Min(value = 0, message = "A quilometragem deve ser maior ou igual a 0")
+    @Max(value = 400000, message = "A quilometragem deve ser menor ou igual a 400.000")
     private Integer quilometragem;
 
     public Long getId() {
