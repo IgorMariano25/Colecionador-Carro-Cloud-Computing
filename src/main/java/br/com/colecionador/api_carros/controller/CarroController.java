@@ -82,7 +82,8 @@ public class CarroController {
     @PutMapping("{id}")
     @Operation(summary = "Alterando informações do carro pelo ID", method = "GET")
 
-    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados) throws Exception {
+    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados)
+            throws Exception {
 
         Optional<Carro> result = this._carroService.findById(id);
 
@@ -100,7 +101,7 @@ public class CarroController {
     }
 
     @DeleteMapping("{id}")
-        @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
+    @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
 
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {

@@ -76,10 +76,16 @@ public class ColecionadorController {
     }
 
     @DeleteMapping("{id}")
-    @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
-
+    @Operation(summary = "Deletando um colecionador pelo ID", method = "DELETE")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
+            Optional<Colecionador> colecionadorASerExcluido = this._colecionadorService.findById(id);
+
+            if (colecionadorASerExcluido.isPresent() == false) {
+                throw new Exception("Não encontrei o colecionador a ser excluído");
+            }
+
+            this._colecionadorService.delete(colecionadorASerExcluido.get().getId());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);

@@ -39,7 +39,7 @@ public class Carro {
     
     @Column(nullable = false)
     @NotNull(message = "O campo velocidade máxima não pode ser Null")
-    @Max(value = 500, message = "O campo velocidade máxima não pode ser maior que 550")
+    @Max(value = 550, message = "O campo velocidade máxima não pode ser maior que 550")
     @Min(value = 0, message = "O campo velocidade máxima não pode ser menor que 0")
     private Integer velocidadeMaxima;
     
