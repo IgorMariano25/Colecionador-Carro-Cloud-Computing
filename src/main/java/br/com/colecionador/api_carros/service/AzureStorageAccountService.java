@@ -9,6 +9,7 @@ import com.azure.storage.blob.BlobClient;
 import com.azure.storage.blob.BlobContainerClient;
 import com.azure.storage.blob.BlobContainerClientBuilder;
 
+@Service
 public class AzureStorageAccountService {
 
     public String uploadFileToAzure(MultipartFile file) throws IOException {
