@@ -8,5 +8,5 @@ import br.com.colecionador.api_carros.model.Postagem;
 
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
     Optional<Postagem> findById(Long postagemId);
-    List<Postagem> findAllByUsuarioId(Long usuarioId);
+    List<Postagem> findAllByColecionadorId(Long colecionadorId);
 }

@@ -13,26 +13,26 @@ import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 public class ColecionadorService {
 
     @Autowired
-    private ColecionadorRepository _colecionadorRepository;
+    private ColecionadorRepository colecionadorRepository;
 
     public List<Colecionador> findAll() {
-        return this._colecionadorRepository.findAll();
+        return this.colecionadorRepository.findAll();
     }
 
     public Optional<Colecionador> findById(Long id) {
-        return this._colecionadorRepository.findById(id);
+        return this.colecionadorRepository.findById(id);
     }
 
     public Colecionador save(Colecionador colecionador) throws Exception {
-        if (this._colecionadorRepository.findById(colecionador.getId()).isPresent() == true) {
+        if (this.colecionadorRepository.findById(colecionador.getId()).isPresent() == true) {
             throw new Exception("Esse cpf já existe na base de dados");
         }
-        this._colecionadorRepository.save(colecionador);
+        this.colecionadorRepository.save(colecionador);
         return colecionador;
     }
 
     public Colecionador update(Long id, Colecionador colecionadorNovosDados) throws Exception {
-        Optional<Colecionador> result = this._colecionadorRepository.findById(id);
+        Optional<Colecionador> result = this.colecionadorRepository.findById(id);
         if (result.isPresent() == false) {
             throw new Exception("Não encontreio o colecionador a ser atualizado na base de dados");
         }
@@ -41,23 +41,23 @@ public class ColecionadorService {
         colecionadorASerAtualizado.setEmail(colecionadorNovosDados.getEmail());
         colecionadorASerAtualizado.setNickname(colecionadorNovosDados.getNickname());
 
-        this._colecionadorRepository.save(colecionadorASerAtualizado);
+        this.colecionadorRepository.save(colecionadorASerAtualizado);
         return colecionadorASerAtualizado;
     }
 
     public void delete(Long id) throws Exception {
-        Optional<Colecionador> colecionadorASerExcluido = this._colecionadorRepository.findById(id);
+        Optional<Colecionador> colecionadorASerExcluido = this.colecionadorRepository.findById(id);
 
         if (colecionadorASerExcluido.isPresent() == false) {
             throw new Exception("Não encontrei o colecionador a ser excluido");
         }
-        this._colecionadorRepository.delete(colecionadorASerExcluido.get());
+        this.colecionadorRepository.delete(colecionadorASerExcluido.get());
     }
 
     public void saveEndereco(Colecionador colecionador) {
-        this._colecionadorRepository.save(colecionador);
+        this.colecionadorRepository.save(colecionador);
     }
     public void saveCarro(Colecionador colecionador) {
-        this._colecionadorRepository.save(colecionador);
+        this.colecionadorRepository.save(colecionador);
     }
 }
