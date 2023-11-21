@@ -27,7 +27,7 @@ public class CarroService {
     }
 
     public Carro save(Carro carro) throws Exception {
-        if (this.carroRepsoitory.findById(carro.getId()).isEmpty()){
+        if (this.carroRepsoitory.findById(carro.getId()).isEmpty()) {
             throw new Exception("Esse ID já existe na base de dados na tabela Carro");
         }
         this.carroRepsoitory.save(carro);
@@ -58,5 +58,23 @@ public class CarroService {
             throw new Exception("Não encontrei o carro a ser excluído na base de dados na tabela Carro");
         }
         this.carroRepsoitory.delete(carroASerExcluido.get());
+    }
+
+    public void saveCarro(Carro carro) {
+        this.carroRepsoitory.save(carro);
+    }
+
+    public void uploadPhotoFileToCarro(MultipartFile file, Long id) throws Exception {
+
+        Optional<Carro> opCarro = this.carroRepsoitory.findById(id);
+
+        if (opCarro.isEmpty()) {
+            throw new Exception("Não encontrei o post a ser atualizado");
+        }
+
+        Carro carro = opCarro.get();
+        String ulrImage = this.azureStorageAccountService.uploadFileToAzure(file);
+        carro.setUrlImagemCarro(ulrImage);
+        this.carroRepsoitory.save(carro);
     }
 }
