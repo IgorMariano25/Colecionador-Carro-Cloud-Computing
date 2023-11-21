@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import br.com.colecionador.api_carros.model.Carro;
 import br.com.colecionador.api_carros.service.CarroService;
@@ -29,48 +31,27 @@ import jakarta.validation.Valid;
 public class CarroController {
 
     @Autowired
-    private CarroService _carroService;
+    private CarroService carroService;
 
     @Autowired
-    private ColecionadorService _colecionadorService;
+    private ColecionadorService colecionadorService;
 
     @GetMapping
     @Operation(summary = "Buscando todos os carros", method = "GET")
     public ResponseEntity<List<Carro>> getAll() {
         try {
-            return new ResponseEntity<>(this._carroService.findAll(), HttpStatus.OK);
+            return new ResponseEntity<>(this.carroService.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PostMapping("{idColecionador}")
-    @Operation(summary = "Adicionando um carro ao colecionador pelo ID", method = "POST")
-    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
-            @Valid @RequestBody Carro carro) {
-        try {
-
-            Optional<Colecionador> colecionador = this._colecionadorService.findById(idColecionador);
-
-            if (colecionador.isPresent() == false) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
-
-            colecionador.get().adicionarCarros(carro);
-            this._colecionadorService.saveCarro(colecionador.get());
-
-            return new ResponseEntity<>(carro, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
-        }
-    }
-
-    @GetMapping("{id}")
+    @GetMapping("{idCarro}")
     @Operation(summary = "Buscando todos os carros de um colecionador pelo ID", method = "GET")
 
-    public ResponseEntity<Carro> getById(@PathVariable("id") Long id) {
+    public ResponseEntity<Carro> getById(@PathVariable("idCarro") Long idCarro) {
 
-        Optional<Carro> result = this._carroService.findById(id);
+        Optional<Carro> result = this.carroService.findById(idCarro);
 
         if (result.isPresent()) {
             return new ResponseEntity<>(result.get(), HttpStatus.OK);
@@ -79,13 +60,45 @@ public class CarroController {
         }
     }
 
-    @PutMapping("{id}")
+    @PostMapping("/colecionador/{idColecionador}")
+    @Operation(summary = "Adicionando um carro ao colecionador pelo ID", method = "POST")
+    public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
+            @Valid @RequestBody Carro carro) {
+        try {
+
+            Optional<Colecionador> colecionador = this.colecionadorService.findById(idColecionador);
+
+            if (colecionador.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+            colecionador.get().adicionarCarros(carro);
+            this.colecionadorService.saveCarro(colecionador.get());
+
+            return new ResponseEntity<>(carro, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+    }
+
+    @PostMapping("{idCarro}")
+    public ResponseEntity<String> uploadCarroImage(@PathVariable("idCarro") Long idCarro,
+            @RequestParam("file") MultipartFile file) {
+        try {
+            carroService.uploadPhotoFileToCarro(file, idCarro);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
+        }
+    }
+
+    @PutMapping("{idCarro}")
     @Operation(summary = "Alterando informações do carro pelo ID", method = "GET")
 
-    public ResponseEntity<Carro> update(@PathVariable("id") Long id, @RequestBody Carro carroNovosDados)
+    public ResponseEntity<Carro> update(@PathVariable("idCarro") Long idCarro, @RequestBody Carro carroNovosDados)
             throws Exception {
 
-        Optional<Carro> result = this._carroService.findById(id);
+        Optional<Carro> result = this.carroService.findById(idCarro);
 
         if (result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -95,27 +108,43 @@ public class CarroController {
         carroASerAtualizado.setCor(carroNovosDados.getCor());
         carroASerAtualizado.setQuilometragem(carroNovosDados.getQuilometragem());
 
-        this._carroService.save(carroASerAtualizado);
+        this.carroService.save(carroASerAtualizado);
 
         return new ResponseEntity<>(result.get(), HttpStatus.OK);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("{idCarro}")
     @Operation(summary = "Deletando um carro pelo ID", method = "DELETE")
 
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("idCarro") Long idCarro) {
         try {
 
-            Optional<Carro> carroASerExluido = this._carroService.findById(id);
+            Optional<Carro> carroASerExluido = this.carroService.findById(idCarro);
 
-            if (carroASerExluido.isPresent() == false) {
+            if (carroASerExluido.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            this._carroService.delete(carroASerExluido.get().getId());
+            this.carroService.delete(carroASerExluido.get().getId());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
+
+    // @GetMapping("/colecionadores/{idColecionador}/carros")
+    // @Operation(summary = "Buscando todos os carros de um colecionador pelo ID",
+    // method = "GET")
+
+    // public ResponseEntity<Carro> getById(@PathVariable("idColecionador") Long
+    // idColecionador) {
+
+    // Optional<Carro> result = this.carroService.findById(idColecionador);
+
+    // if (result.isPresent()) {
+    // return new ResponseEntity<>(result.get(), HttpStatus.OK);
+    // } else {
+    // return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    // }
+    // }
 }
