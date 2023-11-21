@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import br.com.colecionador.api_carros.model.Carro;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
@@ -12,28 +13,31 @@ import br.com.colecionador.api_carros.repository.CarroRepsoitory;
 @Service
 public class CarroService {
     @Autowired
-    private CarroRepsoitory _carroRepsoitory;
+    private CarroRepsoitory carroRepsoitory;
+
+    @Autowired
+    private AzureStorageAccountService azureStorageAccountService;
 
     public List<Carro> findAll() {
-        return this._carroRepsoitory.findAll();
+        return this.carroRepsoitory.findAll();
     }
 
     public Optional<Carro> findById(Long id) {
-        return this._carroRepsoitory.findById(id);
+        return this.carroRepsoitory.findById(id);
     }
 
     public Carro save(Carro carro) throws Exception {
-        if (this._carroRepsoitory.findById(carro.getId()).isPresent() == false) {
+        if (this.carroRepsoitory.findById(carro.getId()).isEmpty()){
             throw new Exception("Esse ID já existe na base de dados na tabela Carro");
         }
-        this._carroRepsoitory.save(carro);
+        this.carroRepsoitory.save(carro);
         return carro;
     }
 
     public Carro update(Long id, Carro carroNovosDados) throws Exception {
-        Optional<Carro> existingItemOptional = _carroRepsoitory.findById(id);
+        Optional<Carro> existingItemOptional = carroRepsoitory.findById(id);
 
-        if (existingItemOptional.isPresent() == false) {
+        if (existingItemOptional.isEmpty()) {
             throw new Exception("Não encontreio o carro a ser atualizado na base de dados na tabela Carro");
         }
 
@@ -42,21 +46,17 @@ public class CarroService {
         carroASerAtualizado.setCor(carroNovosDados.getCor());
         carroASerAtualizado.setQuilometragem(carroNovosDados.getQuilometragem());
 
-        this._carroRepsoitory.save(carroASerAtualizado);
+        this.carroRepsoitory.save(carroASerAtualizado);
 
         return carroASerAtualizado;
     }
 
     public void delete(Long id) throws Exception {
-        Optional<Carro> carroASerExcluido = this._carroRepsoitory.findById(id);
+        Optional<Carro> carroASerExcluido = this.carroRepsoitory.findById(id);
 
-        if (carroASerExcluido.isPresent() == false) {
+        if (carroASerExcluido.isEmpty()) {
             throw new Exception("Não encontrei o carro a ser excluído na base de dados na tabela Carro");
         }
-        this._carroRepsoitory.delete(carroASerExcluido.get());
-    }
-
-    public void saveCarro(Carro carro) {
-        this._carroRepsoitory.save(carro);
+        this.carroRepsoitory.delete(carroASerExcluido.get());
     }
 }
