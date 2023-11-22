@@ -23,6 +23,10 @@ public class ColecionadorService {
         return this.colecionadorRepository.findById(id);
     }
 
+    public Optional<Colecionador> getById(Long id) {
+        return this.colecionadorRepository.findById(id);
+    }
+
     public Colecionador save(Colecionador colecionador) throws Exception {
         if (this.colecionadorRepository.findById(colecionador.getId()).isPresent() == true) {
             throw new Exception("Esse cpf já existe na base de dados");
@@ -58,6 +62,10 @@ public class ColecionadorService {
         this.colecionadorRepository.save(colecionador);
     }
     public void saveCarro(Colecionador colecionador) {
+        this.colecionadorRepository.save(colecionador);
+    }
+
+    public void savePostagem(Colecionador colecionador) {
         this.colecionadorRepository.save(colecionador);
     }
 }
