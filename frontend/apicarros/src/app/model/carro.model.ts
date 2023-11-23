@@ -1,4 +1,4 @@
-export interface Carro {
+export interface CarroModel {
   id?:Number;
   marca?: String;
   modelo?:String;
