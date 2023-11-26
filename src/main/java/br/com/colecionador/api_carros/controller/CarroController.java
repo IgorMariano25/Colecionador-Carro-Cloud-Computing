@@ -83,7 +83,7 @@ public class CarroController {
         }
     }
 
-    @PostMapping("{idCarro}")
+    @PostMapping("{idCarro}/uploadCarroImage")
     public ResponseEntity<String> uploadCarroImage(@PathVariable("idCarro") Long idCarro,
             @RequestParam("file") MultipartFile file) {
         try {
