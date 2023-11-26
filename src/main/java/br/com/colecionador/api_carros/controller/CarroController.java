@@ -49,7 +49,7 @@ public class CarroController {
     }
 
     @GetMapping("{idCarro}")
-    @Operation(summary = "Buscando todos os carros de um colecionador pelo ID", method = "GET")
+    @Operation(summary = "Buscando carro pelo ID", method = "GET")
 
     public ResponseEntity<Carro> getById(@PathVariable("idCarro") Long idCarro) {
 
