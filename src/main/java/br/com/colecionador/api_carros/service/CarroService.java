@@ -8,12 +8,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import br.com.colecionador.api_carros.model.Carro;
+import br.com.colecionador.api_carros.model.Colecionador;
 import br.com.colecionador.api_carros.repository.CarroRepsoitory;
+import br.com.colecionador.api_carros.repository.ColecionadorRepository;
 
 @Service
 public class CarroService {
     @Autowired
     private CarroRepsoitory carroRepsoitory;
+
+    @Autowired
+    private ColecionadorRepository colecionadorRepsoitory;
 
     @Autowired
     private AzureStorageAccountService azureStorageAccountService;
@@ -24,6 +29,9 @@ public class CarroService {
 
     public Optional<Carro> findById(Long id) {
         return this.carroRepsoitory.findById(id);
+    }
+    public Optional<Colecionador> findCarroByColecionadorId(Long id) {
+        return this.colecionadorRepsoitory.findById(id);
     }
 
     public Carro save(Carro carro) throws Exception {
@@ -68,7 +76,7 @@ public class CarroService {
 
         Optional<Carro> opCarro = this.carroRepsoitory.findById(id);
 
-        if (opCarro.isEmpty()) {
+        if (opCarro.isPresent() == false) {
             throw new Exception("Não encontrei o post a ser atualizado");
         }
 
