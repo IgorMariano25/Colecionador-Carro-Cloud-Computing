@@ -1,50 +1,22 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-#sell-all-cars {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#sell-all-cars a {
-  display: block;
-  width: 300px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-
-#sell-all-cars a span {
-  position: relative;
-  z-index: 2;
-}
-
-#sell-all-cars a:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
+#tool-bar {
   background: #ff003b;
-  transition: all .35s;
+  color: white;
 }
 
-#sell-all-cars a:hover {
-  color: #fff;
+.links-navbar {
+  margin-left: 8rem;
 }
 
-#sell-all-cars a:hover:after {
-  width: 100%;
+.links a {
+  text-decoration: none;
+  color: #FFF;
+}
+.links {
+  border-left: 4px solid #FFF;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.border-right {
+  border-right: 3px solid #FFF;
 }
