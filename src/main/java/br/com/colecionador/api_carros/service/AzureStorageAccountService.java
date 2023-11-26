@@ -24,6 +24,6 @@ public class AzureStorageAccountService {
 
         blob.upload(file.getInputStream(), file.getSize(), true);
 
-        return "https://storageapicarros.blob.core.windows.net/images" + file.getOriginalFilename();
+        return "https://storageapicarros.blob.core.windows.net/images/" + file.getOriginalFilename();
     }
 }
