@@ -1,21 +1,20 @@
 <header>
-  <mat-toolbar>
+  <mat-toolbar id="tool-bar">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>🚗 Colecionador de Carros - Cloud Computing ☁️</span>
-    <span class="example-spacer"></span>
+    <span>Colecionador de Carros - Cloud Computing</span>
+    <div class="links-navbar">
+      <span class="border-right" class="links"><a routerLink="/">Home</a></span>
+      <span class="border-right" class="links"><a routerLink="/allCars">Ver Todos os Carros</a></span>
+    </div>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
 </header>
 
-<tabela-colecionadores></tabela-colecionadores>
-
-<div id="sell-all-cars">
-  <a href="#"><span>Ver todos os carros 🚗</span></a>
-</div>
+<body>
+  <router-outlet></router-outlet>
+</body>
