@@ -134,19 +134,15 @@ public class CarroController {
         }
     }
 
-    // @GetMapping("/colecionadores/{idColecionador}/carros")
-    // @Operation(summary = "Buscando todos os carros de um colecionador pelo ID",
-    // method = "GET")
+    @GetMapping("/colecionador/{idColecionador}")
+    @Operation(summary = "Buscando todos os carros de um colecionador pelo ID", method = "GET")
+    public ResponseEntity<Colecionador> findCarroByColecionadorId(@PathVariable("idColecionador") Long idColecionador) {
+        Optional<Colecionador> result = this.colecionadorService.findById(idColecionador);
 
-    // public ResponseEntity<Carro> getById(@PathVariable("idColecionador") Long
-    // idColecionador) {
-
-    // Optional<Carro> result = this.carroService.findById(idColecionador);
-
-    // if (result.isPresent()) {
-    // return new ResponseEntity<>(result.get(), HttpStatus.OK);
-    // } else {
-    // return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    // }
-    // }
+        if (result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
