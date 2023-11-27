@@ -8,8 +8,8 @@ import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.c
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "allCars", component: AllCarsComponent },
-  { path: "carsCollector", component: CarrosColecionadorComponent },
-  { path: "Colecionadores", component: ColecionadoresComponent }
+  { path: "carsCollector/:id", component: CarrosColecionadorComponent },
+  { path: "Colecionadores", component: ColecionadoresComponent },
 ];
 
 @NgModule({
