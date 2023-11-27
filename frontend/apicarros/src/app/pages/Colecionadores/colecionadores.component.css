@@ -1,7 +1,7 @@
 .container-collector {
-  padding-top: 3rem;
+  padding-top: 7rem;
   display: grid;
-  grid-template-columns: repeat(3, 30rem);
+  grid-template-columns: repeat(3, 29rem);
   grid-auto-rows: auto;
   justify-content: center;
 }
@@ -13,10 +13,10 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 8px 40px rgba(#000000, 0.2);
+  margin-bottom: 1.5rem;
 }
 
 .profile {
-  margin-top: 1.2rem;
   position: relative;
 
   .thumbnail {
@@ -25,7 +25,7 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 2rem;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
@@ -43,13 +43,14 @@
     font-weight: 300;
     text-align: center;
     padding-bottom: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-family: porscheNextBold;
   }
 
   .description {
     color: #080911;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     justify-content: center;
     text-align: center;
     margin-bottom: 1.3em;
@@ -64,8 +65,8 @@
     width: 200px;
     height: 40px;
     line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
+    font-size: 20px;
+    font-family: porscheNextBold;
     text-decoration: none;
     background-color: #ff003b;
     letter-spacing: 2px;
