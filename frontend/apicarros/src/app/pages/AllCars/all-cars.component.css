@@ -1,4 +1,5 @@
 .carro-container {
+  padding-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
