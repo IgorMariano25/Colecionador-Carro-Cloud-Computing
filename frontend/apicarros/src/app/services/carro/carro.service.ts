@@ -17,7 +17,7 @@ export class CarroService {
   public getCarrosById(id: any): Observable<CarroModel> {
     return this.httpClient.get<CarroModel>(`http://localhost:8080/${id}`);
   }
-  public getCarrosByColecionadorId(id: any): Observable<CarroModel[]> {
+  public findCarroByColecionadorId(id: any): Observable<CarroModel[]> {
     return this.httpClient.get<CarroModel[]>(`http://localhost:8080/carro/colecionador/${id}`);
   }
 }
