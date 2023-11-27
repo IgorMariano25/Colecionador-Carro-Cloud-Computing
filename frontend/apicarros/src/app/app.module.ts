@@ -15,6 +15,7 @@ import { TabelaColecionadoresComponent } from './componentes/tabela-colecionador
 import { AllCarsComponent } from './pages/AllCars/all-cars.component';
 import { CarrosColecionadorComponent } from './pages/CarrosColecionador/carros-colecionador.component';
 import { HomeComponent } from './pages/Home/home.component';
+import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeComponent } from './pages/Home/home.component';
     AllCarsComponent,
     CarrosColecionadorComponent,
     HomeComponent,
+    ColecionadoresComponent,
   ],
   imports: [
     BrowserModule,

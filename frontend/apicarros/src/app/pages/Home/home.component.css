@@ -1,166 +1,69 @@
-:root {
-  --purple1: rgba(87, 29, 146, 1);
-  --purple2: rgba(172, 25, 102, 1);
-  --purple-gradient: linear-gradient(45deg, var(--purple1) 0%, var(--purple2) 100%);
-
-  --purple2-gradient: linear-gradient(to bottom right, #c90a6d, #ff48a0);
-
-  --blue1: #5e5aec;
-  --blue2: #3f9efc;
-  --blue1-gradient: linear-gradient(to bottom right, var(--blue1), var(--blue2));
-
-  --blue3: #6452e9;
-  --blue4: #639ff9;
-  --blue2-gradient: linear-gradient(to bottom right, var(--blue3), var(--blue4));
-
-  --shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
 body {
-  background-image: url("../../../assets/porsche-background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/porsche-background.jpg");
   background-size: cover;
+  object-fit: cover;
 }
 
-.container-collector{
-  padding-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 30rem);
-  grid-auto-rows: auto;
-  justify-content: center;
+.container-welcome {
+  text-align: center;
 }
 
-.card-collector {
-  width: 400px;
-  height: 580px;
-  background: #fdfeff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 8px 40px rgba(#000000, 0.2);
+h2 {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 30vh;
+  line-height: 3.525rem;
 }
 
-.profile {
-  margin-top: 1.2rem;
+h2 span {
+  margin-top: 15rem;
+}
+
+.sell-all-collectors a {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 380px;
+  height: 45px;
+  line-height: 40px;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-decoration: none;
+  background-color: #ff003b;
+  letter-spacing: 2px;
+  text-align: center;
   position: relative;
-
-  .thumbnail {
-    width: 124px;
-    height: 124px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5em;
-    border-radius: 100%;
-    box-shadow: var(--shadow);
-  }
-
-  .nome {
-    color: #2d354a;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .nickname {
-    color: #7c8097;
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-align: center;
-    padding-bottom: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .description {
-    color: #080911;
-    font-size: 16px;
-    font-weight: 300;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 1.3em;
-  }
-
-  .sell-cars-of-collector a {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    background-color: #ff003b;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .45s;
-    border-radius: 25px;
-    border: 3px solid #ff003b;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .sell-cars-of-collector a span {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-  }
-
-  .sell-cars-of-collector:hover a span {
-    color: #ff003b;
-  }
-
-  .sell-cars-of-collector a:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #fff;
-    transition: all .5s;
-    border-radius: 25px;
-  }
-
-  .sell-cars-of-collector a:hover:after {
-    width: 100%;
-  }
+  transition: all .45s;
+  border-radius: 25px;
+  border: 3px solid #ff003b;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.social-icons {
-  display: flex;
-  margin-top: 1.2rem;
-  justify-content: space-between;
+.sell-all-collectors a span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
 
-  .icon {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+.sell-all-collectors:hover a span {
+  color: #ff003b;
+}
 
-  img {
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    border-radius: 18px;
-    box-shadow: var(--shadow);
-  }
+.sell-all-collectors a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  transition: all .5s;
+  border-radius: 25px;
+}
 
-  img:hover {
-    width: 60px;
-    height: 60px;
-  }
-
-  h4 {
-    color: #080911;
-    font-size: 1.4rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.2rem;
-  }
-
-  p {
-    color: #666b7d;
-    font-size: 16px;
-  }
+.sell-all-collectors a:hover:after {
+  width: 100%;
 }
