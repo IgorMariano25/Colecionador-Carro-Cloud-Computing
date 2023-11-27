@@ -7,14 +7,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ColecionadorService {
 
-  private readonly API = "http:localhost:8080/colecion"
 
   constructor(public httpClient: HttpClient) { }
 
   public getColecionadorById(id: Number) {
-    return this.httpClient.get<ColecionadorModel>(this.API + id);
+    return this.httpClient.get<ColecionadorModel>(`http://localhost:8080/colecionador/${id}`);
   }
   public findAll() {
-    return this.httpClient.get<ColecionadorModel[]>(this.API);
+    return this.httpClient.get<ColecionadorModel[]>("http://localhost:8080/colecionador");
+  }
+
+  public findCarroByColecionadorId(id: Number) {
+    return this.httpClient.get<ColecionadorModel[]>(`http://localhost:8080/carro/colecionador/${id}`)
   }
 }
