@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: porsche;
+  src: url("./assets/fonts/911porschav3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: porsche2;
+  src: url("./assets/fonts/911porschav33d.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: porscheNext;
+  src: url("./assets/fonts/porsche-next.otf") format("truetype");
+}
+
+@font-face {
+  font-family: porscheNextBold;
+  src: url("./assets/fonts/porsche-next.otf") format("truetype");
+}
+
 
 html,
 body {
