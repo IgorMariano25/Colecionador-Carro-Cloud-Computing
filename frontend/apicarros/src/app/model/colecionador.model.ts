@@ -8,5 +8,5 @@ export interface ColecionadorModel {
   email?: string;
   cpf?: number;
   enderecos?: EnderecoModel[];
-  carros?: CarroModel[];
+  carros: CarroModel[];
 }
