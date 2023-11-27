@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,11 +12,17 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabelaColecionadoresComponent } from './componentes/tabela-colecionadores/tabela-colecionadores.component';
+import { AllCarsComponent } from './pages/AllCars/all-cars.component';
+import { CarrosColecionadorComponent } from './pages/CarrosColecionador/carros-colecionador.component';
+import { HomeComponent } from './pages/Home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabelaColecionadoresComponent,
+    AllCarsComponent,
+    CarrosColecionadorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,8 @@ import { TabelaColecionadoresComponent } from './componentes/tabela-colecionador
     RouterModule,
     MatTableModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

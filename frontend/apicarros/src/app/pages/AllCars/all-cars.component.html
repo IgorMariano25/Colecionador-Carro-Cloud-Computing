@@ -1,0 +1,19 @@
+<div class="carro-container" *ngIf="carros && carros.length > 0">
+  <mat-card class="card-carros" *ngFor="let carro of carros">
+    <mat-card-header>
+      <mat-card-title> <img id="icone-marca" src="../../../assets/imagem-de-marca.png" alt="icone-marca">Marca: {{ carro.marca }} </mat-card-title>
+      <mat-card-subtitle> <img id="icon-model" src="../../../assets/carro-esporte.png" alt="icon-model">Modelo: {{ carro.modelo }} </mat-card-subtitle>
+      <mat-card-subtitle> <img id="icone-cor" src="../../../assets/roda-de-cores.png" alt="icone-cor">Cor: {{ carro.cor }} </mat-card-subtitle>
+      <mat-card-subtitle> <img id="icone-ano-de-fabricacao" src="../../../assets/data-limite.png" alt="icone-ano-de-fabricacao">Ano de Fabricação: {{ carro.anoDeFabricacao }} </mat-card-subtitle>
+      <mat-card-subtitle> <img id="icone-velocidade" src="../../../assets/rapidez.png" alt="icone-velocidade">Velocidade Máxima: {{ carro.velocidadeMaxima }} Km/h </mat-card-subtitle>
+      <mat-card-subtitle> <img id="icone-quilometragem" src="../../../assets/distancia.png" alt="icone-quilometragem">Quilometragem: {{ carro.quilometragem }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="carro.urlImagemCarro" alt="Imagem de um carro">
+
+    <mat-card-actions>
+      <mat-card-actions><button mat-button>LIKE</button><mat-icon id="heart">favorite</mat-icon></mat-card-actions>
+      <mat-card-actions><button mat-button>SHARE</button><mat-icon id="share">share</mat-icon></mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

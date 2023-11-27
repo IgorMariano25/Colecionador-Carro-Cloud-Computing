@@ -1,9 +1,5 @@
-import { Colecionador } from './../../../app/model/colecionador.model';
-import { Component, OnInit } from '@angular/core';
-
-const ELEMENT_DATA: Colecionador[] = [
-  { nome: "Teste", sobrenome: "Teste", nickname: 'Teste' },
-];
+import { ColecionadorModel } from './../../../app/model/colecionador.model';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'tabela-colecionadores',
@@ -11,12 +7,8 @@ const ELEMENT_DATA: Colecionador[] = [
   styleUrl: './tabela-colecionadores.component.css'
 })
 
-export class TabelaColecionadoresComponent implements OnInit {
+export class TabelaColecionadoresComponent {
   displayedColumns: string[] = ['Nome', 'Sobrenome', 'Nickname'];
-  dataSource = ELEMENT_DATA;
-  colecionadores: Colecionador[] = [];
+  colecionadores: ColecionadorModel[] = [];
 
-  ngOnInit(): void {
-
-  }
 }
