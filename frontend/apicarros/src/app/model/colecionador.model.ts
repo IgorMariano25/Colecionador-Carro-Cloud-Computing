@@ -6,7 +6,7 @@ export interface ColecionadorModel {
   sobrenome?: string;
   nickname?: string;
   email?: string;
-  cpf?: number;
+  cpf?: string;
   enderecos?: EnderecoModel[];
-  carros: CarroModel[];
+  carros?: CarroModel[];
 }

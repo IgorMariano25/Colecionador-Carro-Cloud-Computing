@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,8 +15,9 @@ import { AppComponent } from './app.component';
 import { TabelaColecionadoresComponent } from './componentes/tabela-colecionadores/tabela-colecionadores.component';
 import { AllCarsComponent } from './pages/AllCars/all-cars.component';
 import { CarrosColecionadorComponent } from './pages/CarrosColecionador/carros-colecionador.component';
-import { HomeComponent } from './pages/Home/home.component';
 import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.component';
+import { FormularioColecionadorComponent } from './pages/FormularioColecionador/formulario-colecionador.component';
+import { HomeComponent } from './pages/Home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.c
     CarrosColecionadorComponent,
     HomeComponent,
     ColecionadoresComponent,
+    FormularioColecionadorComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.c
     MatTableModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
