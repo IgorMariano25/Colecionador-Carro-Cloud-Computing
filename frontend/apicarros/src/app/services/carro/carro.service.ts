@@ -11,13 +11,13 @@ export class CarroService {
   constructor(private httpClient: HttpClient) { }
 
   public getCarros(): Observable<CarroModel[]> {
-    return this.httpClient.get<CarroModel[]>("http://localhost:8080/carro");
+    return this.httpClient.get<CarroModel[]>("https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/carro");
   }
 
   public getCarrosById(id: any): Observable<CarroModel> {
-    return this.httpClient.get<CarroModel>(`http://localhost:8080/${id}`);
+    return this.httpClient.get<CarroModel>(`https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/${id}`);
   }
   public findCarroByColecionadorId(id: any): Observable<CarroModel[]> {
-    return this.httpClient.get<CarroModel[]>(`http://localhost:8080/carro/colecionador/${id}`);
+    return this.httpClient.get<CarroModel[]>(`https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/carro/colecionador/${id}`);
   }
 }

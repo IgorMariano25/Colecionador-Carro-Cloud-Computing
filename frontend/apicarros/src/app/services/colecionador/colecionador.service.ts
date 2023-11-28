@@ -12,17 +12,17 @@ export class ColecionadorService {
   constructor(public httpClient: HttpClient) { }
 
   public getColecionadorById(id: Number) {
-    return this.httpClient.get<ColecionadorModel>(`http://localhost:8080/colecionador/${id}`);
+    return this.httpClient.get<ColecionadorModel>(`https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/colecionador/${id}`);
   }
   public findAll() {
-    return this.httpClient.get<ColecionadorModel[]>("http://localhost:8080/colecionador");
+    return this.httpClient.get<ColecionadorModel[]>("https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/colecionador");
   }
 
   public findCarroByColecionadorId(id: Number) {
-    return this.httpClient.get<ColecionadorModel[]>(`http://localhost:8080/carro/colecionador/${id}`)
+    return this.httpClient.get<ColecionadorModel[]>(`https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/carro/colecionador/${id}`)
   }
 
   public createColecionador(colecionador: ColecionadorModel): Observable<ColecionadorModel> {
-    return this.httpClient.post<ColecionadorModel>(`http://localhost:8080/colecionador`, colecionador);
+    return this.httpClient.post<ColecionadorModel>(`https://deploy-ap1-cloud-computing-2023-2.azurewebsites.net/colecionador`, colecionador);
   }
 }
