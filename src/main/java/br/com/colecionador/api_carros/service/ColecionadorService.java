@@ -27,10 +27,7 @@ public class ColecionadorService {
         return this.colecionadorRepository.findById(id);
     }
 
-    public Colecionador save(Colecionador colecionador) throws Exception {
-        if (this.colecionadorRepository.findById(colecionador.getId()).isPresent() == true) {
-            throw new Exception("Esse cpf já existe na base de dados");
-        }
+    public Colecionador save(Colecionador colecionador) {
         this.colecionadorRepository.save(colecionador);
         return colecionador;
     }

@@ -31,7 +31,6 @@ export class FormularioColecionadorComponent {
 
     this.colecionadorService.createColecionador(novoColecionador).subscribe(response => {
       this.colecionador = response;
-      console.log('Colecionador criado com sucesso:', response);
 
       this.colecionador = {
         nome: '',
