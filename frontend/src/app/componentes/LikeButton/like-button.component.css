@@ -1,0 +1,66 @@
+.buttons-container {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 8rem;
+  box-sizing: border-box;
+}
+
+mat-icon {
+  padding-right: 1rem;
+}
+
+mat-icon #heart {
+  font-size: 1.75rem;
+}
+
+mat-icon #share {
+  font-size: 1.5rem;
+}
+
+.like-content .btn,
+.share-content .btn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.like-content .btn mat-icon,
+.share-content .btn mat-icon {
+  align-items: center;
+}
+
+.like-content .btn {
+  background: #ff003b;
+  box-shadow: 10px 10px 20px -8px rgb(240, 75, 113);
+}
+
+.share-content .btn {
+  background: #139DF2;
+  box-shadow: 10px 10px 20px -8px rgb(19, 86, 242);
+}
+
+.like-content .btn:hover,
+.share-content .btn:hover {
+  transform: translateY(-3px);
+}
+
+#heart,
+#share {
+  color: #ffffff;
+}
