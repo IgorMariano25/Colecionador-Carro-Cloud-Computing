@@ -31,23 +31,26 @@ public class Carro {
     @NotBlank(message = "O campo cor não pode ser vazio")
     private String cor;
 
-    @Column(nullable = true, length = 100)
+    @Column(nullable = false, length = 100)
     @NotNull(message = "O campo ano de fabricação não pode ser Null")
     @Min(value = 1885, message = "O ano de fabricação deve ser maior ou igual a 1885")
     @Max(value = 2023, message = "O ano de fabricação deve ser menor ou igual a 2023")
     private Integer anoDeFabricacao;
-    
+
     @Column(nullable = false)
     @NotNull(message = "O campo velocidade máxima não pode ser Null")
     @Max(value = 550, message = "O campo velocidade máxima não pode ser maior que 550")
     @Min(value = 0, message = "O campo velocidade máxima não pode ser menor que 0")
     private Integer velocidadeMaxima;
-    
+
     @Column(nullable = false)
     @NotNull(message = "O campo quilometragem não pode ser Null")
     @Min(value = 0, message = "A quilometragem deve ser maior ou igual a 0")
     @Max(value = 400000, message = "A quilometragem deve ser menor ou igual a 400.000")
     private Integer quilometragem;
+
+    @Column(nullable = true)
+    private String urlImagemCarro;
 
     public Long getId() {
         return this.id;
@@ -103,5 +106,13 @@ public class Carro {
 
     public void setQuilometragem(Integer quilometragem) {
         this.quilometragem = quilometragem;
+    }
+
+    public String getUrlImagemCarro() {
+        return this.urlImagemCarro;
+    }
+
+    public void setUrlImagemCarro(String urlImagemCarro) {
+        this.urlImagemCarro = urlImagemCarro;
     }
 }

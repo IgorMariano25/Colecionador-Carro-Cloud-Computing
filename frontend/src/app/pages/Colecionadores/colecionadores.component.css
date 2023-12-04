@@ -1,0 +1,148 @@
+.container-collector {
+  padding-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 29rem);
+  grid-auto-rows: auto;
+  justify-content: center;
+}
+
+.card-collector {
+  width: 400px;
+  height: 580px;
+  background: #fdfeff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 40px rgba(#000000, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.profile {
+  position: relative;
+
+  .thumbnail {
+    width: 124px;
+    height: 124px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+  }
+
+  .nome {
+    color: #2d354a;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .nickname {
+    color: #7c8097;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 1rem;
+    letter-spacing: 5px;
+    font-family: porscheNextBold;
+  }
+
+  .description {
+    color: #080911;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.3em;
+  }
+
+  .sell-cars-of-collector a {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: porscheNextBold;
+    text-decoration: none;
+    background-color: #ff003b;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .45s;
+    border-radius: 25px;
+    border: 3px solid #ff003b;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .sell-cars-of-collector a span {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .sell-cars-of-collector:hover a span {
+    color: #ff003b;
+  }
+
+  .sell-cars-of-collector a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all .5s;
+    border-radius: 25px;
+  }
+
+  .sell-cars-of-collector a:hover:after {
+    width: 100%;
+  }
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1.2rem;
+  justify-content: space-between;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img {
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  img:hover {
+    width: 60px;
+    height: 60px;
+  }
+
+  h4 {
+    color: #080911;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    color: #666b7d;
+    font-size: 16px;
+  }
+}
+
+.social-icons .icon:hover {
+  cursor: pointer;
+}

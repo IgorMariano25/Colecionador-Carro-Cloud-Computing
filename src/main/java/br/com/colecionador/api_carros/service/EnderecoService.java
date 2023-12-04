@@ -12,26 +12,26 @@ import br.com.colecionador.api_carros.repository.EnderecoRepository;
 @Service
 public class EnderecoService {
     @Autowired
-    private EnderecoRepository _enderecoRepository;
+    private EnderecoRepository enderecoRepository;
 
     public List<Endereco> findAll() {
-        return this._enderecoRepository.findAll();
+        return this.enderecoRepository.findAll();
     }
 
     public Optional<Endereco> findById(Long id) {
-        return this._enderecoRepository.findById(id);
+        return this.enderecoRepository.findById(id);
     }
 
     public Endereco save(Endereco endereco) throws Exception {
-        if (this._enderecoRepository.findById(endereco.getId()).isPresent() == false) {
+        if (this.enderecoRepository.findById(endereco.getId()).isPresent() == false) {
             throw new Exception("Esse ID já existe na base de dados na tabela Endereco");
         }
-        this._enderecoRepository.save(endereco);
+        this.enderecoRepository.save(endereco);
         return endereco;
     }
 
     public Endereco update(Long id, Endereco enderecoNovosDados) throws Exception {
-        Optional<Endereco> existingItemOptional = _enderecoRepository.findById(id);
+        Optional<Endereco> existingItemOptional = enderecoRepository.findById(id);
 
         if (existingItemOptional.isPresent() == false) {
             throw new Exception("Não encontreio o endereço a ser atualizado na base de dados na tabela Endereco");
@@ -45,21 +45,21 @@ public class EnderecoService {
         enderecoASerAtualizado.setEstado(enderecoNovosDados.getEstado());
         enderecoASerAtualizado.setCep(enderecoNovosDados.getCep());
 
-        this._enderecoRepository.save(enderecoASerAtualizado);
+        this.enderecoRepository.save(enderecoASerAtualizado);
 
         return enderecoASerAtualizado;
     }
 
     public void delete(Long id) throws Exception {
-        Optional<Endereco> enderecoASerExcluido = this._enderecoRepository.findById(id);
+        Optional<Endereco> enderecoASerExcluido = this.enderecoRepository.findById(id);
 
         if (enderecoASerExcluido.isPresent() == false) {
             throw new Exception("Não encontrei o endereço a ser excluído");
         }
-        this._enderecoRepository.delete(enderecoASerExcluido.get());
+        this.enderecoRepository.delete(enderecoASerExcluido.get());
     }
 
     public void saveEndereco(Endereco endereco) {
-        this._enderecoRepository.save(endereco);
+        this.enderecoRepository.save(endereco);
     }
 }

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: porsche;
+  src: url("./assets/fonts/911porschav3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: porsche2;
+  src: url("./assets/fonts/911porschav33d.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: porscheNext;
+  src: url("./assets/fonts/porsche-next.otf") format("truetype");
+}
+
+@font-face {
+  font-family: porscheNextBold;
+  src: url("./assets/fonts/porsche-next.otf") format("truetype");
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #0F0F0F;
+}

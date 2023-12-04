@@ -1,0 +1,37 @@
+<!-- Template com dados do BD-->
+<div class="container-collector" *ngIf="colecionador && colecionador.length> 0">
+  <div class="card-collector" *ngFor="let colecionador of colecionador">
+    <div class="profile">
+      <img
+        src="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w"
+        class="thumbnail" alt="Foto do colecionador">
+      <h3 class="nome"> {{colecionador.nome}} {{colecionador.sobrenome}} </h3>
+      <p class="nickname">{{colecionador.nickname}}</p>
+      <p class="description">Para os amantes de carros esportivos, cada curva é uma dança, cada aceleração é um êxtase.
+        Viva a paixão pela velocidade e sinta a adrenalina pulsar nas veias ao dirigir essas máquinas imponentes.</p>
+      <div (click)="redirectTocarsCollector(colecionador.id)" class="sell-cars-of-collector">
+        <a><span>Ver carros</span></a>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <div class="icon">
+        <a> <img src="../../../assets/instagram.png" alt="instagram logo"></a>
+        <h4>585k</h4>
+        <p>Seguidores</p>
+      </div>
+
+      <div class="icon">
+        <a><img src="../../../assets/twitter.png" alt="twitter logo"> </a>
+        <h4>327k</h4>
+        <p>Seguidores</p>
+      </div>
+
+      <div class="icon">
+        <a><img src="../../../assets/youtube.png" alt="youtube logo"></a>
+        <h4>1M</h4>
+        <p>Seguidores</p>
+      </div>
+    </div>
+  </div>
+</div>

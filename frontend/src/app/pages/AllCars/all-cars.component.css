@@ -1,0 +1,73 @@
+.carro-container {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0.5rem;
+}
+
+.card-carros {
+  max-width: 800px;
+  background-color: #FFF;
+  border-radius: 20px;
+  margin: 2.5rem;
+}
+
+.card-carros img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+mat-card-header img {
+  max-width: 36px;
+  max-height: 512px;
+  margin-right: 1rem;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+mat-card-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+mat-card-actions button {
+  font-size: 1.2rem;
+}
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-actions button {
+  color: #000;
+}
+
+#heart {
+  color: #ff003b;
+}
+
+#share {
+  color: #139DF2;
+}

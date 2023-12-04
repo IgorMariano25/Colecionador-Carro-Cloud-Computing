@@ -47,16 +47,17 @@
 ## Tecnologias utilizadas nesse projeto 
 <div>
 <a href="https://code.visualstudio.com" target="_blank"><img alt="VS-Code-logo-Icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
-<a href="https://www.java.com/pt-BR/" target="_blank"><img alt="Java-logo-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
-<a href="https://spring.io" target="_blank"><img alt="Spring-boot-logo-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" />
-<a href="https://postman.com" target="_blank"><img alt="postman" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
 <a href="https://azure.microsoft.com/en-us/" target="_blank"><img alt="Azure -Microsoft" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" />
 <a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank"><img alt="Windows-11-logo-Icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Windows_11-0078d4?style=for-the-badge&logo=windows-11&logoColor=white" />
-<a href="https://github.com/" target="_blank"><img alt="github-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
-<a href="https://git-scm.com/" target="_blank"><img alt="git-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
 <a href="https://swagger.io/" target="_blank"><img alt="swagger-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" />
+<a href="https://spring.io" target="_blank"><img alt="Spring-boot-logo-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" />
+<a href="https://github.com/" target="_blank"><img alt="github-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
 <a href="https://www.markdownguide.org/" target="_blank"><img alt="markdown-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" />
-<a href="https://maven.apache.org/" target="_blank"><img alt="markdown-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
+<a href="https://www.java.com/pt-BR/" target="_blank"><img alt="Java-logo-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
+<a href="https://postman.com" target="_blank"><img alt="postman" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
+<a href="https://git-scm.com/" target="_blank"><img alt="git-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
+<a href="https://maven.apache.org/" target="_blank"><img alt="apache-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
+<a href="https://angular.io/" target="_blank"><img alt="angular-icon" height="45" width="200" margin-right: 10px; src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
 </div>
 
 ## Tags de versões do Software

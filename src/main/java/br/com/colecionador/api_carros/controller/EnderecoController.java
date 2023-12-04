@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,21 +26,22 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@CrossOrigin(origins = "*")
 @Tag(name = "Endereço", description = "Resquições para a tabela Endereco")
 @RequestMapping("/endereco")
 public class EnderecoController {
 
     @Autowired
-    private EnderecoService _enderecoService;
+    private EnderecoService enderecoService;
 
     @Autowired
-    private ColecionadorService _colecionadorService;
+    private ColecionadorService colecionadorService;
 
     @GetMapping
     @Operation(summary = "Buscando todos os endereços", method = "GET")
     public ResponseEntity<List<Endereco>> getAll() {
         try {
-            return new ResponseEntity<>(this._enderecoService.findAll(), HttpStatus.OK);
+            return new ResponseEntity<>(this.enderecoService.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -52,14 +54,14 @@ public class EnderecoController {
             @Valid @RequestBody Endereco endereco) {
         try {
 
-            Optional<Colecionador> colecionador = this._colecionadorService.findById(idColecionador);
+            Optional<Colecionador> colecionador = this.colecionadorService.findById(idColecionador);
 
             if (colecionador.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
             colecionador.get().adicionarEndereco(endereco);
-            this._colecionadorService.saveEndereco(colecionador.get());
+            this.colecionadorService.saveEndereco(colecionador.get());
 
             return new ResponseEntity<>(endereco, HttpStatus.CREATED);
         } catch (Exception e) {
@@ -72,7 +74,7 @@ public class EnderecoController {
 
     public ResponseEntity<Endereco> getById(@PathVariable("id") Long id) {
 
-        Optional<Endereco> resultGetID = this._enderecoService.findById(id);
+        Optional<Endereco> resultGetID = this.enderecoService.findById(id);
 
         if (resultGetID.isPresent()) {
             return new ResponseEntity<>(resultGetID.get(), HttpStatus.OK);
@@ -85,7 +87,7 @@ public class EnderecoController {
     @Operation(summary = "Alterando informações do endereço pelo ID", method = "PUT")
     public ResponseEntity<Endereco> update(@PathVariable("id") Long id, @RequestBody Endereco enderecoNovosDados) {
         try {
-            Endereco resultadoPUT = this._enderecoService.update(id, enderecoNovosDados);
+            Endereco resultadoPUT = this.enderecoService.update(id, enderecoNovosDados);
             return new ResponseEntity<>(resultadoPUT, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -97,13 +99,13 @@ public class EnderecoController {
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         try {
 
-            Optional<Endereco> enderecoASerExcluido = this._enderecoService.findById(id);
+            Optional<Endereco> enderecoASerExcluido = this.enderecoService.findById(id);
 
             if (enderecoASerExcluido.isPresent() == false) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            this._enderecoService.delete(enderecoASerExcluido.get().getId());
+            this.enderecoService.delete(enderecoASerExcluido.get().getId());
 
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {

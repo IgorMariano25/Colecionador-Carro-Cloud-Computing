@@ -117,11 +117,11 @@ public class Colecionador {
         this.carros = carros;
     }
 
-    public void adicionarEndereco(Endereco endereco){
+    public void adicionarEndereco(Endereco endereco) {
         this.enderecos.add(endereco);
     }
 
-    public void adicionarCarros(Carro carro){
+    public void adicionarCarros(Carro carro) {
         this.carros.add(carro);
     }
 }

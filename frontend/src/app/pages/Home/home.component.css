@@ -1,0 +1,84 @@
+/* body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../../assets/porsche-background.jpg");
+  background-size: cover;
+  object-fit: cover;
+} */
+
+.container-welcome {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-welcome video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.container-welcome .main-content {
+  position: relative;
+  z-index: 1;
+
+}
+
+.main-content h2 {
+  font-family: porscheNextBold;
+  font-size: 55px;
+  color: #fff;
+  line-height: 3.525rem;
+}
+
+.sell-all-collectors a {
+  font-family: porscheNextBold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 380px;
+  height: 45px;
+  line-height: 50px;
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-decoration: none;
+  background-color: #ff003b;
+  text-align: center;
+  position: relative;
+  transition: all .30s;
+  border-radius: 25px;
+  border: 3px solid #ff003b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sell-all-collectors a span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.sell-all-collectors:hover a span {
+  color: #ff003b;
+}
+
+.sell-all-collectors a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  transition: all .5s;
+  border-radius: 25px;
+}
+
+.sell-all-collectors a:hover:after {
+  width: 100%;
+}
