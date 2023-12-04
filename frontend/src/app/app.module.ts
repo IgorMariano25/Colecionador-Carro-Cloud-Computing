@@ -18,6 +18,7 @@ import { CarrosColecionadorComponent } from './pages/CarrosColecionador/carros-c
 import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.component';
 import { FormularioColecionadorComponent } from './pages/FormularioColecionador/formulario-colecionador.component';
 import { HomeComponent } from './pages/Home/home.component';
+import { LikeButtonComponent } from './componentes/LikeButton/like-button.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeComponent } from './pages/Home/home.component';
     HomeComponent,
     ColecionadoresComponent,
     FormularioColecionadorComponent,
+    LikeButtonComponent,
   ],
   imports: [
     BrowserModule,
