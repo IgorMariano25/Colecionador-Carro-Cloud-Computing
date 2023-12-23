@@ -1,8 +1,9 @@
 #tool-bar {
   background: #ff003b;
   color: white;
-  font-family: porsche;
-  font-size: 18px;
+  font-family: porscheNextBold;
+  font-size: 1.5rem;
+  font-weight: 450;
   justify-content: center;
   position: fixed;
   z-index: 3;
@@ -14,13 +15,13 @@
 }
 
 .links {
-  border-left: 4px solid #FFF;
+  border-left: 2px solid #FFF;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 #formsColector {
-  border-right: 4px solid #FFF;
+  border-right: 2px solid #FFF;
   padding-left: 2rem;
   padding-right: 2rem;
 }
