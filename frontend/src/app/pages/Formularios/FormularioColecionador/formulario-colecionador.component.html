@@ -1,0 +1,48 @@
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <h2 class="animation a1">Descubra o extraordinário !</h2>
+        <h3 class="animation a2">Seja membro do nosso grupo exclusivo de apaixonados por carros de luxo.</h3>
+      </div>
+      <div class="form">
+        <input type="text" name="nome" class="form-field animation a3" [(ngModel)]="colecionador.nome"
+          placeholder="Nome" required>
+
+        <input type="text" name="sobrenome" class="form-field animation a4" [(ngModel)]="colecionador.sobrenome"
+          placeholder="Sobrenome" required>
+
+        <input type="text" name="nickname" class="form-field animation a4" [(ngModel)]="colecionador.nickname"
+          placeholder="Nickname" required>
+
+        <input type="email" name="email" class="form-field animation a3" [(ngModel)]="colecionador.email"
+          placeholder="Email" required>
+
+        <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="colecionador.cpf" placeholder="CPF"
+          required>
+        <!-- <button (click)="criarNovoColecionador(); openPopUp()" [disabled]="!formularioValido()" -->
+        <button (click)="criarNovoColecionador(); openPopUp()" class="animation a6">ENVIAR</button>
+
+        <div class="popup__view">
+          <div class="popup" id="popup">
+            <!--Fechar popup com span -->
+            <div (click)="closePopUp()"><span id="close__popup"><i class="bi bi-x-circle-fill"></i></span></div>
+            <div id="content__popup">
+              <img src="" alt="">
+              <h2>Novo colecioandor criado com sucesso !</h2>
+              <p>Obrigado por se juntar à elite dos colecionadores de carros!</p>
+              <p>Estamos empolgados por ter você conosco. <span>🏎️🎉</span></p>
+              <div class="button__popup"><a routerLink="/Colecionadores"><span>Ver colecionadores</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <!-- <video autoplay muted loop>
+        <source src="../../../assets/video-carro-1.mp4" type="video/mp4">
+      </video> -->
+      <img src="../../../assets/ferrari-vermelha-background-e-chave.jpg" alt="">
+    </div>
+  </div>
+</body>

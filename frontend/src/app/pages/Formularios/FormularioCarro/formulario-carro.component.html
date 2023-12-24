@@ -1,3 +1,4 @@
+<p>formulario-carro works!</p>
 <body>
   <div class="container">
     <div class="left">
@@ -20,7 +21,7 @@
 
         <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="colecionador.cpf" placeholder="CPF"
           required>
-        <button (click)="criarNovoColecionador(); openPopUp()" class="animation a6">ENVIAR</button>
+        <button (click)="criarNovoColecionador(); openPopUp()" [disabled]="!formularioValido()" class="animation a6">ENVIAR</button>
 
         <div class="popup__view">
           <div class="popup" id="popup">

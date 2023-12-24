@@ -11,7 +11,7 @@ describe('FormularioColecionadorComponent', () => {
       declarations: [FormularioColecionadorComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(FormularioColecionadorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
