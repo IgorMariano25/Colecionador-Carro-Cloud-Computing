@@ -16,9 +16,11 @@ import { TabelaColecionadoresComponent } from './componentes/tabela-colecionador
 import { AllCarsComponent } from './pages/AllCars/all-cars.component';
 import { CarrosColecionadorComponent } from './pages/CarrosColecionador/carros-colecionador.component';
 import { ColecionadoresComponent } from './pages/Colecionadores/colecionadores.component';
-import { FormularioColecionadorComponent } from './pages/FormularioColecionador/formulario-colecionador.component';
+import { FormularioColecionadorComponent } from './pages/Formularios/FormularioColecionador/formulario-colecionador.component';
+import { FormularioCarroComponent } from './pages/Formularios/FormularioCarro/formulario-carro.component';
 import { HomeComponent } from './pages/Home/home.component';
 import { LikeButtonComponent } from './componentes/LikeButton/like-button.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { LikeButtonComponent } from './componentes/LikeButton/like-button.compon
     ColecionadoresComponent,
     FormularioColecionadorComponent,
     LikeButtonComponent,
+    FormularioCarroComponent
   ],
   imports: [
     BrowserModule,
