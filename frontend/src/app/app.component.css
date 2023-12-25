@@ -1,6 +1,6 @@
-#tool-bar {
+/* #tool-bar {
   background: #ff003b;
-  color: white;
+  color: #fff;
   font-family: porscheNextBold;
   font-size: 1.5rem;
   font-weight: 450;
@@ -9,19 +9,136 @@
   z-index: 3;
 }
 
+#tool-bar span:hover {
+  background-color: #c5002e;
+  transform: scale(1.1);
+}
+
 .links a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .links {
-  border-left: 2px solid #FFF;
+  border-left: 2px solid #fff;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-#formsColector {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff003b;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #c5002e;
+}
+
+.links:hover .dropdown-content {
+  display: block;
+} */
+
+/* ------------------------------ */
+header {
+  top: 0;
+  margin-top: 0;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  justify-content: center;
+}
+
+#navbar__list {
+  list-style: none;
+  background: #ff003b;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+#navbar__list li a {
+  font-family: porscheNextBold;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+}
+
+
+#formulario {
+  align-items: center;
+  justify-content: center;
+}
+
+/* #home,
+#seeAllCars,
+#seeColectors,
+#formulario {
+  border-left: 2px solid #FFF;
+}
+
+#formulario {
   border-right: 2px solid #FFF;
-  padding-left: 2rem;
-  padding-right: 2rem;
+} */
+
+#formulario i {
+  padding: 0.125rem;
+  font-size: 22px;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 20px 25px;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: inherit;
+  background: #ff003b;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+#formsDropdown .dropdown {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li a:hover {
+  background: #c5002e;
+}
+
+ul #formsDropdown:hover ul.dropdown {
+  display: block;
+  padding-left: 0;
 }
