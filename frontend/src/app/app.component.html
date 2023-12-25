@@ -1,12 +1,21 @@
 <header>
-  <mat-toolbar id="tool-bar">
-    <div class="links-navbar">
-      <span id="home" class="links"><a routerLink="/">Home</a></span>
-      <span id="seeAllCars" class="links"><a routerLink="/allCars">Ver Todos os Carros</a></span>
-      <span id="seeColectors" class="links"><a routerLink="/Colecionadores">Ver Colecionadores</a></span>
-      <span id="formsColector" class="links"><a routerLink="/FormularioColecionador">Formulário</a></span>
-    </div>
-  </mat-toolbar>
+  <nav>
+    <ul id="navbar__list">
+      <li><a id="home" class="links" routerLink="/">Home</a></li>
+      <li><a id="seeAllCars" class="links" routerLink="/allCars">Ver Todos os Carros</a>
+      <li><a id="seeColectors" class="links" routerLink="/Colecionadores">Ver Colecionadores</a></li>
+      <li>
+        <span id="formsDropdown" class="links">
+          <!-- <a id="formulario">Formulários <i class="bi bi-arrow-down-short"></i></a> -->
+          <a id="formulario">Formulários <i class="bi bi-arrow-down-circle"></i></a>
+          <ul class="dropdown">
+            <li><a routerLink="/FormularioColecionador">Colecionador</a></li>
+            <li><a routerLink="/FormularioCarro">Carro</a></li>
+          </ul>
+        </span>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <body>
