@@ -86,20 +86,27 @@ nav {
   justify-content: center;
 }
 
-/* #home,
-#seeAllCars,
-#seeColectors,
-#formulario {
-  border-left: 2px solid #FFF;
+#formulario #setas i {
+  padding: 0 0 0 .5rem;
+  font-size: 22px;
+  position: absolute;
+  transition: 1s ease;
 }
 
-#formulario {
-  border-right: 2px solid #FFF;
-} */
+#formsDropdown:hover #setas #down {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.8s ease;
+}
 
-#formulario i {
-  padding: 0.125rem;
-  font-size: 22px;
+#formulario #setas #up {
+  opacity: 0;
+}
+
+#formsDropdown:hover #setas #up {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.8s ease;
 }
 
 ul li {
