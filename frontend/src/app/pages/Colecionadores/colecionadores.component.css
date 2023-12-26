@@ -9,10 +9,10 @@
 .card-collector {
   width: 400px;
   height: 580px;
-  background: #fdfeff;
+  background: var(--white-color-3);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 8px 40px rgba(#000000, 0.2);
+  box-shadow: 0 8px 40px var(--black-color-opacity-20);
   margin-bottom: 1.5rem;
 }
 
@@ -31,14 +31,14 @@
   }
 
   .nome {
-    color: #2d354a;
+    color: var(--blue-grey-color);
     font-size: 24px;
     font-weight: 600;
     text-align: center;
   }
 
   .nickname {
-    color: #7c8097;
+    color: var(--blue-grey-color-2);
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
@@ -48,7 +48,7 @@
   }
 
   .description {
-    color: #080911;
+    color: var(--black-color-2);
     font-size: 18px;
     font-weight: 400;
     justify-content: center;
@@ -56,7 +56,8 @@
     margin-bottom: 1.3em;
   }
 
-  .sell-cars-of-collector a {
+  .sell-cars-of-collector a,
+  .add__car__to__collector a {
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: auto;
@@ -68,40 +69,51 @@
     font-size: 20px;
     font-family: porscheNextBold;
     text-decoration: none;
-    background-color: #ff003b;
+    background-color: var(--main-color);
     letter-spacing: 2px;
     text-align: center;
     position: relative;
     transition: all .45s;
     border-radius: 25px;
-    border: 3px solid #ff003b;
+    border: 3px solid var(--main-color);
     font-weight: 600;
     cursor: pointer;
   }
 
-  .sell-cars-of-collector a span {
+  .sell-cars-of-collector a span,
+  .add__car__to__collector a span {
     position: relative;
     z-index: 2;
-    color: #fff;
+    color: var(--white-color);
   }
 
-  .sell-cars-of-collector:hover a span {
-    color: #ff003b;
+  .sell-cars-of-collector:hover a span,
+  .add__car__to__collector:hover a span {
+    color: var(--main-color);
   }
 
-  .sell-cars-of-collector a:after {
+  .sell-cars-of-collector a:after,
+  .add__car__to__collector a:after {
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
     width: 0;
     height: 100%;
-    background: #fff;
+    background: var(--white-color);
     transition: all .5s;
     border-radius: 25px;
   }
 
-  .sell-cars-of-collector a:hover:after {
+  .sell-cars-of-collector a:after {
+    left: 0;
+  }
+
+  .add__car__to__collector a:after {
+    right: 0;
+  }
+
+  .sell-cars-of-collector a:hover:after,
+  .add__car__to__collector a:hover:after {
     width: 100%;
   }
 }
@@ -118,7 +130,7 @@
   }
 
   img {
-    color: #fff;
+    color: var(--white-color);
     width: 55px;
     height: 55px;
     border-radius: 18px;
@@ -131,14 +143,14 @@
   }
 
   h4 {
-    color: #080911;
+    color: var(--black-color-2);
     font-size: 1.4rem;
     margin-top: 0.8rem;
     margin-bottom: 0.2rem;
   }
 
   p {
-    color: #666b7d;
+    color: var(--grey-color-2);
     font-size: 16px;
   }
 }

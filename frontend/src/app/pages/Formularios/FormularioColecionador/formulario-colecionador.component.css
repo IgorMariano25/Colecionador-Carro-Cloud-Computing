@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .container {
@@ -44,7 +44,7 @@ body {
 
 .header h2 {
   margin: 0;
-  color: #FF003C;
+  color: var(--main-color);
   font-family: porscheNextBold;
   font-size: 38px;
   letter-spacing: 0.2rem;
@@ -55,7 +55,7 @@ body {
   font-weight: normal;
   font-size: 24px;
   font-family: porscheNextBold;
-  color: rgba(0, 0, 0, .4);
+  color: var(--black-color-opacity-40);
 }
 
 .form {
@@ -70,7 +70,7 @@ body {
 }
 
 .form p a {
-  color: #000;
+  color: var(--black-color);
   font-size: 14px;
 }
 
@@ -85,16 +85,16 @@ body {
 }
 
 .form-field:focus {
-  border-color: #0f7ef1;
+  border-color: var(--blue-color-2);
 }
 
 .form button {
   padding: 12px 10px;
   border: 0;
-  background: linear-gradient(to right, #FF003C 0%, #00A5E0 100%);
+  background: linear-gradient(to right, var(--main-color) 0%, var(--blue-color-1) 100%);
   border-radius: 3px;
   margin-top: 15px;
-  color: #fff;
+  color: var(--white-color);
   letter-spacing: 1px;
   width: 30%;
   align-self: center;
@@ -165,9 +165,9 @@ body {
 .popup {
   width: 40rem;
   height: 20rem;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 18px;
-  border: 2px solid #FF003C;
+  border: 2px solid var(--main-color);
   position: absolute;
   z-index: 5;
   top: 0;
@@ -207,7 +207,7 @@ body {
 
 .popup h2 {
   font-size: 28px;
-  color: #FF003C;
+  color: var(--main-color);
 }
 
 .popup p {
@@ -229,13 +229,13 @@ body {
   top: 0;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  color: #FF003C;
+  color: var(--main-color);
   font-size: 30px;
   font-weight: 800;
 }
 
 #close__popup i {
-  color: #FF003C;
+  color: var(--main-color);
   font-size: 22px;
 }
 
@@ -271,7 +271,7 @@ body {
 .button__popup a span {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .button__popup:hover a span {
@@ -285,7 +285,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #fff;
+  background: var(--white-color);
   transition: all .5s;
   border-radius: 25px;
 }

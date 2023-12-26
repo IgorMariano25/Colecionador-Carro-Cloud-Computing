@@ -65,9 +65,9 @@ mat-card-actions button {
 }
 
 #heart {
-  color: #ff003b;
+  color: var(--main-color);
 }
 
 #share {
-  color: #139DF2;
+  color: var(--blue-color);
 }
