@@ -30,9 +30,15 @@ public class CarroService {
     public Optional<Carro> findById(Long id) {
         return this.carroRepsoitory.findById(id);
     }
+
     public List<Carro> findByMarca(String marca) {
         return this.carroRepsoitory.findByMarca(marca);
     }
+
+    public List<Carro> findByModelo(String modelo) {
+        return this.carroRepsoitory.findByModelo(modelo);
+    }
+
     public Optional<Colecionador> findCarroByColecionadorId(Long id) {
         return this.colecionadorRepsoitory.findById(id);
     }
