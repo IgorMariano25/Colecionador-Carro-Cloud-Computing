@@ -83,6 +83,12 @@ ul li ul.dropdown {
   display: none;
 }
 
+#formulario {
+  align-items: center;
+  justify-content: center;
+  padding-right: 42.1px;
+}
+
 #formsDropdown .dropdown {
   margin: 0;
   justify-content: center;
