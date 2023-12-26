@@ -18,6 +18,21 @@
   src: url("./assets/fonts/porsche-next.otf") format("truetype");
 }
 
+:root {
+  --main-color: #ff003b;
+  --secundary-color: #c5002e;
+
+  --white-color: #fff;
+  --white-color-2: #ddd;
+  --black-color: #000;
+
+  --black-color-opacity-40: rgba(0, 0, 0, .4);
+  --black-color-opacity-80: rgba(0, 0, 0, .8);
+  --black-color-opacity-90: rgba(0, 0, 0, .9);
+  --bg-color: #0F0F0F;
+  --blue-color-1: #139DF2;
+  --blue-color-2: #0f7ef1;
+}
 
 html,
 body {
