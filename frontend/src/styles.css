@@ -28,10 +28,16 @@
 
   --black-color: #000;
   --black-color-2: #080911;
-  --black-color-opacity-20: rgba(#000000, 0.2);
+  --black-color-opacity-10: rgba(0, 0, 0, .1);
+  --black-color-opacity-20: rgba(0, 0, 0, .2);
+  --black-color-opacity-30: rgba(0, 0, 0, .3);
   --black-color-opacity-40: rgba(0, 0, 0, .4);
+  --black-color-opacity-50: rgba(0, 0, 0, .5);
+  --black-color-opacity-60: rgba(0, 0, 0, .6);
+  --black-color-opacity-70: rgba(0, 0, 0, .7);
   --black-color-opacity-80: rgba(0, 0, 0, .8);
   --black-color-opacity-90: rgba(0, 0, 0, .9);
+  --black-color-opacity-100: rgba(0, 0, 0, 1);
   --bg-color: #0F0F0F;
   --blue-color-1: #139DF2;
   --blue-color-2: #0f7ef1;
