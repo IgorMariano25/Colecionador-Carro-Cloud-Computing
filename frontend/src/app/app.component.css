@@ -30,7 +30,7 @@ nav {
   padding: 0 0 0 .5rem;
   font-size: 20px;
   position: absolute;
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 
 #formsDropdown:hover #setas #down {
