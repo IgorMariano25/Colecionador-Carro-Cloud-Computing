@@ -8,21 +8,32 @@
         </h3>
       </div>
       <div class="form">
-        <input type="text" name="nome" class="form-field animation a3" [(ngModel)]="colecionador.nome"
-          placeholder="Nome" required>
+        <div class="inputs">
+          <input type="text" name="nome" class="form-field animation a3" [(ngModel)]="carro.marca" placeholder="Marca"
+            required>
 
-        <input type="text" name="sobrenome" class="form-field animation a4" [(ngModel)]="colecionador.sobrenome"
-          placeholder="Sobrenome" required>
+          <input type="text" name="sobrenome" class="form-field animation a4" [(ngModel)]="carro.modelo"
+            placeholder="Modelo" required>
+        </div>
 
-        <input type="text" name="nickname" class="form-field animation a4" [(ngModel)]="colecionador.nickname"
-          placeholder="Nickname" required>
+        <div class="inputs">
+          <input type="text" name="nickname" class="form-field animation a4" [(ngModel)]="carro.cor" placeholder="Cor"
+            required>
 
-        <input type="email" name="email" class="form-field animation a3" [(ngModel)]="colecionador.email"
-          placeholder="Email" required>
+          <input type="email" name="email" class="form-field animation a3" [(ngModel)]="carro.anoDeFabricacao"
+            [placeholder]="getAnoFabricacaoPlaceholder()" required>
+        </div>
 
-        <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="colecionador.cpf" placeholder="CPF"
-          required>
-        <button (click)="criarNovoColecionador(); openPopUp()" [disabled]="!formularioValido()" class="animation a6">ENVIAR</button>
+        <div class="inputs">
+          <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="carro.velocidadeMaxima"
+            [placeholder]="getVelocidadeMaximaPlaceholder()" required>
+
+          <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="carro.quilometragem"
+            [placeholder]="getQuilometragemPlaceholder()" required>
+        </div>
+        <!-- <button (click)="criarNovoCarro(); openPopUp()" [disabled]="!formularioValido()" class="animation a6">ENVIAR</button> -->
+        <button (click)="criarNovoCarro(); openPopUp()" class="animation a6">ENVIAR</button>
+        <!-- <button>ENVIAR</button> -->
 
         <div class="popup__view">
           <div class="popup" id="popup">
