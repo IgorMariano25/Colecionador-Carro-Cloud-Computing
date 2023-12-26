@@ -20,15 +20,15 @@
             required>
 
           <input type="email" name="email" class="form-field animation a3" [(ngModel)]="carro.anoDeFabricacao"
-            [placeholder]="getAnoFabricacaoPlaceholder()" required>
+            placeholder="Ano de Fabricação" required>
         </div>
 
         <div class="inputs">
           <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="carro.velocidadeMaxima"
-            [placeholder]="getVelocidadeMaximaPlaceholder()" required>
+            placeholder="Velocidade Máxima" required>
 
           <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="carro.quilometragem"
-            [placeholder]="getQuilometragemPlaceholder()" required>
+            placeholder="Quilometragem" required>
         </div>
         <!-- <button (click)="criarNovoCarro(); openPopUp()" [disabled]="!formularioValido()" class="animation a6">ENVIAR</button> -->
         <button (click)="criarNovoCarro(); openPopUp()" class="animation a6">ENVIAR</button>
