@@ -78,6 +78,22 @@ public class CarroController {
         }
     }
 
+    @GetMapping("/modelo")
+    @Operation(summary = "Buscando carros pela modelo", method = "GET")
+    public ResponseEntity<List<Carro>> getByModelo(@RequestParam("modelo") String modelo) {
+        try {
+            List<Carro> carros = this.carroService.findByModelo(modelo);
+    
+            if (carros.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+    
+            return new ResponseEntity<>(carros, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @PostMapping("/colecionador/{idColecionador}")
     @Operation(summary = "Adicionando um carro ao colecionador pelo ID", method = "POST")
     public ResponseEntity<Carro> create(@PathVariable("idColecionador") Long idColecionador,
