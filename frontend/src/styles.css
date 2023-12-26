@@ -24,14 +24,23 @@
 
   --white-color: #fff;
   --white-color-2: #ddd;
-  --black-color: #000;
+  --white-color-3: #fdfeff;
 
+  --black-color: #000;
+  --black-color-2: #080911;
+  --black-color-opacity-20: rgba(#000000, 0.2);
   --black-color-opacity-40: rgba(0, 0, 0, .4);
   --black-color-opacity-80: rgba(0, 0, 0, .8);
   --black-color-opacity-90: rgba(0, 0, 0, .9);
   --bg-color: #0F0F0F;
   --blue-color-1: #139DF2;
   --blue-color-2: #0f7ef1;
+
+  --blue-grey-color: #2d354a;
+  --blue-grey-color-2: #7c8097;
+
+  --grey-color: #808080;
+  --grey-color-2: #666b7d;
 }
 
 html,
