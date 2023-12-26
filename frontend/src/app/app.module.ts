@@ -20,6 +20,7 @@ import { FormularioColecionadorComponent } from './pages/Formularios/FormularioC
 import { FormularioCarroComponent } from './pages/Formularios/FormularioCarro/formulario-carro.component';
 import { HomeComponent } from './pages/Home/home.component';
 import { LikeButtonComponent } from './componentes/LikeButton/like-button.component';
+import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-busca.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LikeButtonComponent } from './componentes/LikeButton/like-button.compon
     ColecionadoresComponent,
     FormularioColecionadorComponent,
     LikeButtonComponent,
-    FormularioCarroComponent
+    FormularioCarroComponent,
+    FiltroDeBuscaComponent
   ],
   imports: [
     BrowserModule,
