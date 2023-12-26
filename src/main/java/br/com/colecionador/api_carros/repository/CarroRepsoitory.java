@@ -10,4 +10,5 @@ import br.com.colecionador.api_carros.model.Carro;
 public interface CarroRepsoitory extends JpaRepository<Carro, Long>{
         Optional<Carro> findById(Long id);
         List<Carro> findByMarca(String marca);
+        List<Carro> findByModelo(String modelo);
 }
