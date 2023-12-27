@@ -1,22 +1,46 @@
 .carro-container {
-  padding-top: 4rem;
+  padding-top: inherit;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   grid-gap: 0.5rem;
+  padding: 2.5rem;
 }
 
 .card-carros {
-  max-width: 800px;
+  max-width: 600px;
   background-color: var(--white-color);
   border-radius: 20px;
-  margin: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  border-color: 1px solid var(--white-color);
 }
 
-.card-carros img {
+.card-carros:hover {
+  background-color: var(--black-color-opacity-30);
+  border: 1.5px solid var(--main-color);
+}
+
+.card-carros:hover mat-card-title,
+.card-carros:hover mat-card-subtitle {
+  color: var(--white-color);
+}
+
+.card-carros #car__image {
+  width: auto;
+  height: 300px;
+}
+
+.card-carros #car__image img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-carros:hover #car__image img {
+  transform: scale(0.9);
+  border-radius: 20px;
 }
 
 mat-card-title,
@@ -29,6 +53,7 @@ mat-card-subtitle {
 mat-card-header {
   justify-content: center;
 }
+
 mat-card-header img {
   max-width: 36px;
   max-height: 512px;
