@@ -1,3 +1,5 @@
+<searchFilter id="buscadorDeCarros" [placeholder]="'Digite uma marca...'"></searchFilter>
+
 <div class="carro-container" *ngIf="carros && carros.length > 0">
   <mat-card class="card-carros" *ngFor="let carro of carros">
     <mat-card-header>
@@ -8,7 +10,7 @@
       <mat-card-subtitle> <img id="icone-velocidade" src="../../../assets/rapidez.png" alt="icone-velocidade">Velocidade Máxima: {{ carro.velocidadeMaxima }} Km/h </mat-card-subtitle>
       <mat-card-subtitle> <img id="icone-quilometragem" src="../../../assets/distancia.png" alt="icone-quilometragem">Quilometragem: {{ carro.quilometragem }} </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="carro.urlImagemCarro" alt="Imagem de um carro">
+    <span id="car__image"><img mat-card-image [src]="carro.urlImagemCarro" alt="Imagem de um carro"></span>
 
     <like-button></like-button>
   </mat-card>
