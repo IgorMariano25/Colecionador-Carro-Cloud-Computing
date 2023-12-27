@@ -10,6 +10,11 @@ nav {
   justify-content: center;
 }
 
+#navbar__list .logo__site {
+  width: 50px;
+  width: 50px;
+}
+
 #navbar__list {
   list-style: none;
   background: var(--main-color);
