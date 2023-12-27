@@ -2,6 +2,18 @@
   <nav>
     <ul id="navbar__list">
       <li><a id="home" class="links" routerLink="/">Home</a></li>
+      <li>
+        <span id="formsDropdown" class="links">
+          <a id="formulario">A Elite <span id="setas"><i id="down" class="bi bi-arrow-down-circle"></i>
+              <i id="up" class="bi bi-arrow-up-circle"></i></span>
+          </a>
+          <ul class="dropdown">
+            <li><a id="historia" (click)="redirectToAboutPage('historia')">História</a></li>
+            <li><a id="proposito" (click)="redirectToAboutPage('proposito')">Propósito</a></li>
+            <li><a id="equipe" (click)="redirectToAboutPage('equipe')">Equipe</a></li>
+          </ul>
+        </span>
+      </li>
       <li><a id="seeAllCars" class="links" routerLink="/allCars">Ver todos os carros</a>
       <li><a id="seeColectors" class="links" routerLink="/Colecionadores">Ver colecionadores</a></li>
       <li>
