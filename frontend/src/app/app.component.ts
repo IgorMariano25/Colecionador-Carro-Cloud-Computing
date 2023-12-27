@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarroService } from './services/carro/carro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,18 @@ import { CarroService } from './services/carro/carro.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private carroService: CarroService){ }
+  constructor(private router: Router) { }
 
+  pageUrl(urlPath: string) {
+    this.router.navigate(['/About', urlPath]);
+  }
+
+  redirectToAboutPage(id: string) {
+    const navigateToElement = document.getElementById(id);
+
+    if (navigateToElement) {
+      navigateToElement.addEventListener("click", () => this.pageUrl(id));
+    }
+  }
 }
+
