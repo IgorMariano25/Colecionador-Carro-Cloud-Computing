@@ -21,6 +21,7 @@ import { FormularioCarroComponent } from './pages/Formularios/FormularioCarro/fo
 import { HomeComponent } from './pages/Home/home.component';
 import { LikeButtonComponent } from './componentes/LikeButton/like-button.component';
 import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-busca.component';
+import { AboutComponent } from './pages/AboutCompany/about.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-bu
     FormularioColecionadorComponent,
     LikeButtonComponent,
     FormularioCarroComponent,
-    FiltroDeBuscaComponent
+    FiltroDeBuscaComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
