@@ -34,7 +34,7 @@ mat-icon #share {
   cursor: pointer;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: var(--white-color);
   text-decoration: none;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -46,13 +46,13 @@ mat-icon #share {
 }
 
 .like-content .btn {
-  background: #ff003b;
-  box-shadow: 10px 10px 20px -8px rgb(240, 75, 113);
+  background: var(--main-color);
+  box-shadow: 10px 10px 20px -8px var(--main-color-opacity-80);
 }
 
 .share-content .btn {
-  background: #139DF2;
-  box-shadow: 10px 10px 20px -8px rgb(19, 86, 242);
+  background: var(--blue-color-1);
+  box-shadow: 10px 10px 20px -8px var(--blue-color-3);
 }
 
 .like-content .btn:hover,
@@ -62,5 +62,5 @@ mat-icon #share {
 
 #heart,
 #share {
-  color: #ffffff;
+  color: var(--white-color);
 }
