@@ -20,6 +20,7 @@
 
 :root {
   --main-color: #ff003b;
+  --main-color-opacity-80: rgba(255, 0, 59, .8);
   --secundary-color: #c5002e;
 
   --white-color: #fff;
