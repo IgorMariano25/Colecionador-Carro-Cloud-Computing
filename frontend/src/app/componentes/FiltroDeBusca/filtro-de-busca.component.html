@@ -1,0 +1,23 @@
+<!-- <div class="filter">
+  <input [(ngModel)]="nomeParaBuscar" placeholder="Digite o nome">
+  <button (click)="searchByNome(nomeParaBuscar)">Buscar</button>
+</div> -->
+
+<div class="filter">
+  <div>
+    <select name="options" id="options" required>
+      <option value="marca" selected>Marca</option>
+      <option value="modelo">Modelo</option>
+      <!-- <option value="modelo">Cor</option>
+      <option value="modelo">Ano de fabicação</option>
+      <option value="modelo">Velociodade Máxima</option>
+      <option value="modelo">Quilometragem</option> -->
+    </select>
+  </div>
+  <div>
+    <input type="text" [placeholder]="placeholder">
+  </div>
+  <div>
+    <button><i class="bi bi-search"></i>Buscar</button>
+  </div>
+</div>

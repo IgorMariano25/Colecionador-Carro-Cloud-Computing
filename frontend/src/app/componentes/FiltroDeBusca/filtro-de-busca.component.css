@@ -1,0 +1,88 @@
+.filter {
+  display: flex;
+  color: var(--white-color);
+  padding-top: 7rem;
+  justify-content: center;
+  gap: 1rem;
+  /* font-size: 24px; */
+}
+
+.filter i {
+  margin-right: 0.5rem;
+}
+
+.filter div {
+  gap: 2rem;
+}
+
+.filter input,
+.filter #options {
+  border-radius: 25px;
+  padding: 0.5rem;
+  border: 2px solid var(--main-color);
+}
+
+.filter select {
+  font-size: 18px;
+}
+
+.filter #options option {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  color: var(--black-color);
+  font-size: 18px;
+}
+
+.filter input {
+  width: 350px;
+}
+
+.filter input::placeholder {
+  color: var(--black-color);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.filter button {
+  font-family: porscheNextBold;
+  width: 175px;
+  height: 35px;
+  font-size: 18px;
+  letter-spacing: 6px;
+  text-decoration: none;
+  background-color: var(--main-color);
+  text-align: center;
+  position: relative;
+  transition: all .30s;
+  border-radius: 25px;
+  border: 2px solid var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--white-color);
+  box-shadow: 0 0 10px var(--main-color);
+  transition: .6s ease;
+
+}
+
+.filter button:hover {
+  background-color: var(--white-color);
+  color: var(--main-color);
+  box-shadow: none;
+  transform: scale(1.025);
+  transition: .6s ease;
+}
+
+.filter button:hover i {
+  color: var(--main-color);
+  font-weight: 700;
+  transform: scale(1.025);
+}
+
+.option:nth-child(6):hover~#option-bg {
+  top: 200px;
+  background-color: #006400;
+  border-radius: 0 0 4px 4px;
+}
