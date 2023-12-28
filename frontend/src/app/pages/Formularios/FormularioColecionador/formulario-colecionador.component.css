@@ -74,10 +74,29 @@ body {
   font-size: 14px;
 }
 
+.form #biografia {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: porscheNextBold;
+  color: var(--black-color-opacity-40);
+}
+
+.form #textoBiografia {
+  font-size: 18px;
+  border: 2px solid var(--white-color-2);
+}
+
+.form #textoBiografia:focus {
+  outline: 0;
+  border-color: var(--blue-color-2);
+}
+
 .form-field {
   height: 50px;
   padding: 0 16px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--white-color-2);
   border-radius: 4px;
   outline: 0;
   transition: 0.5s;
@@ -133,6 +152,14 @@ body {
 
 .a6 {
   animation-delay: 1.7s;
+}
+
+.a7 {
+  animation-delay: 1.8s;
+}
+
+.a8 {
+  animation-delay: 1.9s;
 }
 
 @keyframes move {
