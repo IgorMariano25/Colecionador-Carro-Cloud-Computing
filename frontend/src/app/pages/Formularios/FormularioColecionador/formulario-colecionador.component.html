@@ -9,19 +9,24 @@
         <input type="text" name="nome" class="form-field animation a3" [(ngModel)]="colecionador.nome"
           placeholder="Nome" required>
 
-        <input type="text" name="sobrenome" class="form-field animation a4" [(ngModel)]="colecionador.sobrenome"
+        <input type="text" name="sobrenome" class="form-field animation a3" [(ngModel)]="colecionador.sobrenome"
           placeholder="Sobrenome" required>
 
         <input type="text" name="nickname" class="form-field animation a4" [(ngModel)]="colecionador.nickname"
           placeholder="Nickname" required>
 
-        <input type="email" name="email" class="form-field animation a3" [(ngModel)]="colecionador.email"
+        <input type="email" name="email" class="form-field animation a4" [(ngModel)]="colecionador.email"
           placeholder="Email" required>
 
-        <input type="text" name="cpf" class="form-field animation a3" [(ngModel)]="colecionador.cpf" placeholder="CPF"
+        <input type="text" name="cpf" class="form-field animation a5" [(ngModel)]="colecionador.cpf" placeholder="CPF"
           required>
+
+        <span id="biografia" class="animation a5">Digite uma frase para a bio do seu perfil.</span>
+        <textarea name="biografia" id="textoBiografia" class="animation a6" cols="30" rows="10"
+          placeholder=" Ex: A vida é uma corrida de resistência, mas para esse apaixonado por carros, cada quilômetro é uma vitória conquistada com combustível de paixão."
+          required></textarea>
         <!-- <button (click)="criarNovoColecionador(); openPopUp()" [disabled]="!formularioValido()" -->
-        <button (click)="criarNovoColecionador(); openPopUp()" class="animation a6">ENVIAR</button>
+        <button (click)="criarNovoColecionador(); openPopUp()" class="animation a8">ENVIAR</button>
 
         <div class="popup__view">
           <div class="popup" id="popup">
