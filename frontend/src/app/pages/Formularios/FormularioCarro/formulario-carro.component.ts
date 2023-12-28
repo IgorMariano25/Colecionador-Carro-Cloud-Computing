@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CarroModel } from '../../../model/carro.model';
 import { CarroService } from '../../../services/carro/carro.service';
+import { ColecionadorService } from '../../../services/colecionador/colecionador.service';
+import { ColecionadorModel } from './../../../model/colecionador.model';
 
 @Component({
   selector: 'app-formulario-carro',
@@ -12,10 +14,19 @@ export class FormularioCarroComponent {
     marca: '',
     modelo: '',
     cor: '',
-    anoDeFabricacao: 0,
-    velocidadeMaxima: 0,
-    quilometragem: 0,
+    anoDeFabricacao: undefined,
+    velocidadeMaxima: undefined,
+    quilometragem: undefined,
     urlImagemCarro: ''
+  };
+
+  colecionador: ColecionadorModel = {
+    nome: '',
+    sobrenome: '',
+    nickname: '',
+    email: '',
+    cpf: '',
+    carros: []
   };
 
   constructor(private carroService: CarroService) { }
@@ -45,7 +56,7 @@ export class FormularioCarroComponent {
       quilometragem: this.carro.quilometragem as number,
     };
 
-    this.carroService.createCarro(novoCarro).subscribe(response => {
+    this.carroService.createCarro(this.colecionador, novoCarro).subscribe(response => {
       this.carro = response;
 
       this.carro = {
