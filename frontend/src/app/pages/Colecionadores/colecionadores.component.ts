@@ -32,4 +32,7 @@ export class ColecionadoresComponent {
       });
     }
   }
+  redirectToFormsAddCar() {
+    this.router.navigate(['/FormularioCarro']);
+  };
 }
