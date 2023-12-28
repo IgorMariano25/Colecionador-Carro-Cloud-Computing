@@ -1,0 +1,88 @@
+body,
+#about__contanier,
+#services {
+  background-color: var(--white-color);
+}
+
+#about__main__content {
+  padding-top: 5rem;
+}
+
+#about__contanier {
+  padding: 2.5rem;
+}
+
+#about__contanier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left__content h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-family: porscheNextBold;
+  font-size: 40px;
+  font-weight: 1000;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+#left__content h2 {
+  margin: 0;
+  color: var(--main-color);
+  font-family: porscheNextBold;
+  font-size: 38px;
+  letter-spacing: 0.2rem;
+}
+
+#left__content h3,
+#left__content h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 0.2rem;
+  font-family: porscheNextBold;
+  color: var(--black-color-opacity-40);
+}
+
+#list__information {
+  list-style-type: none;
+}
+
+#list__information span {
+  display: flex;
+  gap: 1rem;
+  font-size: 22px;
+  color: var(--black-color);
+  margin-bottom: 0.5rem;
+}
+
+
+#imagem__colecionador img {
+  max-width: 800px;
+  max-height: auto;
+}
+
+#services {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.service h4 {
+  font-size: 28px;
+  font-weight: 1000;
+  font-family: porscheNextBold;
+  color: var(--black-color);
+}
+
+.service p {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: porscheNextBold;
+  color: var(--black-color);
+  color: var(--black-color-opacity-60);
+  max-width: 300px;
+}
