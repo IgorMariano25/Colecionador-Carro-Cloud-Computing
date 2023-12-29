@@ -1,5 +1,6 @@
 .container-collector {
-  padding-top: 7rem;
+  padding-top: inherit;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 29rem);
   grid-auto-rows: auto;
