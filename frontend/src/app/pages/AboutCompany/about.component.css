@@ -1,6 +1,7 @@
 body,
 .about__contanier,
-#services {
+#services,
+.about__contanier__equipe {
   background-color: var(--white-color);
 }
 
@@ -138,4 +139,117 @@ body,
 .about__contanier #imagem__logo svg {
   width: 425px;
   height: auto;
+}
+
+/* Equipe */
+.about__contanier__equipe #titulos {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about__contanier__equipe #titulos h1 {
+  margin: 0;
+  padding-top: 2rem;
+  color: var(--main-color);
+  font-family: porscheNextBold;
+  font-size: 40px;
+  font-weight: 1000;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about__contanier__equipe #titulos h2 {
+  margin: 0;
+  color: var(--main-color);
+  font-family: porscheNextBold;
+  font-size: 38px;
+  letter-spacing: 0.2rem;
+}
+
+.about__contanier__equipe #titulos h3 {
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 0.2rem;
+  font-family: porscheNextBold;
+  color: var(--black-color-opacity-40);
+  width: 35vw;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.container__equipe {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 29rem);
+  grid-auto-rows: auto;
+  justify-content: center;
+}
+
+.card__pessoa {
+  width: 400px;
+  height: 640px;
+  background: var(--white-color-3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 40px var(--black-color-opacity-20);
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--white-color);
+  transition: 0.3s ease-out;
+  text-align: center;
+}
+
+.card__pessoa:hover {
+  transform: scale(1.009);
+  border: 2px solid var(--main-color);
+  transition: 0.3s ease-in;
+
+  .thumbnail {
+    transform: scale(0.95);
+    transition: 0.3s ease-in;
+  }
+}
+
+.profile {
+  position: relative;
+
+  .thumbnail {
+    width: 400px;
+    height: 520px;
+    display: flex;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    transition: 0.3s ease-out;
+    box-shadow: var(--shadow);
+  }
+
+  .nome {
+    color: var(--blue-grey-color);
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .cargo,
+  .linkedin {
+    color: var(--blue-grey-color-2);
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-family: porscheNextBold;
+  }
+
+  .cargo {
+    font-size: 1.4rem;
+  }
+
+  .linkedin {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .linkedin:hover {
+    color: var(--main-color);
+  }
 }
