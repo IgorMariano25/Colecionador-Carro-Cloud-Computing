@@ -1,88 +1,86 @@
-body,
-#about__contanier,
-#services {
+body {
+  background-color: var(--bg-color);
+}
+
+/* .imagens__encontros {
+  display: flex;
+}
+
+.imagens__encontros img{
+  width: 500px;
+  height: auto;
+} */
+
+
+/* body,
+.multimGalContainer {
   background-color: var(--white-color);
-}
+} */
 
-#about__main__content {
-  padding-top: 5rem;
-}
-
-#about__contanier {
-  padding: 2.5rem;
-}
-
-#about__contanier {
+.multimGalContainer {
   display: flex;
+  flex-wrap: wrap;
+  padding-top: calc(2rem + 60px);
   justify-content: center;
-  align-items: center;
 }
 
-#left__content h1 {
-  margin: 0;
-  color: var(--main-color);
-  font-family: porscheNextBold;
-  font-size: 40px;
-  font-weight: 1000;
-  letter-spacing: 0.5rem;
-  margin-bottom: 2rem;
+/* .image-large {
+  flex: 4;
 }
 
-#left__content h2 {
-  margin: 0;
-  color: var(--main-color);
-  font-family: porscheNextBold;
-  font-size: 38px;
-  letter-spacing: 0.2rem;
+.image-small {
+  flex: 2;
+} */
+
+.multimGalContainer div img {
+  transform: scale(1);
+  transition: 0.3s ease-out;
 }
 
-#left__content h3,
-#left__content h4 {
-  margin-top: 10px;
-  font-weight: normal;
-  font-size: 24px;
-  letter-spacing: 0.2rem;
-  font-family: porscheNextBold;
-  color: var(--black-color-opacity-40);
+.multimGalContainer div img:hover {
+  transform: scale(0.96);
+  transition: 0.3s ease-in;
 }
 
-#list__information {
-  list-style-type: none;
+.multimGalContainer div iframe {
+  transform: scale(1);
+  transition: 0.3s ease-out;
 }
 
-#list__information span {
+.multimGalContainer div iframe:hover {
+  transform: scale(0.96);
+  transition: 0.3s ease-in;
+}
+
+.multimGalContainer img {
+  width: 100%;
+  display: block;
+  margin-left: 0.5rem;
+}
+
+.multimGalContainer iframe {
+  width: 500px;
+  height: 333px;
+  margin-left: 0.5rem;
+}
+
+.multimGalContainer #grid__1 img {
   display: flex;
-  gap: 1rem;
-  font-size: 22px;
-  color: var(--black-color);
+  width: 500px;
+  height: auto;
   margin-bottom: 0.5rem;
 }
 
-
-#imagem__colecionador img {
-  max-width: 800px;
-  max-height: auto;
-}
-
-#services {
+.multimGalContainer #grid__2 img {
   display: flex;
-  gap: 2.5rem;
-  padding: 1.5rem;
-  justify-content: center;
+  width: 500px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
-.service h4 {
-  font-size: 28px;
-  font-weight: 1000;
-  font-family: porscheNextBold;
-  color: var(--black-color);
-}
-
-.service p {
-  font-size: 20px;
-  font-weight: lighter;
-  font-family: porscheNextBold;
-  color: var(--black-color);
-  color: var(--black-color-opacity-60);
-  max-width: 300px;
+.multimGalContainer #grid__3 img {
+  display: flex;
+  width: 500px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
