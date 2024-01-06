@@ -13,12 +13,12 @@
   border-radius: 20px;
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
-  border-color: 1px solid var(--white-color);
+  border-color: 2px solid var(--white-color);
 }
 
 .card-carros:hover {
   background-color: var(--black-color-opacity-30);
-  border: 1.5px solid var(--main-color);
+  border: 1.8px solid var(--main-color);
 }
 
 .card-carros:hover mat-card-title,
