@@ -23,6 +23,7 @@ import { LikeButtonComponent } from './componentes/LikeButton/like-button.compon
 import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-busca.component';
 import { AboutComponent } from './pages/AboutCompany/about.component';
 import { EncontrosComponent } from './pages/Encontros/encontros.component';
+import { FooterPageComponent } from './componentes/FooterPage/footer-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EncontrosComponent } from './pages/Encontros/encontros.component';
     FormularioCarroComponent,
     FiltroDeBuscaComponent,
     AboutComponent,
-    EncontrosComponent
+    EncontrosComponent,
+    FooterPageComponent
   ],
   imports: [
     BrowserModule,
