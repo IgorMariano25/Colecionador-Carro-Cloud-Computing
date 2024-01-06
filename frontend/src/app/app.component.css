@@ -14,6 +14,7 @@ nav {
 #navbar__list .logo__site {
   width: 50px;
   width: 50px;
+  margin-right: 0.5rem;
 }
 
 #navbar__list {
@@ -120,33 +121,33 @@ ul.dropdown.countries li a:hover span {
 }
 
 ul.dropdown.countries>li:nth-child(1) a:hover {
-  background-image: url("../assets/BRAZIL-FLAG.png");
+  background-image: url("../assets/paises/BRAZIL-FLAG.png");
 }
 
 ul.dropdown.countries>li:nth-child(2) a:hover {
-  background-image: url("../assets/US-FLAG.jpg");
+  background-image: url("../assets/paises/US-FLAG.jpg");
 }
 
 ul.dropdown.countries>li:nth-child(3) a:hover {
-  background-image: url("../assets/PORTUGAL-FLAG.png");
+  background-image: url("../assets/paises/PORTUGAL-FLAG.png");
 }
 
 ul.dropdown.countries>li:nth-child(4) a:hover {
-  background-image: url("../assets/GERMANY-FLAG.jpg");
+  background-image: url("../assets/paises/GERMANY-FLAG.jpg");
 }
 
 ul.dropdown.countries>li:nth-child(5) a:hover {
-  background-image: url("../assets/FRENCH-FLAG-2.jpg");
+  background-image: url("../assets/paises/FRENCH-FLAG-2.jpg");
 }
 
 ul.dropdown.countries>li:nth-child(6) a:hover {
-  background-image: url("../assets/BELGIUM-FLAG-2.jpg");
+  background-image: url("../assets/paises/BELGIUM-FLAG-2.jpg");
 }
 
 ul.dropdown.countries>li:nth-child(7) a:hover {
-  background-image: url("../assets/SWITZERLAND-FLAG.jpg");
+  background-image: url("../assets/paises/SWITZERLAND-FLAG.jpg");
 }
 
 ul.dropdown.countries>li:nth-child(8) a:hover {
-  background-image: url("../assets/SPAIN-FLAG.jpg");
+  background-image: url("../assets/paises/SPAIN-FLAG.jpg");
 }
