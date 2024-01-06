@@ -24,6 +24,7 @@ import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-bu
 import { AboutComponent } from './pages/AboutCompany/about.component';
 import { EncontrosComponent } from './pages/Encontros/encontros.component';
 import { FooterPageComponent } from './componentes/FooterPage/footer-page.component';
+import { FormularioContatoComponent } from './pages/Formularios/FormularioContato/formulario-contato.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FooterPageComponent } from './componentes/FooterPage/footer-page.compon
     FiltroDeBuscaComponent,
     AboutComponent,
     EncontrosComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    FormularioContatoComponent
   ],
   imports: [
     BrowserModule,
