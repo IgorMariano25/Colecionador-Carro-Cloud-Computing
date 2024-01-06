@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: left;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+  flex: 3;
+}
+
+.right {
+  flex: 3;
+  display: flex;
+  align-items: stretch;
+}
+
+.right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header h2 {
+  margin: 0;
+  color: var(--main-color);
+  font-family: porscheNextBold;
+  font-size: 38px;
+  letter-spacing: 0.2rem;
+}
+
+.header h3 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 24px;
+  font-family: porscheNextBold;
+  color: var(--black-color-opacity-40);
+}
+
+.form {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.form p {
+  text-align: right;
+}
+
+.form p a {
+  color: var(--black-color);
+  font-size: 14px;
+}
+
+.form #mensagem {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: porscheNextBold;
+  color: var(--black-color-opacity-40);
+}
+
+.form #textoMensagem {
+  font-size: 18px;
+  border: 2px solid var(--white-color-2);
+  resize: none;
+}
+
+.form #textoMensagem:focus {
+  outline: 0;
+  border-color: var(--blue-color-2);
+}
+
+.form-field {
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid var(--white-color-2);
+  border-radius: 4px;
+  outline: 0;
+  transition: 0.5s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: var(--blue-color-2);
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 25px;
+}
+
+.form button {
+  padding: 12px 10px;
+  width: 12rem;
+  border: 0;
+  background: linear-gradient(to right, var(--main-color) 0%, var(--blue-color-1) 100%);
+  border-radius: 3px;
+  margin-top: 15px;
+  color: var(--white-color);
+  letter-spacing: 2px;
+  align-self: center;
+  transition: 0.3s ease-out;
+}
+
+.form button:hover {
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.animation {
+  animation-name: move;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-delay: s;
+}
+
+.a1 {
+  animation-delay: 1.2s;
+}
+
+.a2 {
+  animation-delay: 1.3s;
+}
+
+.a3 {
+  animation-delay: 1.4s;
+}
+
+.a4 {
+  animation-delay: 1.5s;
+}
+
+.a5 {
+  animation-delay: 1.6s;
+}
+
+.a6 {
+  animation-delay: 1.7s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+
+.popup {
+  width: 40rem;
+  height: 20rem;
+  background-color: var(--white-color);
+  border-radius: 18px;
+  border: 2px solid var(--main-color);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.001);
+  visibility: hidden;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-family: porscheNextBold;
+  transition: transform 0.6s, top 0.6s;
+}
+
+.container .popup__view {
+  z-index: 2;
+  background-color: var(--black-color-opacity-80);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+
+.container .popup__view.active {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.8s;
+}
+
+.open__popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+}
+
+.popup h2 {
+  font-size: 28px;
+  color: var(--main-color);
+}
+
+.popup p {
+  font-size: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, .9);
+}
+
+.popup .content__popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#close__popup {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#close__popup i {
+  color: var(--main-color);
+  font-size: 22px;
+}
+
+#close__popup:hover {
+  transform: scale(1.125);
+}
+
+.button__popup a {
+  font-family: porscheNextBold;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: block;
+  width: 250px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background-color: var(--main-color);
+  text-align: center;
+  position: relative;
+  transition: all .30s;
+  border-radius: 25px;
+  border: 2px solid var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
+}
+
+.button__popup a span {
+  position: relative;
+  z-index: 2;
+  color: var(--white-color);
+}
+
+.button__popup:hover a span {
+  color: var(--main-color);
+}
+
+.button__popup a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--white-color);
+  transition: all .5s;
+  border-radius: 25px;
+}
+
+.button__popup a:hover:after {
+  width: 100%;
+}
