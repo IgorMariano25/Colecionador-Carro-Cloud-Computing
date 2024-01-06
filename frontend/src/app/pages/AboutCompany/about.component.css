@@ -128,13 +128,35 @@ body,
   max-width: 300px;
 }
 
+.about__contanier__logo {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 2.5rem;
+}
 
-.about__contanier #imagem__logo svg:path {
+.about__contanier__logo #left__content h1,
+.about__contanier__logo #left__content h2,
+.about__contanier__logo #left__content h3 {
+  text-align: center;
+}
+
+.about__contanier__logo #left__content h4 {
+  text-align: left;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.about__contanier__logo #left__content {
+  text-align: center;
+}
+
+.about__contanier__logo #imagem__logo svg:path {
   fill: var(--main-color);
 }
 
-.about__contanier #imagem__logo svg {
-  width: 425px;
+.about__contanier__logo #imagem__logo svg {
+  width: 350px;
   height: auto;
 }
 
