@@ -60,6 +60,8 @@ body,
   letter-spacing: 0.2rem;
   font-family: porscheNextBold;
   color: var(--black-color-opacity-40);
+  line-height: 2.5rem;
+  letter-spacing: 2px;
 }
 
 #titulos h4 {
