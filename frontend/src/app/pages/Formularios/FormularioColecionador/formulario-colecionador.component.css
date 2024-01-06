@@ -86,6 +86,7 @@ body {
 .form #textoBiografia {
   font-size: 18px;
   border: 2px solid var(--white-color-2);
+  resize: none;
 }
 
 .form #textoBiografia:focus {
