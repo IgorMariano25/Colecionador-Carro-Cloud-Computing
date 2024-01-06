@@ -1,1 +1,53 @@
-<p>formulario-contato works!</p>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <h2 class="animation a1">Precisa de ajuda? Conecte-se conosco !</h2>
+        <h3 class="animation a2">O suporte imediato para suas secessidades está a uma mensagem de distância.
+        </h3>
+      </div>
+      <div class="form">
+        <div class="inputs">
+          <input type="text" name="nome" class="form-field animation a3" placeholder="Nome" required>
+
+          <input type="text" name="sobrenome" class="form-field animation a4" placeholder="Sobrenome" required>
+        </div>
+
+        <div class="inputs">
+          <input type="text" name="nickname" class="form-field animation a4" placeholder="Telefone: Ex: (99) 9999-9999 "
+            required>
+          <input type="text" name="nickname" class="form-field animation a4" placeholder="Motivo do contato" required>
+        </div>
+
+        <span id="mensagem" class="animation a5">Escreva a sua mensagem aqui.</span>
+        <textarea name="mensagem" id="textoMensagem" class="animation a6" cols="30" rows="10"
+          placeholder="Ex: Estou entrando em contato pois gostaria de saber quando e onde será o próximo encontro de carros da elite."
+          required></textarea>
+
+
+        <!-- <button (click)="criarNovoCarro(); openPopUp()" [disabled]="!formularioValido()" class="animation a6">ENVIAR</button> -->
+        <button id="button__enviar__fomrs" (click)="openPopUp()" class="animation a6">ENVIAR</button>
+
+        <div class="popup__view">
+          <div class="popup" id="popup">
+            <!--Fechar popup com span -->
+            <div (click)="closePopUp()"><span id="close__popup"><i class="bi bi-x-circle-fill"></i></span></div>
+            <div id="content__popup">
+              <img src="" alt="">
+              <h2>Mensagem enviada com sucesso !</h2>
+              <p>Obrigado por entrar em contato conosco ! </p>
+              <p>Boa notícia! Nossa equipe já recebeu sua mensagem, e um dos nossos especialistas entrará em contato
+                para
+                ajudá-lo com sua solicitação. Fique atento ao seu celular!<span>✅📞</span></p>
+
+              <div (click)="closePopUp()" class="button__popup"><a><span>FECHAR POP-UP</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <img src="../../../../assets/pessoas/team-office-3.jpg" alt="">
+    </div>
+  </div>
+</body>
