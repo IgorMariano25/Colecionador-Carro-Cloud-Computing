@@ -125,12 +125,6 @@ body {
   color: var(--white-color);
   letter-spacing: 2px;
   align-self: center;
-  transition: 0.3s ease-out;
-}
-
-.form button:hover {
-  cursor: pointer;
-  transition: 0.3s ease-in;
 }
 
 .animation {

@@ -120,10 +120,6 @@ body {
   align-self: center;
 }
 
-.form button:hover {
-  cursor: pointer;
-}
-
 .animation {
   animation-name: move;
   animation-duration: .3s;
