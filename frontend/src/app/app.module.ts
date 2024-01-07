@@ -28,6 +28,7 @@ import { FormularioContatoComponent } from './pages/Formularios/FormularioContat
 import { TemosUsoComponent } from './pages/TermosDeUso/temos-uso.component';
 import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/politica-privacidade.component';
 import { LgpdComponent } from './pages/LPGD/lgpd.component';
+import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LgpdComponent } from './pages/LPGD/lgpd.component';
     FormularioContatoComponent,
     TemosUsoComponent,
     PoliticaPrivacidadeComponent,
-    LgpdComponent
+    LgpdComponent,
+    EmpregosECarreirasComponent
   ],
   imports: [
     BrowserModule,
