@@ -25,6 +25,9 @@ import { AboutComponent } from './pages/AboutCompany/about.component';
 import { EncontrosComponent } from './pages/Encontros/encontros.component';
 import { FooterPageComponent } from './componentes/FooterPage/footer-page.component';
 import { FormularioContatoComponent } from './pages/Formularios/FormularioContato/formulario-contato.component';
+import { TemosUsoComponent } from './pages/TermosDeUso/temos-uso.component';
+import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/politica-privacidade.component';
+import { LgpdComponent } from './pages/LPGD/lgpd.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { FormularioContatoComponent } from './pages/Formularios/FormularioContat
     AboutComponent,
     EncontrosComponent,
     FooterPageComponent,
-    FormularioContatoComponent
+    FormularioContatoComponent,
+    TemosUsoComponent,
+    PoliticaPrivacidadeComponent,
+    LgpdComponent
   ],
   imports: [
     BrowserModule,
