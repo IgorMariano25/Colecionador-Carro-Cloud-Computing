@@ -13,6 +13,8 @@ import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/poli
 import { TemosUsoComponent } from './pages/TermosDeUso/temos-uso.component';
 import { LgpdComponent } from './pages/LPGD/lgpd.component';
 import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
+import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
+import { SustentabilidadeComponent } from './pages/Sustentabilidade/sustentabilidade.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -28,7 +30,9 @@ const routes: Routes = [
   { path: "empregos", component: EmpregosECarreirasComponent },
   { path: "politica-privacidade", component: PoliticaPrivacidadeComponent },
   { path: "termos-uso", component: TemosUsoComponent },
-  { path: "lgpd", component: LgpdComponent }
+  { path: "lgpd", component: LgpdComponent },
+  { path: "imprensa", component: ImprensaComponent },
+  { path: "sustentabilidade", component: SustentabilidadeComponent },
 ];
 
 @NgModule({
