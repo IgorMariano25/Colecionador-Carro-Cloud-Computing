@@ -97,13 +97,13 @@ body {
 
 .form button {
   padding: 12px 10px;
+  width: 12rem;
   border: 0;
   background: linear-gradient(to right, var(--main-color) 0%, var(--blue-color-1) 100%);
   border-radius: 3px;
   margin-top: 15px;
   color: var(--white-color);
-  letter-spacing: 1px;
-  width: 30%;
+  letter-spacing: 2px;
   align-self: center;
 }
 
