@@ -23,12 +23,12 @@ import { LikeButtonComponent } from './componentes/LikeButton/like-button.compon
 import { FiltroDeBuscaComponent } from './componentes/FiltroDeBusca/filtro-de-busca.component';
 import { AboutComponent } from './pages/AboutCompany/about.component';
 import { EncontrosComponent } from './pages/Encontros/encontros.component';
-import { FooterPageComponent } from './componentes/FooterPage/footer-page.component';
 import { FormularioContatoComponent } from './pages/Formularios/FormularioContato/formulario-contato.component';
 import { TemosUsoComponent } from './pages/TermosDeUso/temos-uso.component';
 import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/politica-privacidade.component';
 import { LgpdComponent } from './pages/LPGD/lgpd.component';
 import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
+import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +44,12 @@ import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-
     FiltroDeBuscaComponent,
     AboutComponent,
     EncontrosComponent,
-    FooterPageComponent,
     FormularioContatoComponent,
     TemosUsoComponent,
     PoliticaPrivacidadeComponent,
     LgpdComponent,
-    EmpregosECarreirasComponent
+    EmpregosECarreirasComponent,
+    ImprensaComponent
   ],
   imports: [
     BrowserModule,
