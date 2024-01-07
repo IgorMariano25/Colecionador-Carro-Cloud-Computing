@@ -56,7 +56,8 @@ body {
   height: 100%;
 }
 
-a:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
