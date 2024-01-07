@@ -9,6 +9,10 @@ import { FormularioCarroComponent } from './pages/Formularios/FormularioCarro/fo
 import { FormularioContatoComponent } from './pages/Formularios/FormularioContato/formulario-contato.component';
 import { AboutComponent } from './pages/AboutCompany/about.component';
 import { EncontrosComponent } from './pages/Encontros/encontros.component';
+import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/politica-privacidade.component';
+import { TemosUsoComponent } from './pages/TermosDeUso/temos-uso.component';
+import { LgpdComponent } from './pages/LPGD/lgpd.component';
+import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -20,7 +24,11 @@ const routes: Routes = [
   { path: "FormularioContato", component: FormularioContatoComponent },
   { path: "About/:id", component: AboutComponent },
   { path: "About", component: AboutComponent },
-  { path: "Encontros", component: EncontrosComponent }
+  { path: "Encontros", component: EncontrosComponent },
+  { path: "empregos", component: EmpregosECarreirasComponent },
+  { path: "politica-privacidade", component: PoliticaPrivacidadeComponent },
+  { path: "termos-uso", component: TemosUsoComponent },
+  { path: "lgpd", component: LgpdComponent }
 ];
 
 @NgModule({
