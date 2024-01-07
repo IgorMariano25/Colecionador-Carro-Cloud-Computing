@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ColecionadorService } from './../../services/colecionador/colecionador.service';
-import { CarroService } from '../../services/carro/carro.service';
 import { ColecionadorModel } from '../../model/colecionador.model';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CarroModel } from '../../model/carro.model';
 
 @Component({
