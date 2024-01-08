@@ -151,3 +151,23 @@ ul.dropdown.countries>li:nth-child(7) a:hover {
 ul.dropdown.countries>li:nth-child(8) a:hover {
   background-image: url("../assets/paises/SPAIN-FLAG.jpg");
 }
+
+footer {
+  position: absolute;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+  background-color: var(--bg-color);
+}
+
+@media screen and (min-width: 600px) {
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+}
