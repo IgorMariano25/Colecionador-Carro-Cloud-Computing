@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ColecionadorModel } from '../../model/colecionador.model';
 import { CarroModel } from '../../model/carro.model';
+import { VisibilityService } from '../../services/VisibilityService/visibility.service';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,13 @@ export class HomeComponent implements OnInit {
   colecionador?: ColecionadorModel[];
   carro?: CarroModel[];
 
-  constructor() {
+  constructor(private visibilityService: VisibilityService) { }
 
+  ngOnInit() {
+    this.visibilityService.setShowFooter(false);
   }
 
-  ngOnInit(): void {
+  ngOnDestroy() {
+    this.visibilityService.setShowFooter(true);
   }
 }
