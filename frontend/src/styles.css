@@ -69,7 +69,11 @@ body {
 
 /* ScrollBar */
 ::-webkit-scrollbar {
+  /* Vertical */
   width: 8px;
+
+  /* Horizontal */
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
