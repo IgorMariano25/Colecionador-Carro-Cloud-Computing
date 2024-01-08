@@ -29,6 +29,9 @@ import { PoliticaPrivacidadeComponent } from './pages/PoliticaDePrivacidade/poli
 import { LgpdComponent } from './pages/LPGD/lgpd.component';
 import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
 import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
+import { SustentabilidadeComponent } from './pages/Sustentabilidade/sustentabilidade.component';
+import { ComplianceComponent } from './pages/Compliance/compliance.component';
+import { DenunciaComponent } from './pages/Denuncia/denuncia.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
     PoliticaPrivacidadeComponent,
     LgpdComponent,
     EmpregosECarreirasComponent,
-    ImprensaComponent
+    ImprensaComponent,
+    SustentabilidadeComponent,
+    ComplianceComponent,
+    DenunciaComponent
   ],
   imports: [
     BrowserModule,
