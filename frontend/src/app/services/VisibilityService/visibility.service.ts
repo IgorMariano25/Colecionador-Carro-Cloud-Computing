@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class VisibilityService {
+  private showFooter = true;
 
-  constructor() { }
+  setShowFooter(show: boolean) {
+    this.showFooter = show;
+  }
+
+  getShowFooter() {
+    return this.showFooter;
+  }
 }
