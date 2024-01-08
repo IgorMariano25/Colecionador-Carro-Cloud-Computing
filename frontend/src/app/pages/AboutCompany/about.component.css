@@ -7,7 +7,7 @@ body,
 }
 
 #about__main__content {
-  padding-top: 5rem;
+  padding-top: calc(60px);
 }
 
 .about__contanier {
