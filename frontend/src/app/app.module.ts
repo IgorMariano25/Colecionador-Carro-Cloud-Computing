@@ -32,6 +32,8 @@ import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
 import { SustentabilidadeComponent } from './pages/Sustentabilidade/sustentabilidade.component';
 import { ComplianceComponent } from './pages/Compliance/compliance.component';
 import { DenunciaComponent } from './pages/Denuncia/denuncia.component';
+import { SubsidiariaComponent } from './pages/Subsidiaria/subsidiaria.component';
+import { EquipeComponent } from './pages/Equipe/equipe.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { DenunciaComponent } from './pages/Denuncia/denuncia.component';
     ImprensaComponent,
     SustentabilidadeComponent,
     ComplianceComponent,
-    DenunciaComponent
+    DenunciaComponent,
+    SubsidiariaComponent,
+    EquipeComponent
   ],
   imports: [
     BrowserModule,
