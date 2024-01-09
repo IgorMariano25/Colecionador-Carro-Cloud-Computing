@@ -153,21 +153,144 @@ ul.dropdown.countries>li:nth-child(8) a:hover {
 }
 
 footer {
+  width: 100%;
+  border-top: 1px solid var(--white-color);
   position: absolute;
   color: white;
   padding: 2.5rem;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+footer h3 {
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer span {
+  margin-bottom: 0;
+}
+
+footer .footer-section #idioma h4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer #brazil__flag {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.8rem;
+}
+
+.footer-section .informations {
+  display: flex;
+  flex-direction: row;
+
+  #contato,
+  #social__media {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #contato span {
+    background-color: var(--white-color);
+    width: 60%;
+    padding: 12px 10px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    align-self: center;
+    transition: 0.35s ease-out;
+    transform: scale(0.98);
+  }
+
+  #contato span:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    transition: 0.35s ease-in;
+    transform: scale(1);
+  }
+
+  #contato span a {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 480;
+    transition: 0.35s ease-out;
+  }
+
+  #contato span:hover a {
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 490;
+    transition: 0.35s ease-in;
+  }
+
+  .social__media__icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social__media__icons span {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-left: 10px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3px;
+    transform: scale(0.98);
+    transition: 0.35s ease-out;
+  }
+
+  .social__media__icons span:hover {
+    background-color: var(--main-color);
+    transform: scale(1.09);
+    transition: 0.35s ease-in;
+  }
+
+  .social__media__icons span:hover i {
+    font-size: 25px;
+    line-height: 25px;
+    color: var(--white-color);
+    transition: 0.35s ease-out;
+  }
+
+  .social__media__icons span i {
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--main-color);
+    transition: 0.35s ease-out;
+  }
 }
 
 .footer-content {
   margin-bottom: 20px;
   background-color: var(--bg-color);
+  align-items: top;
+  justify-content: center;
+}
+
+.footer-content p {
+  font-size: 16px;
+  font-weight: 250;
 }
 
 @media screen and (min-width: 600px) {
   .footer-content {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
   }
 }
