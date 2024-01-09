@@ -15,6 +15,7 @@ import { LgpdComponent } from './pages/LPGD/lgpd.component';
 import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-ecarreiras.component';
 import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
 import { SustentabilidadeComponent } from './pages/Sustentabilidade/sustentabilidade.component';
+import { ComplianceComponent } from './pages/Compliance/compliance.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -33,6 +34,8 @@ const routes: Routes = [
   { path: "lgpd", component: LgpdComponent },
   { path: "imprensa", component: ImprensaComponent },
   { path: "sustentabilidade", component: SustentabilidadeComponent },
+  { path: "compliance", component: ComplianceComponent },
+  { path: "compliance/denuncia", component: ComplianceComponent },
 ];
 
 @NgModule({
