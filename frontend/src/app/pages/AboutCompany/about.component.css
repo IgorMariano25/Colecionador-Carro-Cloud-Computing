@@ -133,6 +133,8 @@ body,
   flex-direction: row;
   gap: 5rem;
   padding: 2.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__contanier__logo #left__content h1,
@@ -156,7 +158,8 @@ body,
 }
 
 .about__contanier__logo #imagem__logo svg {
-  width: 350px;
+  margin-top: 3.5rem;
+  width: 475px;
   height: auto;
 }
 
