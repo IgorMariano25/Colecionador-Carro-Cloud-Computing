@@ -55,12 +55,12 @@ nav {
   transition: 0.8s ease;
 }
 
-ul li {
+nav ul li {
   display: inline-block;
   position: relative;
 }
 
-ul li a {
+nav ul li a {
   display: block;
   padding: 20px 30px;
   color: var(--white-color);
@@ -69,11 +69,11 @@ ul li a {
   font-size: 20px;
 }
 
-ul li ul.dropdown li {
+nav ul li ul.dropdown li {
   display: block;
 }
 
-ul li ul.dropdown {
+nav ul li ul.dropdown {
   width: inherit;
   background: var(--main-color);
   position: absolute;
@@ -93,20 +93,20 @@ ul li ul.dropdown {
   align-items: center;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   background: var(--secundary-color);
 }
 
-ul.dropdown.countries li a:hover {
+nav ul.dropdown.countries li a:hover {
   background: none;
 }
 
-ul #formsDropdown:hover ul.dropdown {
+nav ul #formsDropdown:hover ul.dropdown {
   display: block;
   padding-left: 0;
 }
 
-ul.dropdown.countries li a:hover {
+nav ul.dropdown.countries li a:hover {
   top: 0;
   margin-top: 0;
   opacity: 1;
@@ -116,39 +116,39 @@ ul.dropdown.countries li a:hover {
   transition: background 0.5s ease, opacity 0.5s ease;
 }
 
-ul.dropdown.countries li a:hover span {
+nav ul.dropdown.countries li a:hover span {
   visibility: hidden;
 }
 
-ul.dropdown.countries>li:nth-child(1) a:hover {
+nav ul.dropdown.countries>li:nth-child(1) a:hover {
   background-image: url("../assets/paises/BRAZIL-FLAG.png");
 }
 
-ul.dropdown.countries>li:nth-child(2) a:hover {
+nav ul.dropdown.countries>li:nth-child(2) a:hover {
   background-image: url("../assets/paises/US-FLAG.jpg");
 }
 
-ul.dropdown.countries>li:nth-child(3) a:hover {
+nav ul.dropdown.countries>li:nth-child(3) a:hover {
   background-image: url("../assets/paises/PORTUGAL-FLAG.png");
 }
 
-ul.dropdown.countries>li:nth-child(4) a:hover {
+nav ul.dropdown.countries>li:nth-child(4) a:hover {
   background-image: url("../assets/paises/GERMANY-FLAG.jpg");
 }
 
-ul.dropdown.countries>li:nth-child(5) a:hover {
+nav ul.dropdown.countries>li:nth-child(5) a:hover {
   background-image: url("../assets/paises/FRENCH-FLAG-2.jpg");
 }
 
-ul.dropdown.countries>li:nth-child(6) a:hover {
+nav ul.dropdown.countries>li:nth-child(6) a:hover {
   background-image: url("../assets/paises/BELGIUM-FLAG-2.jpg");
 }
 
-ul.dropdown.countries>li:nth-child(7) a:hover {
+nav ul.dropdown.countries>li:nth-child(7) a:hover {
   background-image: url("../assets/paises/SWITZERLAND-FLAG.jpg");
 }
 
-ul.dropdown.countries>li:nth-child(8) a:hover {
+nav ul.dropdown.countries>li:nth-child(8) a:hover {
   background-image: url("../assets/paises/SPAIN-FLAG.jpg");
 }
 
@@ -340,7 +340,6 @@ footer #logo {
 }
 
 .footer-content {
-  margin-bottom: 20px;
   background-color: var(--bg-color);
   align-items: top;
   justify-content: center;
