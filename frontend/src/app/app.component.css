@@ -276,6 +276,69 @@ footer #brazil__flag {
   }
 }
 
+.footer-section ul li a {
+  color: var(--white-color);
+}
+
+.footer-section .links__uteis ul li a,
+.footer-section .empresa__links ul li a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  align-items: start;
+  padding: 10px;
+  color: var(--white-color);
+  margin-bottom: 0.5rem;
+  transition: 0.35s ease-out;
+  letter-spacing: 2px;
+  transform: scale(0.98);
+  font-weight: 550;
+}
+
+.footer-section .links__uteis ul li:hover a,
+.footer-section .empresa__links ul li:hover a {
+  transition: 0.35s ease-in;
+  background-color: var(--main-color-opacity-75);
+  transform: scale(1);
+}
+
+footer #copyright__information {
+  font-size: 16px;
+  transition: 0.35s ease-out;
+
+  a {
+    color: var(--main-color);
+  }
+
+  a:hover {
+    color: var(--blue-color-2);
+    transition: 0.35s ease-in;
+  }
+
+  a:visited,
+  a:active {
+    color: var(--blue-color-2);
+  }
+}
+
+footer #logo {
+  cursor: pointer;
+
+  img {
+    width: 80px;
+    height: auto;
+  }
+
+  p {
+    margin-top: 20px;
+    color: var(--main-color);
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-family: porscheNext;
+  }
+}
+
 .footer-content {
   margin-bottom: 20px;
   background-color: var(--bg-color);
