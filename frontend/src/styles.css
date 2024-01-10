@@ -76,6 +76,26 @@
   --blue-grey-color-2: #7c8097;
 
   --grey-color: #808080;
+  --grey-color-opacity-95: rgba(128, 128, 128, .95);
+  --grey-color-opacity-90: rgba(128, 128, 128, .90);
+  --grey-color-opacity-80: rgba(128, 128, 128, .85);
+  --grey-color-opacity-85: rgba(128, 128, 128, .80);
+  --grey-color-opacity-80: rgba(128, 128, 128, .75);
+  --grey-color-opacity-75: rgba(128, 128, 128, .70);
+  --grey-color-opacity-70: rgba(128, 128, 128, .65);
+  --grey-color-opacity-65: rgba(128, 128, 128, .60);
+  --grey-color-opacity-60: rgba(128, 128, 128, .65);
+  --grey-color-opacity-55: rgba(128, 128, 128, .55);
+  --grey-color-opacity-50: rgba(128, 128, 128, .50);
+  --grey-color-opacity-45: rgba(128, 128, 128, .45);
+  --grey-color-opacity-40: rgba(128, 128, 128, .40);
+  --grey-color-opacity-35: rgba(128, 128, 128, .35);
+  --grey-color-opacity-30: rgba(128, 128, 128, .30);
+  --grey-color-opacity-25: rgba(128, 128, 128, .25);
+  --grey-color-opacity-20: rgba(128, 128, 128, .20);
+  --grey-color-opacity-15: rgba(128, 128, 128, .15);
+  --grey-color-opacity-10: rgba(128, 128, 128, .10);
+
   --grey-color-2: #666b7d;
 }
 
