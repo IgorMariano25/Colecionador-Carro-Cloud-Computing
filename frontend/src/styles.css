@@ -19,6 +19,7 @@
 }
 
 :root {
+  /* MAIN */
   --main-color: #ff003b;
   --main-color-opacity-95: rgba(255, 0, 59, .95);
   --main-color-opacity-90: rgba(255, 0, 59, .90);
@@ -60,6 +61,7 @@
   --secundary-color-opacity-15: #c5002e;
   --secundary-color-opacity-10: #c5002e;
 
+  /* WHITE COLOR */
   --white-color: rgb(255, 255, 255);
   --white-color-opacity-95: rgb(255, 255, 255, .95);
   --white-color-opacity-90: rgb(255, 255, 255, .90);
@@ -83,8 +85,10 @@
   --white-color-2: #ddd;
   --white-color-3: #fdfeff;
 
+  /* BACKGROUND COLOR */
   --bg-color: #0F0F0F;
 
+  /* BLACK COLOR */
   --black-color: #000;
   --black-color-opacity-95: rgba(0, 0, 0, .95);
   --black-color-opacity-90: rgba(0, 0, 0, .90);
@@ -107,6 +111,7 @@
 
   --black-color-2: #080911;
 
+  /* BLUE COLOR */
   --blue-color-1: #139DF2;
   --blue-color-2: #0f7ef1;
   --blue-color-3: #1356f2;
@@ -138,6 +143,7 @@
 
   --grey-color-2: #666b7d;
 
+  /* RED */
   --red-color-50: rgba(255, 235, 238, 1);
   --red-color-100: rgba(255, 205, 210, 1);
   --red-color-200: rgba(239, 154, 154, 1);
