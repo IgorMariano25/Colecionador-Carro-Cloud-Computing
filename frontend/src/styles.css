@@ -38,7 +38,27 @@
   --main-color-opacity-20: rgba(255, 0, 59, .20);
   --main-color-opacity-15: rgba(255, 0, 59, .15);
   --main-color-opacity-10: rgba(255, 0, 59, .10);
+
+  /* SECUNDARY COLOR*/
   --secundary-color: #c5002e;
+  --secundary-color-opacity-95: rgbA(197, 0, 46);
+  --secundary-color-opacity-90: #c5002e;
+  --secundary-color-opacity-85: #c5002e;
+  --secundary-color-opacity-80: #c5002e;
+  --secundary-color-opacity-75: #c5002e;
+  --secundary-color-opacity-70: #c5002e;
+  --secundary-color-opacity-65: #c5002e;
+  --secundary-color-opacity-60: #c5002e;
+  --secundary-color-opacity-55: #c5002e;
+  --secundary-color-opacity-50: #c5002e;
+  --secundary-color-opacity-45: #c5002e;
+  --secundary-color-opacity-40: #c5002e;
+  --secundary-color-opacity-35: #c5002e;
+  --secundary-color-opacity-30: #c5002e;
+  --secundary-color-opacity-25: #c5002e;
+  --secundary-color-opacity-20: #c5002e;
+  --secundary-color-opacity-15: #c5002e;
+  --secundary-color-opacity-10: #c5002e;
 
   --white-color: rgb(255, 255, 255);
   --white-color-opacity-95: rgb(255, 255, 255, .95);
