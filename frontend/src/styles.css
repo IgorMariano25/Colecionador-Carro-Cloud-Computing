@@ -87,6 +87,24 @@
 
   /* BACKGROUND COLOR */
   --bg-color: #0F0F0F;
+  --bg-color-opacity-95: rgba(15, 15, 15, .95);
+  --bg-color-opacity-90: rgba(15, 15, 15, .90);
+  --bg-color-opacity-85: rgba(15, 15, 15, .85);
+  --bg-color-opacity-80: rgba(15, 15, 15, .80);
+  --bg-color-opacity-75: rgba(15, 15, 15, .75);
+  --bg-color-opacity-70: rgba(15, 15, 15, .70);
+  --bg-color-opacity-65: rgba(15, 15, 15, .65);
+  --bg-color-opacity-60: rgba(15, 15, 15, .60);
+  --bg-color-opacity-55: rgba(15, 15, 15, .55);
+  --bg-color-opacity-50: rgba(15, 15, 15, .50);
+  --bg-color-opacity-45: rgba(15, 15, 15, .45);
+  --bg-color-opacity-40: rgba(15, 15, 15, .40);
+  --bg-color-opacity-35: rgba(15, 15, 15, .35);
+  --bg-color-opacity-30: rgba(15, 15, 15, .30);
+  --bg-color-opacity-25: rgba(15, 15, 15, .25);
+  --bg-color-opacity-20: rgba(15, 15, 15, .20);
+  --bg-color-opacity-15: rgba(15, 15, 15, .15);
+  --bg-color-opacity-10: rgba(15, 15, 15, .10);
 
   /* BLACK COLOR */
   --black-color: #000;
