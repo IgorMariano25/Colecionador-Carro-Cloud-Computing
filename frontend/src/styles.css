@@ -117,6 +117,22 @@
   --grey-color-opacity-10: rgba(128, 128, 128, .10);
 
   --grey-color-2: #666b7d;
+
+  --red-color-50: rgba(255, 235, 238, 1);
+  --red-color-100: rgba(255, 205, 210, 1);
+  --red-color-200: rgba(239, 154, 154, 1);
+  --red-color-300: rgba(229, 115, 115, 1);
+  --red-color-400: rgba(239, 83, 80, 1);
+  --red-color-500: rgba(244, 67, 54, 1);
+  --red-color-600: rgba(229, 57, 53, 1);
+  --red-color-700: rgba(211, 47, 47, 1);
+  --red-color-800: rgba(198, 40, 40, 1);
+  --red-color-900: rgba(183, 28, 28, 1);
+  --red-color-A-100: rgba(255, 138, 128, 1);
+  --red-color-A-200: rgba(255, 82, 82, 1);
+  --red-color-A-400: rgba(255, 23, 68, 1);
+  --red-color-A-700: rgba(213, 0, 0, 1);
+  --red-color: rgb(255, 0, 0, 1);
 }
 
 html,
