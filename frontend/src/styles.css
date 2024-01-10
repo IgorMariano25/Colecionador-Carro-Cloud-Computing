@@ -133,6 +133,24 @@
   --red-color-A-400: rgba(255, 23, 68, 1);
   --red-color-A-700: rgba(213, 0, 0, 1);
   --red-color: rgb(255, 0, 0, 1);
+
+  /* PINK COLOR */
+  --pink-color-100: rgba(233, 30, 99, 1);
+  --pink-color-200: rgba(233, 30, 99, 1);
+  --pink-color-300: rgba(252, 228, 236, 1);
+  --pink-color-400: rgba(244, 143, 177, 1);
+  --pink-color-500: rgba(240, 98, 146, 1);
+  --pink-color-600: rgba(236, 64, 122, 1);
+  --pink-color-700: rgba(233, 30, 99, 1);
+  --pink-color-800: rgba(216, 27, 96, 1);
+  --pink-color-900: rgba(173, 20, 87, 1);
+  --pink-color-A-100: rgba(136, 14, 79, 1);
+  --pink-color-A-100: rgba(255, 128, 171, 1);
+  --pink-color-A-200: rgba(255, 64, 129, 1);
+  --pink-color-A-300: rgba(245, 0, 87, 1);
+  --pink-color-A-400: rgba(245, 0, 87, 1);
+  --pink-color-A-700: rgba(197, 17, 98, 1);
+  --pink-color: rgba(255, 0, 221, 1);
 }
 
 html,
