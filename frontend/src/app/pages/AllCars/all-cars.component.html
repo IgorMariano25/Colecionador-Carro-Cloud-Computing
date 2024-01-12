@@ -1,4 +1,7 @@
-<searchFilter id="buscadorDeCarros" [placeholder]="'Digite uma marca...'"></searchFilter>
+<searchFilter id="buscadorDeCarros"
+  [placeholder]="'Digite uma marca...'"
+  [selectOptions]="[{ value: 'marca', text: 'Marca' }, { value: 'modelo', text: 'Modelo' }]">
+</searchFilter>
 
 <div class="carro-container" *ngIf="carros && carros.length > 0">
   <mat-card class="card-carros" *ngFor="let carro of carros">
