@@ -119,43 +119,83 @@
   }
 }
 
-.social-icons {
+.social__media__icons {
   display: flex;
   margin-top: 1.2rem;
   justify-content: space-between;
+  padding: 0 2rem;
 
   .icon {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 
   img {
     color: var(--white-color);
-    width: 55px;
-    height: 55px;
-    border-radius: 18px;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
     box-shadow: var(--shadow);
+    transition: 0.35s ease-out;
+    transform: scale(0.98);
   }
 
   img:hover {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 55px;
+    transition: 0.35s ease-in;
+    transform: scale(1.15);
   }
 
   h4 {
     color: var(--black-color-2);
     font-size: 1.4rem;
+    font-weight: 550;
+    letter-spacing: 2px;
     margin-top: 0.8rem;
     margin-bottom: 0.2rem;
+    font-family: porscheNextBold;
   }
 
   p {
     color: var(--grey-color-2);
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: porscheNextBold;
   }
 }
 
-.social-icons .icon:hover {
+
+.social__media__icons span {
+  display: flex;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  margin-left: 10px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3px;
+  transform: scale(0.98);
+  transition: 0.35s ease-out;
+}
+
+.social__media__icons span:hover {
+  background-color: var(--main-color);
+  transform: scale(1.09);
+  transition: 0.35s ease-in;
+}
+
+.social__media__icons span:hover i {
+  color: var(--white-color);
+  transition: 0.35s ease-out;
+}
+
+.social__media__icons span i {
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--main-color);
+  transition: 0.35s ease-out;
 }
