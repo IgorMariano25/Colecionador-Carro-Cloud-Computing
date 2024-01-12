@@ -161,7 +161,7 @@ footer {
   text-align: center;
   box-sizing: border-box;
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   flex-direction: column;
 }
 
