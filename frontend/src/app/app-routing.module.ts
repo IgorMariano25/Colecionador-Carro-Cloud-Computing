@@ -25,7 +25,6 @@ const routes: Routes = [
   { path: "FormularioColecionador", component: FormularioColecionadorComponent },
   { path: "FormularioCarro", component: FormularioCarroComponent },
   { path: "FormularioContato", component: FormularioContatoComponent },
-  { path: "About/:id", component: AboutComponent },
   { path: "About", component: AboutComponent },
   { path: "Encontros", component: EncontrosComponent },
   { path: "empregos", component: EmpregosECarreirasComponent },
