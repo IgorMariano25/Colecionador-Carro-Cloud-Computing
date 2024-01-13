@@ -75,6 +75,9 @@
   transition: .45s ease-in;
 }
 
+.filter #buscador div {
+  align-items: center;
+  text-align: center;
 }
 
 .filter button:hover {
