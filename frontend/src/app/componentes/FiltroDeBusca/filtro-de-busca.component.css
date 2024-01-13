@@ -88,8 +88,8 @@
   transition: .45s ease-out;
 }
 
-.filter button:hover i {
-  color: var(--main-color);
+.filter #buscador button i {
+  font-size: 24px;
   font-weight: 700;
   transform: scale(1.025);
 }
