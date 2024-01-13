@@ -90,12 +90,8 @@
 
 .filter #buscador button i {
   font-size: 24px;
-  font-weight: 700;
-  transform: scale(1.025);
 }
 
-.option:nth-child(6):hover~#option-bg {
-  top: 200px;
-  background-color: #006400;
-  border-radius: 0 0 4px 4px;
+.filter #buscador button:hover i {
+  color: var(--main-color);
 }
