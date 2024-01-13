@@ -1,4 +1,6 @@
-<!-- Template com dados do BD-->
+<searchFilter id="buscadorDeCarros" [placeholder]="'Digite um nome...'"
+  [selectOptions]="[{ value: 'nome', text: 'Nome' }, { value: 'apelido', text: 'Alepido' }]">
+</searchFilter>
 <div class="container-collector" *ngIf="colecionador && colecionador.length> 0">
   <div class="card-collector" *ngFor="let colecionador of colecionador">
     <div class="profile">
