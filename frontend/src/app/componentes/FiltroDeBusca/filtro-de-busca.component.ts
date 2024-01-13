@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './filtro-de-busca.component.css'
 })
 export class FiltroDeBuscaComponent {
-  @Input() placeholder: string = ''
+  @Input() placeholder: string = '';
+  @Input() selectOptions: Array<{ value: string, text: string }> = [];
 }
