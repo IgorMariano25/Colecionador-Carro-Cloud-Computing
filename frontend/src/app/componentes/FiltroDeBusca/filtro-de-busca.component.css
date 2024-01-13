@@ -32,6 +32,7 @@
 
 .filter input {
   width: 350px;
+  font-size: 18px;
 }
 
 .filter input::placeholder {
