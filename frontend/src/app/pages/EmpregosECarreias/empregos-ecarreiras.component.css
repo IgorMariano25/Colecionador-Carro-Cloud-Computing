@@ -1,0 +1,20 @@
+main {
+  width: 100%;
+}
+
+.banner__carreiras {
+  /* position: absolute; */
+
+}
+
+.banner__carreiras img {
+  width: 100vw;
+  height: auto;
+  top: 60px;
+  z-index: -1;
+}
+
+.banner__carreiras #button__vagas {
+  position: relative;
+  z-index: 99;
+}
