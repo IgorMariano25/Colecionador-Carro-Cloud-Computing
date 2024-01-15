@@ -34,6 +34,11 @@ import { ComplianceComponent } from './pages/Compliance/compliance.component';
 import { DenunciaComponent } from './pages/Denuncia/denuncia.component';
 import { SubsidiariaComponent } from './pages/Subsidiaria/subsidiaria.component';
 import { EquipeComponent } from './pages/Equipe/equipe.component';
+import { EstudantesComponent } from './pages/EmpregosECarreias/Estudantes/estudantes.component';
+import { EstudantesTrabalhadorComponent } from './pages/EmpregosECarreias/Estudantes/EstudantesTrabalhadores/estudantes-trabalhador.component';
+import { TeseComponent } from './pages/EmpregosECarreias/Estudantes/Tese/tese.component';
+import { CandidaturaComponent } from './pages/EmpregosECarreias/Candidatura/candidatura.component';
+import { DoutoradoComponent } from './pages/EmpregosECarreias/Estudantes/Doutorado/doutorado.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +64,12 @@ import { EquipeComponent } from './pages/Equipe/equipe.component';
     ComplianceComponent,
     DenunciaComponent,
     SubsidiariaComponent,
-    EquipeComponent
+    EquipeComponent,
+    EstudantesComponent,
+    EstudantesTrabalhadorComponent,
+    TeseComponent,
+    CandidaturaComponent,
+    DoutoradoComponent,
   ],
   imports: [
     BrowserModule,
