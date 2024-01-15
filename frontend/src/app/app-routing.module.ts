@@ -16,6 +16,11 @@ import { EmpregosECarreirasComponent } from './pages/EmpregosECarreias/empregos-
 import { ImprensaComponent } from './pages/Imprensa/imprensa.component';
 import { SustentabilidadeComponent } from './pages/Sustentabilidade/sustentabilidade.component';
 import { ComplianceComponent } from './pages/Compliance/compliance.component';
+import { EstudantesComponent } from './pages/EmpregosECarreias/Estudantes/estudantes.component';
+import { ProfissionaisComponent } from './pages/EmpregosECarreias/Profissionais/profissionais.component';
+import { TeseComponent } from './pages/EmpregosECarreias/Estudantes/Tese/tese.component';
+import { DoutoradoComponent } from './pages/EmpregosECarreias/Estudantes/Doutorado/doutorado.component';
+import { CandidaturaComponent } from './pages/EmpregosECarreias/Candidatura/candidatura.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -28,6 +33,11 @@ const routes: Routes = [
   { path: "About", component: AboutComponent },
   { path: "Encontros", component: EncontrosComponent },
   { path: "empregos", component: EmpregosECarreirasComponent },
+  { path: "empregos/candidatura", component: CandidaturaComponent },
+  { path: "empregos/profissionais", component: ProfissionaisComponent },
+  { path: "empregos/estudantes", component: EstudantesComponent },
+  { path: "empregos/estudantes/doutorado", component: DoutoradoComponent },
+  { path: "empregos/estudantes/tese", component: TeseComponent },
   { path: "politica-privacidade", component: PoliticaPrivacidadeComponent },
   { path: "termos-uso", component: TemosUsoComponent },
   { path: "lgpd", component: LgpdComponent },
