@@ -28,6 +28,12 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/About'], { fragment: fragment });
   }
 
+  redirectToPageIdHtml(page: string, idHtml: string) {
+    this.router.navigate(['/' + page], { fragment: idHtml }).then(() => {
+    });
+  }
+
+  smoothScrollTo(endX: number, endY: number, duration: number): void {
   smoothScrollTo(endX: number, endY: number, duration: number): void {
     const startX: number = window.scrollX;
     const startY: number = window.scrollY;
