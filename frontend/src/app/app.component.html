@@ -2,7 +2,7 @@
   <nav>
     <ul id="navbar__list">
       <a routerLink="/"><img class="logo__site" src="../assets/svg/no-celta-2.svg" alt=""></a>
-      <li><a id="home" class="links" routerLink="/">Home</a></li>
+      <li><a id="home" class="links" (click)="redirectToPage('/')">Home</a></li>
       <li>
         <span id="formsDropdown" class="links">
           <a id="formulario" (click)="redirectToPage('About')">A Elite <span id="setas"><i id="down"
