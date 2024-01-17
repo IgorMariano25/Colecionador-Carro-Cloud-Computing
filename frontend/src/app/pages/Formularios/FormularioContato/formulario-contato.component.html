@@ -14,9 +14,16 @@
         </div>
 
         <div class="inputs">
-          <input type="text" name="nickname" class="form-field animation a4" placeholder="Telefone: Ex: (99) 9999-9999 "
+          <input type="text" name="telefone" class="form-field animation a4" placeholder="Telefone: Ex: (99) 9999-9999 "
             required>
-          <input type="text" name="nickname" class="form-field animation a4" placeholder="Motivo do contato" required>
+          <!-- <input type="text" name="motivo__contato" class="form-field animation a4" placeholder="Motivo do contato" required> -->
+          <select id="select__forms__contato" name="select__forms__contato" class="form-field animation a4">
+            <option value="" disabled selected hidden>Motivo do Contato</option>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestoes">Sugestões</option>
+            <option value="vagasDeEmprego">Vagas de Emprego</option>
+            <option value="outros">Outros</option>
+          </select>
         </div>
 
         <span id="mensagem" class="animation a5">Escreva a sua mensagem aqui.</span>
