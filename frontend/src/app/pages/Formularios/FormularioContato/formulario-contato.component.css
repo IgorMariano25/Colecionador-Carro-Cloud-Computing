@@ -6,6 +6,10 @@ body {
   background-color: var(--white-color);
 }
 
+#close__popup i:hover {
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -72,6 +76,25 @@ body {
 .form p a {
   color: var(--black-color);
   font-size: 14px;
+}
+
+.form-field::placeholder,
+#select__forms__contato option {
+  font-size: 18px;
+  font-family: porscheNext;
+}
+
+.form-field::placeholder {
+  color: var(--black-color-opacity-40);
+}
+
+#select__forms__contato option {
+  color: var(--black-color);
+}
+
+.form-field {
+  color: var(--black-color);
+  font-size: 18px;
 }
 
 .form #mensagem {
