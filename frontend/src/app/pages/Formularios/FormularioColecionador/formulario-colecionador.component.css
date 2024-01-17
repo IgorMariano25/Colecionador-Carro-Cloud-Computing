@@ -6,6 +6,10 @@ body {
   background-color: var(--white-color);
 }
 
+#close__popup i:hover {
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   height: 100vh;
