@@ -25,9 +25,10 @@
               <i id="up" class="bi bi-arrow-up-circle"></i></span>
           </a>
           <ul class="dropdown">
-            <li><a routerLink="/FormularioCarro">Carro</a></li>
-            <li><a routerLink="/FormularioContato">Contato</a></li>
-            <li><a routerLink="/FormularioColecionador">Colecionador</a></li>
+            <!-- <li><a routerLink="/FormularioCarro">Carro</a></li> -->
+            <li><a (click)="redirectToPage('FormularioCarro')">Carro</a></li>
+            <li><a (click)="redirectToPage('FormularioContato')">Contato</a></li>
+            <li><a (click)="redirectToPage('FormularioColecionador')">Colecionador</a></li>
           </ul>
         </span>
       </li>
