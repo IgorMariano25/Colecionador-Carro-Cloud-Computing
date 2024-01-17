@@ -154,15 +154,24 @@ nav ul.dropdown.countries>li:nth-child(8) a:hover {
 
 footer {
   width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2.5rem;
   border-top: 1px solid var(--white-color);
-  position: absolute;
+  position: relative;
   color: white;
-  padding: 2.5rem;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   gap: 1.5rem;
+  padding-bottom: 2.5rem;
   flex-direction: column;
+  background-color: var(--bg-color);
+}
+
+footer .footer-content {
+  padding-top: 1.5rem;
 }
 
 footer h3 {
