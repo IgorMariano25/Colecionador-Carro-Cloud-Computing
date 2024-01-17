@@ -39,6 +39,7 @@ import { EstudantesTrabalhadorComponent } from './pages/EmpregosECarreias/Estuda
 import { TeseComponent } from './pages/EmpregosECarreias/Estudantes/Tese/tese.component';
 import { CandidaturaComponent } from './pages/EmpregosECarreias/Candidatura/candidatura.component';
 import { DoutoradoComponent } from './pages/EmpregosECarreias/Estudantes/Doutorado/doutorado.component';
+import { ProfissionaisComponent } from './pages/EmpregosECarreias/Profissionais/profissionais.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { DoutoradoComponent } from './pages/EmpregosECarreias/Estudantes/Doutora
     TeseComponent,
     CandidaturaComponent,
     DoutoradoComponent,
+    ProfissionaisComponent,
   ],
   imports: [
     BrowserModule,
