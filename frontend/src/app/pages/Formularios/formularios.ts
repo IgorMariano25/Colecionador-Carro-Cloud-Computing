@@ -13,4 +13,7 @@ export class Formularios {
     popup?.classList.remove("open__popup");
     popupBackgroundView?.classList.remove("active");
   }
+  public validarFomrulario(): boolean {
+    return false
+  }
 }
