@@ -7,7 +7,8 @@ import { ColecionadorModel } from './../../../model/colecionador.model';
   templateUrl: './formulario-colecionador.component.html',
   styleUrls: ['./formulario-colecionador.component.css']
 })
-export class FormularioColecionadorComponent {
+
+export class FormularioColecionadorComponent extends Formularios {
   colecionador: ColecionadorModel = {
     nome: '',
     sobrenome: '',
@@ -17,33 +18,18 @@ export class FormularioColecionadorComponent {
     carros: []
   };
 
-  constructor(private colecionadorService: ColecionadorService) { }
-  // public formularioValido(): boolean {
-  //   return (
-  //     this.colecionador.nome !== (undefined || null) &&
-  //     this.colecionador.sobrenome !== (undefined || null) &&
-  //     this.colecionador.nickname !== (undefined || null) &&
-  //     this.colecionador.email !== (undefined || null) &&
-  //     this.colecionador.cpf !== (undefined || null)
-  //   );
-  // }
-
-
-  public openPopUp() {
-    // Verifique se o formulário é válido antes de abrir o popup
-    // if (this.formularioValido()) {
-    let popup = document.querySelector(".popup");
-    popup?.classList.add("open__popup");
-
-    let popupBackgroundView = document.querySelector(".popup__view");
-    popupBackgroundView?.classList.add("active");
+  constructor(private colecionadorService: ColecionadorService) {
+    super();
   }
 
-  public closePopUp() {
-    let popup = document.querySelector(".popup");
-    let popupBackgroundView = document.querySelector(".popup__view");
-    popup?.classList.remove("open__popup");
-    popupBackgroundView?.classList.remove("active");
+  public override validarFomrulario(): boolean {
+    return (
+      !!this.colecionador.nome &&
+      !!this.colecionador.sobrenome &&
+      !!this.colecionador.nickname &&
+      !!this.colecionador.email &&
+      !!this.colecionador.cpf
+    );
   }
 
   public criarNovoColecionador() {
