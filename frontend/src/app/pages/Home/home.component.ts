@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ColecionadorModel } from '../../model/colecionador.model';
 import { CarroModel } from '../../model/carro.model';
-import { VisibilityService } from '../../services/VisibilityService/visibility.service';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+
+export class HomeComponent extends AppComponent implements OnInit {
   colecionador?: ColecionadorModel[];
   carro?: CarroModel[];
 
-  constructor(private visibilityService: VisibilityService) { }
-
-  ngOnInit() {
+  override ngOnInit() {
     this.visibilityService.setShowFooter(false);
   }
 
