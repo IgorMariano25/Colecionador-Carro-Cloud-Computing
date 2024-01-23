@@ -3,13 +3,14 @@ import { CarroModel } from '../../../model/carro.model';
 import { CarroService } from '../../../services/carro/carro.service';
 import { ColecionadorService } from '../../../services/colecionador/colecionador.service';
 import { ColecionadorModel } from './../../../model/colecionador.model';
+import { Formularios } from '../formularios';
 
 @Component({
   selector: 'app-formulario-carro',
   templateUrl: './formulario-carro.component.html',
   styleUrl: './formulario-carro.component.css'
 })
-export class FormularioCarroComponent {
+export class FormularioCarroComponent extends Formularios {
   carro: CarroModel = {
     marca: '',
     modelo: '',
@@ -29,21 +30,8 @@ export class FormularioCarroComponent {
     carros: []
   };
 
-  constructor(private carroService: CarroService) { }
-
-  public openPopUp() {
-    let popup = document.querySelector(".popup");
-    popup?.classList.add("open__popup");
-
-    let popupBackgroundView = document.querySelector(".popup__view");
-    popupBackgroundView?.classList.add("active");
-  }
-
-  public closePopUp() {
-    let popup = document.querySelector(".popup");
-    let popupBackgroundView = document.querySelector(".popup__view");
-    popup?.classList.remove("open__popup");
-    popupBackgroundView?.classList.remove("active");
+  constructor(private carroService: CarroService) {
+    super();
   }
 
   public criarNovoCarro() {
