@@ -146,3 +146,22 @@
 .become-a-collector a:hover:after {
   width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+  .main-content h2 {
+    font-size: 45px;
+    line-height: 3rem;
+  }
+
+  .sell-all-collectors a {
+    padding: 0rem 2rem;
+    width: 340px;
+    font-size: 20px;
+  }
+
+  .become-a-collector a {
+    padding: 0rem 2rem;
+    width: 340px;
+    font-size: 20px;
+  }
+}
