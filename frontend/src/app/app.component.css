@@ -30,6 +30,15 @@ nav {
 #navbar__list li a {
   font-family: porscheNextBold;
   font-size: 1.375rem;
+
+  .logo__site,
+  #home,
+  #seeAllCars,
+  #seeColectors,
+  #encontros {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 #formulario #setas i {
