@@ -74,5 +74,20 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  public openMenuMobile() {
+    // let menuMobile = document.querySelector(".popup");
+    // popup?.classList.add("open__popup");
+
+    // let popupBackgroundView = document.querySelector(".popup__view");
+    // popupBackgroundView?.classList.add("active");
+  }
+
+  public closeMenuMobile() {
+    // let menuMobile = document.getElementsByTagName("nav");
+    // let menuBackgroundView = document.querySelector(".popup__view");
+    // popup?.classList.remove("open__popup");
+    // popupBackgroundView?.classList.remove("active");
+  }
 }
 
