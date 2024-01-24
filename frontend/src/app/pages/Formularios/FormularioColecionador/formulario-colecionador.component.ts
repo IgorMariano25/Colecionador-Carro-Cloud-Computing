@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ColecionadorService } from '../../../services/colecionador/colecionador.service';
 import { ColecionadorModel } from './../../../model/colecionador.model';
+import { Formularios } from '../formularios';
 
 @Component({
   selector: 'app-formulario-colecionador',
