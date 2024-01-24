@@ -1,6 +1,7 @@
 header {
   top: 0;
   margin-top: 0;
+  width: 100vw;
 }
 
 nav {
@@ -8,6 +9,7 @@ nav {
   top: 0;
   z-index: 999;
   width: 100vw;
+  background: var(--main-color);
   justify-content: center;
 }
 
@@ -19,7 +21,6 @@ nav {
 
 #navbar__list {
   list-style: none;
-  background: var(--main-color);
   padding: 0;
   display: flex;
   justify-content: center;
@@ -41,7 +42,9 @@ nav {
   }
 }
 
-#formulario #setas i {
+#about #setas i,
+#formulario #setas i,
+#encontros #setas i {
   padding: 0 0 0 .5rem;
   font-size: 20px;
   position: absolute;
@@ -54,7 +57,9 @@ nav {
   transition: 0.8s ease;
 }
 
-#formulario #setas #up {
+#about #setas #up,
+#formulario #setas #up,
+#encontros #setas #up {
   opacity: 0;
 }
 
@@ -90,6 +95,8 @@ nav ul li ul.dropdown {
   display: none;
 }
 
+#about,
+#encontros,
 #formulario {
   align-items: center;
   justify-content: center;
@@ -428,5 +435,12 @@ footer #logo {
   .footer-content {
     flex-direction: column;
     /* Ajustar o conteúdo do rodapé para coluna */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav ul li a {
+    padding: 20px 15px;
+    font-size: 16px;
   }
 }
