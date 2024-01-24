@@ -374,3 +374,59 @@ footer #logo {
     /* justify-content: space-around; */
   }
 }
+
+/* MOBILE */
+@media screen and (max-width: 900px) {
+
+  nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+
+  #navbar__list {
+    flex-direction: column;
+    padding: 5rem 0rem;
+    gap: 1rem;
+  }
+
+  #navbar__list li {
+    width: 35%;
+    /* Faz com que cada item ocupe a largura total */
+  }
+
+  #navbar__list li a {
+    font-size: 2rem;
+    /* Reduzir o tamanho da fonte para melhor adaptação */
+    padding: 10px 15px;
+    /* Reduzir o padding para economizar espaço */
+  }
+
+  .dropdown {
+    position: absolute;
+  }
+
+  /* Regras para o rodapé */
+  footer {
+    flex-direction: column;
+    /* Organizar o conteúdo do rodapé em coluna */
+  }
+
+  .footer-section .informations {
+    flex-direction: column;
+    /* Alinhar as seções do rodapé em coluna */
+    align-items: center;
+    /* Centralizar o conteúdo */
+  }
+
+  .footer-section .informations #contato,
+  .footer-section .informations #social__media {
+    width: 100%;
+    /* Usar a largura total para cada seção */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    /* Ajustar o conteúdo do rodapé para coluna */
+  }
+}
