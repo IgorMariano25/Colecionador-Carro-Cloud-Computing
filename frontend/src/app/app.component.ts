@@ -9,11 +9,10 @@ import { VisibilityService } from './services/VisibilityService/visibility.servi
 })
 
 export class AppComponent implements OnInit {
-  // @ViewChild('navbar') header!: ElementRef;
 
   constructor(
-    private router: Router,
-    private route: ActivatedRoute,
+    public router: Router,
+    public route: ActivatedRoute,
     public visibilityService: VisibilityService) { }
 
   ngOnInit() {
@@ -24,7 +23,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  redirectToPage(page: string) {
+  public redirectToPage(page: string) {
     this.router.navigate(['/' + page]).then(() => {
       window.scrollTo(0, 0);
     });
@@ -35,7 +34,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  smoothScrollTo(endX: number, endY: number, duration: number): void {
+  public smoothScrollTo(endX: number, endY: number, duration: number): void {
     const startX: number = window.scrollX;
     const startY: number = window.scrollY;
     const distanceX: number = endX - startX;
@@ -61,7 +60,7 @@ export class AppComponent implements OnInit {
     }, 1000 / 60);
   }
 
-  private scrollToElement(id: string) {
+  public scrollToElement(id: string) {
     const offsetTop = 85;
 
     setTimeout(() => {
