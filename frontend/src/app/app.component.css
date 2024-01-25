@@ -168,6 +168,12 @@ nav ul.dropdown.countries>li:nth-child(8) a:hover {
   background-image: url("../assets/paises/SPAIN-FLAG.jpg");
 }
 
+.main__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 footer {
   width: 100%;
   bottom: 0;
