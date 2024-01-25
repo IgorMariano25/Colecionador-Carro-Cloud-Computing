@@ -54,75 +54,77 @@
   </nav>
 </header>
 
-<router-outlet></router-outlet>
-
-<footer class="footer" *ngIf="visibilityService.getShowFooter()">
-  <div class="footer-content">
-    <div class="footer-section">
-      <div id="idioma">
-        <h3>Região / Idioma Atual</h3>
-        <h4><img id="brazil__flag" src="../assets/paises/bandeira-brasil-redonda.png" alt="Bandeira do Brasil">Brasil /
-          Português</h4>
-      </div>
-    </div>
-    <div class="footer-section">
-      <div class="informations">
-        <div id="contato">
-          <h3>Contato</h3>
-          <p>Perguntas ?</p>
-          <span (click)="redirectToPage('FormularioContato')"><a>Formulário de Contato</a></span>
-          <!-- &#64; = @ -->
-          <p>Email: contato&#64;elite.com</p>
+<main class="main__container">
+  <router-outlet></router-outlet>
+  <footer class="footer" *ngIf="visibilityService.getShowFooter()">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div id="idioma">
+          <h3>Região / Idioma Atual</h3>
+          <h4><img id="brazil__flag" src="../assets/paises/bandeira-brasil-redonda.png" alt="Bandeira do Brasil">Brasil
+            /
+            Português</h4>
         </div>
-        <div id="social__media">
-          <h3>Redes Sociais</h3>
-          <p>Entre em contato conosco através das mídias sociais.</p>
-          <div class="social__media__icons">
-            <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
-            <span class="icon"><i class="fa-brands fa-instagram"></i></span>
-            <span class="icon"><i class="fa-brands fa-pinterest-p"></i></span>
-            <span class="icon"><i class="fa-brands fa-youtube"></i></span>
-            <span class="icon"><i class="fa-brands fa-x-twitter"></i></span>
-            <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
+      </div>
+      <div class="footer-section">
+        <div class="informations">
+          <div id="contato">
+            <h3>Contato</h3>
+            <p>Perguntas ?</p>
+            <span (click)="redirectToPage('FormularioContato')"><a>Formulário de Contato</a></span>
+            <!-- &#64; = @ -->
+            <p>Email: contato&#64;elite.com</p>
+          </div>
+          <div id="social__media">
+            <h3>Redes Sociais</h3>
+            <p>Entre em contato conosco através das mídias sociais.</p>
+            <div class="social__media__icons">
+              <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
+              <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+              <span class="icon"><i class="fa-brands fa-pinterest-p"></i></span>
+              <span class="icon"><i class="fa-brands fa-youtube"></i></span>
+              <span class="icon"><i class="fa-brands fa-x-twitter"></i></span>
+              <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-section">
-      <div class="links__uteis">
-        <h3>Links Úteis</h3>
-        <ul>
-          <li><a (click)="redirectToPage('politica-privacidade')">Política de Privacidade</a></li>
-          <li><a (click)="redirectToPage('termos-uso')">Termos de Uso</a></li>
-          <li><a (click)="redirectToPage('compliance')">Compliance</a></li>
-          <li><a (click)="redirectToPage('lgpd')">LGPD</a></li>
-        </ul>
+      <div class="footer-section">
+        <div class="links__uteis">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a (click)="redirectToPage('politica-privacidade')">Política de Privacidade</a></li>
+            <li><a (click)="redirectToPage('termos-uso')">Termos de Uso</a></li>
+            <li><a (click)="redirectToPage('compliance')">Compliance</a></li>
+            <li><a (click)="redirectToPage('lgpd')">LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Empresa</h3>
+        <div class="empresa__links">
+          <ul>
+            <li><a (click)="redirectToPage('About')">Sobre</a></li>
+            <li><a (click)="redirectToPage('empregos')">Empregos e Carreiras</a></li>
+            <li><a (click)="redirectToPage('imprensa')">Imprensa</a></li>
+            <li><a (click)="redirectToPage('sustentabilidade')">Sustentabilidade</a></li>
+            <li><a (click)="redirectToPage('subsidiaria')">Subsidiária</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-section">
-      <h3>Empresa</h3>
-      <div class="empresa__links">
-        <ul>
-          <li><a (click)="redirectToPage('About')">Sobre</a></li>
-          <li><a (click)="redirectToPage('empregos')">Empregos e Carreiras</a></li>
-          <li><a (click)="redirectToPage('imprensa')">Imprensa</a></li>
-          <li><a (click)="redirectToPage('sustentabilidade')">Sustentabilidade</a></li>
-          <li><a (click)="redirectToPage('subsidiaria')">Subsidiária</a></li>
-        </ul>
-      </div>
+    <div id="copyright__information">
+      <p>
+        © 2024 ELite -Brasil Ltda. Indicações Legais.
+        <a (click)="redirectToPage('politica-privacidade')">Política de Privacidade.</a>
+        <a (click)="redirectToPage('compliance')">Compliance Elite.</a>
+        <a routerLink="/compliance/denuncia">Canal de Denúncia.</a>
+      </p>
     </div>
-  </div>
-  <div id="copyright__information">
-    <p>
-      © 2024 ELite -Brasil Ltda. Indicações Legais.
-      <a (click)="redirectToPage('politica-privacidade')">Política de Privacidade.</a>
-      <a (click)="redirectToPage('compliance')">Compliance Elite.</a>
-      <a routerLink="/compliance/denuncia">Canal de Denúncia.</a>
-    </p>
-  </div>
-  <div id="logo" routerLink="/">
-    <img src="../assets/svg/no-celta-main-color.svg"
-      alt="Nossa logo marca: Um nó celta chamado solomons quádruplos com estremidade redondas">
-    <p>Elite</p>
-  </div>
-</footer>
+    <div id="logo" routerLink="/">
+      <img src="../assets/svg/no-celta-main-color.svg"
+        alt="Nossa logo marca: Um nó celta chamado solomons quádruplos com estremidade redondas">
+      <p>Elite</p>
+    </div>
+  </footer>
+</main>
