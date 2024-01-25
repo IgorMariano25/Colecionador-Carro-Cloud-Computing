@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  redirectToPageIdHtml(page: string, idHtml: string) {
+  public redirectToPageIdHtml(page: string, idHtml: string) {
     this.router.navigate(['/' + page], { fragment: idHtml }).then(() => {
     });
   }
