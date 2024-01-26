@@ -46,67 +46,7 @@ main {
   width: 100%;
   height: auto;
   margin-top: 60px;
-
-  #tittle {
-    position: absolute;
-    top: 250px;
-    left: 5%;
-    padding-left: 2.5rem;
-    z-index: 10;
-    color: var(--white-color);
-  }
-
-  h1 {
-    font-family: porscheNextBold;
-    font-size: 52px;
-    line-height: 4rem;
-    color: var(--main-color)
-  }
-
-  #button__vagas {
-    z-index: 99;
-    position: relative;
-    display: flex;
-  }
-
-  #button__vagas span {
-    display: flex;
-    background-color: var(--white-color);
-    width: 12rem;
-    padding: 15px 12px;
-    border-radius: 3px;
-    letter-spacing: 2px;
-    transition: 0.35s ease-out;
-    transform: scale(0.98);
-    justify-content: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 0 0 6px var(--main-color), 0 0 6px var(--main-color), 0 0 6px var(--main-color); */
-  }
-
-  #button__vagas span:hover {
-    cursor: pointer;
-    background-color: var(--main-color);
-    transition: 0.35s ease-in;
-    transform: scale(1);
-    /* box-shadow: 0 0 1px var(--main-color), 0 0 1px var(--main-color), 0 0 1px var(--main-color); */
-  }
-
-  #button__vagas span a {
-    color: var(--main-color);
-    font-family: porscheNext;
-    font-size: 20px;
-    transition: 0.35s ease-in;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  #button__vagas span:hover a {
-    color: var(--white-color);
-    transition: 0.35s ease-in;
-  }
+  height: auto;
 }
 
 #navigation__carreiras {
