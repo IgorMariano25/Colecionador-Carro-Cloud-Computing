@@ -1,8 +1,4 @@
-body,
-.about__contanier,
-#services,
-.about__contanier__logo,
-.about__contanier__equipe {
+#about__main__content {
   background-color: var(--white-color);
 }
 
