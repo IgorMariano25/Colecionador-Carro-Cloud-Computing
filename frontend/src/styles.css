@@ -85,6 +85,8 @@
   --white-color-2: #ddd;
   --white-color-3: #fdfeff;
   --white-color-4-whitesmoke: #f5f5f5;
+  --white-color-4-whitesmoke-opacity-55: rgba(245, 245, 245, 0.55);
+  --white-color-5-behr-silver-bullet: #c4c4c4;
 
   /* BACKGROUND COLOR */
   --bg-color: #0F0F0F;
