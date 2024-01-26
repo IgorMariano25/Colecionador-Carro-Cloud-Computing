@@ -229,7 +229,6 @@ body,
     height: 520px;
     transform: scale(1.009);
     display: flex;
-    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
