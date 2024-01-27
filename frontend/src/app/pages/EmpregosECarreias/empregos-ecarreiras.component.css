@@ -6,13 +6,15 @@ body,
 main {
   width: 100%;
   height: 100%;
+  position: relative;
   flex: 1 0 auto;
   background-color: var(--white-color);
 }
 
 .banner__carreiras img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   position: relative;
   padding: 0;
   margin: 0;
@@ -40,13 +42,11 @@ main {
 } */
 
 .banner__carreiras {
-  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin-top: 60px;
-  height: auto;
 }
 
 #navigation__carreiras {
@@ -102,12 +102,6 @@ main {
   transition: 0.35s ease-in;
 }
 
-/* #carreiras__links .links:hover {
-  background-color: var(--black-color-opacity-10);
-  border-radius: 4px;
-  transition: 0.35s ease-out;
-} */
-
 #navigation__vagas {
   display: flex;
   flex-direction: column;
@@ -120,9 +114,11 @@ main {
 
   #encontrar__vagas,
   #ingresso__elite,
+  #card__ingresso,
   #emprego__dos__sonhos,
   #ingresso__subsidiarias {
-    width: 50%;
+    width: 100%;
+    margin: 0 auto;
   }
 
   h1 {
@@ -131,19 +127,190 @@ main {
     font-size: 42px;
   }
 
+  #encontrar__vagas {
+    padding: 5rem 0;
+  }
+
   #encontrar__vagas h1 {
     padding-bottom: 2rem;
   }
 
-  #encontrar__vagas input {
-    max-width: 50%;
-    width: 25%;
-    margin-right: 2.5rem;
+  .filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .filter input {
+    width: 350px;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid var(--black-color);
+    border-radius: 5px;
+    outline: 0;
+    transition: 0.5s;
+  }
+
+  .filter input:focus {
+    border-color: var(--main-color);
+  }
+
+  .filter input::placeholder {
+    color: var(--grey-color);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  .filter button {
+    font-family: porscheNextBold;
+    width: 200px;
+    height: 46.5px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    text-align: center;
+    transition: all .30s;
+    transition: .6s ease;
+    transition: .45s ease-in;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: var(--white-color);
+    z-index: 99;
+  }
+
+  .filter button:hover {
+    background-color: var(--red-color-A-400);
+    box-shadow: 0 0 10px var(--main-color);
+    transition: .45s ease-out;
   }
 }
 
+#ingresso__elite {
+  width: 100%;
+  height: 25%;
+  background-color: var(--white-color-4-whitesmoke);
+  padding: 5rem 0;
 
+  #ingresso__links {
+    display: flex;
+    font-family: porscheNext;
+    font-size: 18px;
+    color: var(--black-color);
+    gap: 1rem;
+    transition: 0.6s ease-in;
+    position: relative;
+  }
 
-/* #encontrar__vagas h1 {
-  padding-bottom: 2rem;
-} */
+  #ingresso__links .links {
+    transition: 0.6s ease-in;
+    position: relative;
+  }
+
+  #ingresso__links .links::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s;
+    border-radius: 25px;
+  }
+
+  #ingresso__links .links:active,
+  #ingresso__links .links:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .6s ease-in;
+  }
+
+  #ingresso__links .links:active,
+  #ingresso__links .links:hover {
+    color: var(--main-color);
+    transition: 0.35s ease-in;
+  }
+}
+
+.grid__cards {
+  padding-top: 2rem;
+  display: grid;
+  margin: 2rem 0;
+  grid-template-columns: repeat(3, 27rem);
+  grid-auto-rows: auto;
+  justify-content: center;
+}
+
+.card__ingresso {
+  width: 400px;
+  height: auto;
+  min-width: 325px;
+  border-radius: 10px;
+  background-color: var(--white-color-4-whitesmoke);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.35s ease-out;
+  overflow: hidden;
+}
+
+.card__ingresso:hover {
+  border: 2px solid var(--main-color);
+  background-color: var(--white-color);
+  transition: 0.35s ease-in;
+}
+
+.card__ingresso:hover .card__image img {
+  transform: scale(1.05);
+}
+
+.card__image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.details {
+  margin: 2rem 1rem;
+
+  h3 {
+    font-size: 24px;
+    font-family: porscheNextBold;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 1.2px;
+    color: var(--black-color-2);
+    font-family: porscheNext;
+  }
+}
+
+#emprego__dos__sonhos {
+  width: 100%;
+  height: 25%;
+  background-color: var(--bg-color);
+  padding: 5rem 0;
+}
