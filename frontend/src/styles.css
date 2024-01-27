@@ -599,6 +599,19 @@ button:hover {
   cursor: pointer;
 }
 
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  font-family: porscheNextBold;
+}
+
+p,a, span {
+  font-family: porscheNext;
+}
+
 ul,
 li {
   list-style: none;
