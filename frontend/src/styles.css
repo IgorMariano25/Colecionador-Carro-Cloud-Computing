@@ -151,6 +151,10 @@
   --black-color-2-opacity-15: rgba(8, 9, 17, 0.15);
   --black-color-2-opacity-10: rgba(8, 9, 17, 0.10);
 
+  --black-color-3: #0e0e12;
+  --black-color-4: #212225;
+  --black-color-4-hover: #535457;
+
   /* GREY COLOR */
   --grey-color: #808080;
   --grey-color-opacity-95: rgba(128, 128, 128, 0.95);
@@ -608,7 +612,9 @@ h6 {
   font-family: porscheNextBold;
 }
 
-p,a, span {
+p,
+a,
+span {
   font-family: porscheNext;
 }
 
