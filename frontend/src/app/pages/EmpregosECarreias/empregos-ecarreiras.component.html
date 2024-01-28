@@ -1,21 +1,16 @@
 <div class="banner__carreiras">
   <img src="../../../assets/porsche-jobs-background-image.png" alt="">
-  <div id="tittle">
-    <h1>Gostou da Elite ?<br>Venha trabalhar conosco !</h1>
-    <div id="button__vagas">
-      <span (click)="redirectToPageIdHtml('empregos', 'encontrar__vagas')">
-        <a>Ver vagas</a>
-      </span>
-    </div>
-  </div>
 </div>
 
 <main>
   <section id="navigation__carreiras">
     <ol id="carreiras__links">
-      <li id="emprego__elite" class="links active">Empregos na Elite</li>
-      <li id="oportunidade__ingressos" class="links">Oportunidade de Ingresso</li>
-      <li id="subsidiarias" class="links">Subsidiárias</li>
+      <li id="emprego__elite" class="links active" (click)="redirectToPageIdHtml('empregos', 'encontrar__vagas')">
+        Empregos na Elite</li>
+      <li id="oportunidade__ingressos" class="links" (click)="redirectToPageIdHtml('empregos', 'ingresso__elite')">
+        Oportunidade de Ingresso</li>
+      <li id="subsidiarias" class="links" (click)="redirectToPageIdHtml('empregos', 'ingresso__subsidiarias')">
+        Subsidiárias</li>
     </ol>
   </section>
 
@@ -30,66 +25,74 @@
     </div>
 
     <section id="ingresso__elite">
-      <div>
-        <h1>Ingresso na Elite</h1>
-        <ol id="ingresso__links">
-          <li id="estudantes__e__graduados" class="links active">Estudantes universitários e graduados</li>
-          <li id="profissionais__experientes" class="links">Profissionais experientes
-          </li>
-        </ol>
+      <h1>Ingresso na Elite</h1>
+      <ol id="ingresso__links">
+        <li id="estudantes__e__graduados" class="links active">Estudantes universitários e graduados</li>
+        <li id="profissionais__experientes" class="links">Profissionais experientes
+        </li>
+      </ol>
 
+      <div class="grid__cards">
         <div class="card__ingresso">
           <div class="card">
-            <span>
-              <img src="../../../assets/EmpregosECarreiras/estudante-universitario-banner.png" class="thumbnail"
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/estudante-universitario-banner.png"
                 alt="Foto de um Homem sorridente usando óculos e fones de ouvido, trabalhando em um laptop em um ambiente
                  de escritório iluminado. Ele está vestindo uma camiseta listrada em branco e azul com um pequeno detalhe
                   de emblema no peito. Ao seu lado, há uma mesa com um telefone celular, uma garrafa de água, e uma
                   mochila preta. O fundo desfocado sugere um espaço de trabalho contemporâneo com outras pessoas ao fundo.">
             </span>
-            <h3 class="titulo">Estudante Universitário</h3>
-            <p class="cargo">
-              Oferecemos uma ampla gama de oportunidades de ingresso para estudantes em todas as áreas da empresa. Faça
-              parte da família Porsche e junte-se à nossa equipe - como parte de um estágio, uma tese ou como estudante
-              trabalhador.</p>
-            <a class="linkedin" href=""><i class="bi bi-arrow-right"></i>Saiba mais</a>
+            <div class="details">
+              <h3 class="titulo">Estudante Universitário</h3>
+              <p class="cargo">
+                Oferecemos uma ampla gama de oportunidades de ingresso para estudantes em todas as áreas da empresa.
+                Faça
+                parte da família Porsche e junte-se à nossa equipe - como parte de um estágio, uma tese ou como
+                estudante
+                trabalhador.</p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
           </div>
         </div>
 
         <div class="card__ingresso">
           <div class="card">
-            <span>
-              <img src="../../../assets/EmpregosECarreiras/doutorado-na-elite-banner.png" class="thumbnail" alt="Foto de uma
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/doutorado-na-elite-banner.png" alt="Foto de uma
                 ulher de cabelos loiros cacheados e óculos sorrindo enquanto olha para um monitor de computador,
                 aparentemente em um ambiente de escritório espaçoso e bem iluminado. Ela usa uma blusa azul escura
                 e está sentada em uma cadeira de escritório com rodinhas. No fundo, há outros colegas de trabalho e
                 computadores, indicando um ambiente colaborativo de trabalho. A imagem transmite uma atmosfera positiva
                 e produtiva no local de trabalho.">
             </span>
-            <h3 class="titulo">Doutorado na Elite</h3>
-            <p class="cargo">
-              Dar o pontapé na carreira sem perder a ciência de vista? Junte-se à Porsche pelo doutorado.
-            </p>
-            <a class="linkedin" href=""><i class="bi bi-arrow-right"></i>Saiba mais</a>
+            <div class="details">
+              <h3 class="titulo">Doutorado na Elite</h3>
+              <p class="cargo">
+                Dar o pontapé na carreira sem perder a ciência de vista? Junte-se à ELite pelo doutorado.
+              </p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
           </div>
         </div>
 
         <div class="card__ingresso">
           <div class="card">
-            <span>
-              <img src="../../../assets/EmpregosECarreiras/estudantes-entrada-direta.png" class="thumbnail" alt="Foto de um
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/estudantes-entrada-direta.png" alt="Foto de um
                  homem de perfil, usando óculos e com barba, manuseando um smartphone dentro de uma cabine
                  de escritório com paredes de vidro. Ele está apoiado em uma bancada circular com acabamento em madeira
                  que contém papéis e um mouse de computador. Vestido casualmente, ele usa uma camiseta azul escura e um
                  relógio de pulso. Ao fundo, através do vidro, pode-se observar um ambiente de escritório
                  moderno e espaçoso com outras pessoas trabalhando em suas mesas.">
             </span>
-            <h3 class="titulo">Entrada direta</h3>
-            <p class="cargo">
-              Assumir tarefas exigentes em um ambiente de trabalho empolgante? Nós oferecemos apoio quando você começa
-              na Porsche.
-            </p>
-            <a class="linkedin" href=""><i class="bi bi-arrow-right"></i>Saiba mais</a>
+            <div class="details">
+              <h3 class="titulo">Entrada direta</h3>
+              <p class="cargo">
+                Assumir tarefas exigentes em um ambiente de trabalho empolgante? Nós oferecemos apoio quando você começa
+                na Elite.
+              </p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
           </div>
         </div>
       </div>
@@ -104,11 +107,94 @@
       </div>
     </section>
 
-    <div id="ingresso__subsidiarias">
+    <section id="ingresso__subsidiarias">
       <h1>Ingresso em subsidiárias e organização comercial</h1>
-      <span>Encontrar Vagas</span>
-      <span>Perguntas Frequentres sobre a candidatura</span>
-      <span>Hotline e Candidatura</span>
-    </div>
+      <div class="grid__cards">
+        <div class="card__ingresso">
+          <div class="card">
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/Imagem-Ingresso-Subsidiaria-5.jpg"
+                alt="Foto de um Homem sorridente usando óculos e fones de ouvido, trabalhando em um laptop em um ambiente
+                 de escritório iluminado. Ele está vestindo uma camiseta listrada em branco e azul com um pequeno detalhe
+                  de emblema no peito. Ao seu lado, há uma mesa com um telefone celular, uma garrafa de água, e uma
+                  mochila preta. O fundo desfocado sugere um espaço de trabalho contemporâneo com outras pessoas ao fundo.">
+            </span>
+            <div class="details">
+              <h3 class="titulo">Elite Engineering</h3>
+              <p class="cargo">
+                A Elite Engineering é a prestadora de serviços de engenharia da Porsche. A empresa lida com projetos
+                de engenharia para uma ampla gama de clientes do setor automotivo e além.</p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__ingresso">
+          <div class="card">
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/Imagem-Ingresso-Subsidiaria-3.jpg" alt="Foto de uma
+                ulher de cabelos loiros cacheados e óculos sorrindo enquanto olha para um monitor de computador,
+                aparentemente em um ambiente de escritório espaçoso e bem iluminado. Ela usa uma blusa azul escura
+                e está sentada em uma cadeira de escritório com rodinhas. No fundo, há outros colegas de trabalho e
+                computadores, indicando um ambiente colaborativo de trabalho. A imagem transmite uma atmosfera positiva
+                e produtiva no local de trabalho.">
+            </span>
+            <div class="details">
+              <h3 class="titulo">Centros da Elite </h3>
+              <p class="cargo">
+                Perto do cliente. Perto do produto. Os Centros da Elite estão sempre interessados em pessoas talentosas,
+                especialistas e executivos que desejam acelerar – e que compartilham uma coisa acima de tudo: o
+                entusiasmo e paixão pelo mundo automotivo.
+              </p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__ingresso">
+          <div class="card">
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/Imagem-Ingresso-Subsidiaria-2.jpg" alt="Foto de um
+                 homem de perfil, usando óculos e com barba, manuseando um smartphone dentro de uma cabine
+                 de escritório com paredes de vidro. Ele está apoiado em uma bancada circular com acabamento em madeira
+                 que contém papéis e um mouse de computador. Vestido casualmente, ele usa uma camiseta azul escura e um
+                 relógio de pulso. Ao fundo, através do vidro, pode-se observar um ambiente de escritório
+                 moderno e espaçoso com outras pessoas trabalhando em suas mesas.">
+            </span>
+            <div class="details">
+              <h3 class="titulo">Elite Consuliting</h3>
+              <p class="cargo">
+                Pense estrategicamente, aja com pragmatismo. Os consultores da Elite Consulting trabalham em 12
+                unidades ao redor do mundo e auxiliam as empresas a melhorar seu desempenho e força inovadora além de
+                auxiliar colecionadores com novos carros de sua coleção.
+              </p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__ingresso">
+          <div class="card">
+            <span class="card__image">
+              <img src="../../../assets/EmpregosECarreiras/Imagem-Ingresso-Subsidiaria-2.jpg" alt="Foto de um
+                 homem de perfil, usando óculos e com barba, manuseando um smartphone dentro de uma cabine
+                 de escritório com paredes de vidro. Ele está apoiado em uma bancada circular com acabamento em madeira
+                 que contém papéis e um mouse de computador. Vestido casualmente, ele usa uma camiseta azul escura e um
+                 relógio de pulso. Ao fundo, através do vidro, pode-se observar um ambiente de escritório
+                 moderno e espaçoso com outras pessoas trabalhando em suas mesas.">
+            </span>
+            <div class="details">
+              <h3 class="titulo">Elite Digital</h3>
+              <p class="cargo">
+                Em vários locais, a Elite Digital desenvolve visões inovadoras, estratégias, produtos, modelos de
+                negócios e experiências inspiradoras do cliente para definir ainda mais a marca Elite na era da
+                digitalização.
+              </p>
+              <span class="btn__saiba__mais"><a href=""></a><i class="bi bi-arrow-right"></i>Saiba mais</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </main>
