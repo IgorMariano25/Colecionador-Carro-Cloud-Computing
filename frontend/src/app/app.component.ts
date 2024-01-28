@@ -34,6 +34,12 @@ export class AppComponent implements OnInit {
     });
   }
 
+  public redirectToPageIdHtmlByOtherPage(page: string, idHtml: string) {
+    this.router.navigate(['/' + page], { fragment: idHtml }).then(() => {
+      window.scrollTo(0, 0)
+    });
+  }
+
   public smoothScrollTo(endX: number, endY: number, duration: number): void {
     const startX: number = window.scrollX;
     const startY: number = window.scrollY;
