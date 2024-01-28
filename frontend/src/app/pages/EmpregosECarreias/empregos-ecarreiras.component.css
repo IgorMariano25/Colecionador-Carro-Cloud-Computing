@@ -243,6 +243,7 @@ main {
   display: grid;
   margin: 2rem 0;
   grid-template-columns: repeat(3, 27rem);
+  row-gap: 1.5rem;
   grid-auto-rows: auto;
   justify-content: center;
 }
@@ -305,23 +306,51 @@ main {
     letter-spacing: 1.2px;
     color: var(--black-color-2);
     font-family: porscheNext;
+    margin-bottom: 1rem;
   }
 }
 
 #emprego__dos__sonhos {
   width: 100%;
   height: 25%;
-  background-color: var(--bg-color);
+  background-color: var(--white-color-4-whitesmoke);
   padding: 5rem 0;
+
+  #btn__info__vagas {
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: auto;
+
+  }
+
+  span {
+    width: 400px;
+    height: 42px;
+    border-radius: 10px;
+    padding: 1rem 0 1rem 0.5rem;
+    color: var(--white-color);
+    background-color: var(--black-color-4);
+  }
 }
 
 .btn__saiba__mais {
-  display: flex;
   align-items: center;
   color: var(--main-color);
   font-size: 18px;
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.35s ease-out;
 
   i {
     margin-right: 0.5rem;
   }
+}
+
+.card__ingresso .btn__saiba__mais:hover {
+  /* border: 2px solid var(--main-color); */
+  background-color: var(--main-color);
+  color: var(--white-color);
+  transition: 0.35s ease-in;
 }
